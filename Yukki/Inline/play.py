@@ -148,11 +148,7 @@ def search_markup2(
             ),
         ],
     ]
-)
-await message.reply(
-    disable_web_page_preview=True, url_markup=key
-)
-return buttons
+    return buttons
 
 
 def secondary_markup(videoid, user_id):
