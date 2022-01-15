@@ -143,12 +143,11 @@ async def play(_, message: Message):
             mystic,
         )
     elif url:
-        mystic = await message.reply_text("🔄 Processing URL... Please Wait!")
-        if not message.reply_to_message:
-            query = message.text.split(None, 1)[1]
-        else:
-            query = message.reply_to_message.text
-        (
+        what = "Audio Searched"
+        await LOG_CHAT(message, what)
+        mystic = await message.reply_text("🔍 **Searching**...")
+        query = message.text.split(None, 1)[1]
+        (  
             title,
             duration_min,
             duration_sec,
