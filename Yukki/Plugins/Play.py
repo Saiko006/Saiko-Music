@@ -157,10 +157,10 @@ async def play(_, message: Message):
         ) = get_yt_info_query(query)
         await mystic.delete()
         buttons = url_markup2(videoid, duration_min, message.from_user.id)
-        return await message.reply_photo(
-            photo=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__",
+        return await mystic.edit(
+            f"🎧 Silahkan pilih lagu yang ingin anda putar 🎧:\n\n1️⃣ **[{title[:27]}](https://youtube.com/watch?v={videoid})**\n💡 **[More Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})**\n⚡ __Powered by {MUSIC_BOT_NAME}__",
             reply_markup=InlineKeyboardMarkup(buttons),
+            disable_web_page_preview=True
         )
     else:
         if len(message.command) < 2:
