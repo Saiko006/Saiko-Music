@@ -15,12 +15,7 @@ def url_markup2(videoid, duration, user_id):
                 text="🎥 Play Video",
                 callback_data=f"Choose {videoid}|{duration}|{user_id}",
             ),
-        ],
-        [        
-            InlineKeyboardButton(
-                text="<", callback_data=f"popat 1|{user_id}"
-            ),
-        ],
+        ],        
         [
             InlineKeyboardButton(
                 text="🗑 Close Search",
