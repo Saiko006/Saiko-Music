@@ -59,7 +59,7 @@ def stream_quality_markup(videoid, duration, user_id):
         [
             InlineKeyboardButton(
                 text="⬅️ Back",
-                callback_data=f"popat 1 {videoid}|{duration}|{user_id}",
+                callback_data=f"popat 1|{query}|{user_id}",
             )
         ],
         [
