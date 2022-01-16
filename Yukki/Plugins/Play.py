@@ -32,45 +32,8 @@ from Yukki.Utilities.youtube import (get_yt_info_id, get_yt_info_query,
                                      get_yt_info_query_slider)
 
 loop = asyncio.get_event_loop()
-
-
-async def yt_music(videoid):
-    proc = await asyncio.create_subprocess_exec(
-        "youtube-dl",
-        "-g",
-        "-f",
-        f"bestaudio",
-        f"{videoid}",
-        stdout=asyncio.subprocess.PIPE,
-        stderr=asyncio.subprocess.PIPE,
-    )
-    stdout, stderr = await proc.communicate()
-    if stdout:
-        return 1, stdout.decode().split("\n")[0]
-    else:
-        return 0, stderr.decode()
-
-
-
-def yt_choose(suhu):
-    try:
-        search = VideosSearch(suhu, limit=1)
-        for r in search.result()["result"]:
-            ytid = r["id"]
-            if len(r["title"]) > 34:
-                title = r["title"][:70]
-            else:
-                title = r["title"]
-            url = f"https://www.youtube.com/watch?v={ytid}"
-            duration = r["duration"]
-            videoid = r["id"]
-        return [title, url, duration, videoid]
-    except Exception as e:
-        print(e)
-        return 0
       
       
-#play
 @app.on_message(
     filters.command(["play", f"play@{BOT_USERNAME}"]) & filters.group
 )
