@@ -397,73 +397,7 @@ async def popat(_, CallbackQuery):
         )
         return
       
-      
-@app.on_callback_query(filters.regex(pattern=r"tomi"))
-async def tomi(_, CallbackQuery):
-    chat_id = CallbackQuery.message.chat.id
-    callback_data = CallbackQuery.data.strip()
-    CallbackQuery.message.chat.title
-    callback_request = callback_data.split(None, 1)[1]
-    try:
-        x, suhu, user_id = callback_request.split("|")
-    except Exception as e:
-        await CallbackQuery.message.reply_text(f"❌ **Error:** `{e}`")
-        return
-    if CallbackQuery.from_user.id != int(user_id):
-        return await CallbackQuery.answer(
-            "Ini bukan untukmu! Cari Audio/Video Anda Sendiri", show_alert=True
-        )
-    await CallbackQuery.message.delete()
-    search = yt_choose(suhu)
-    if search == 0:
-        await CallbackQuery.answer(
-            "`Tidak Menemukan Apapun untuk Kueri yang Diberikan`"
-        )
-    else:
-        title = search[0]
-        url = search[1]
-        duration = search[2]
-        videoid = search[3]
-        thumbnail = f"https://i.ytimg.com/vi/{videoid}/hqdefault.jpg"
-        tm = await yt_music(url)
-        if tm == 0:
-            await CallbackQuery.message.reply_text(
-                f"❌ yt-dl masalah terdeteksi\n\n» `{ytlink}`"
-            )
-        else:
-            await app.send_photo(
-                chat_id,
-                photo=thumbnail,
-                caption=f"""
-**🏷️ Nama:** [{title}]({url})
-**⏱  Durasi:** {duration}
-**💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})**
-**🎧 Atas permintaan:** [{CallbackQuery.from_user.first_name}](tg://user?id={CallbackQuery.from_user.id})
-**⚡️ Powered By:** [{BOT_NAME}](t.me/{BOT_USERNAME})
-""",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                text="🎵 Play Music",
-                                callback_data=f"MusicStream 0|{suhu}|{user_id}",
-                            ),
-                            InlineKeyboardButton(
-                                text="🎥 Play Video",
-                                callback_data=f"Choose 0|{suhu}|{user_id}",
-                            ),
-                        ],
-                        [
-                            InlineKeyboardButton(
-                                text="🗑 Close",
-                                callback_data=f"forceclose {suhu}|{user_id}",
-                            )
-                        ],
-                    ]
-                ),
-            )
-      
-      
+                                                                                                                                                                            
 @app.on_callback_query(filters.regex(pattern=r"slider"))
 async def slider_query_results(_, CallbackQuery):
     callback_data = CallbackQuery.data.strip()
