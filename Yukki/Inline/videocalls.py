@@ -40,7 +40,7 @@ def livestream_markup(quality, videoid, duration, user_id):
     return buttons
 
 
-def stream_quality_markup(videoid, duration, user_id, query):
+def stream_quality_markup(videoid, duration, user_id):
     buttons = [
         [
             InlineKeyboardButton(
@@ -55,12 +55,6 @@ def stream_quality_markup(videoid, duration, user_id, query):
                 text="📽 480P",
                 callback_data=f"VideoStream 480|{videoid}|{duration}|{user_id}",
             ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="⬅️ Back",
-                callback_data=f"popat 1|{query}|{user_id}",
-            )
         ],
         [
             InlineKeyboardButton(
