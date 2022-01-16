@@ -203,7 +203,7 @@ async def play(_, message: Message):
         ID3 = (result[2]["id"])
         ID4 = (result[3]["id"])
         ID5 = (result[4]["id"])
-        buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
+        buttons = search_markup3(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         return await mystic.edit(
             f"🎧 𝐒𝐢𝐥𝐚𝐡𝐤𝐚𝐧 𝐩𝐢𝐥𝐢𝐡 𝐥𝐚𝐠𝐮 𝐲𝐚𝐧𝐠 𝐢𝐧𝐠𝐢𝐧 𝐚𝐧𝐝𝐚 𝐩𝐮𝐭𝐚𝐫 🎧:\n\n1️⃣ <b>[{title1[:27]}](https://www.youtube.com/watch?v={ID1})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__\n\n2️⃣ <b>[{title2[:27]}](https://www.youtube.com/watch?v={ID2})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__\n\n3️⃣ <b>[{title3[:27]}](https://www.youtube.com/watch?v={ID3})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__\n\n4️⃣ <b>[{title4[:27]}](https://www.youtube.com/watch?v={ID4})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__\n\n5️⃣ <b>[{title5[:27]}](https://youtube.com/watch?v={ID5})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__",
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -373,7 +373,7 @@ async def popat(_, CallbackQuery):
         await n.delete()
         return
     if i == 1:
-        buttons = search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, duration9, duration10, user_id, query)
+        buttons = search_markup4(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, duration9, duration10, user_id, query)
         await CallbackQuery.edit_message_text(
             f"🎧 𝐒𝐢𝐥𝐚𝐡𝐤𝐚𝐧 𝐩𝐢𝐥𝐢𝐡 𝐥𝐚𝐠𝐮 𝐲𝐚𝐧𝐠 𝐢𝐧𝐠𝐢𝐧 𝐚𝐧𝐝𝐚 𝐩𝐮𝐭𝐚𝐫 🎧:\n\n6️⃣ <b>[{title6[:27]}](https://www.youtube.com/watch?v={ID6})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__\n\n7️⃣ <b>[{title7[:27]}](https://www.youtube.com/watch?v={ID7})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__\n\n8️⃣ <b>[{title8[:27]}](https://www.youtube.com/watch?v={ID8})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__\n\n9️⃣ <b>[{title9[:27]}](https://www.youtube.com/watch?v={ID9})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__\n\n🔟 <b>[{title10[:27]}](https://youtube.com/watch?v={ID10})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__",
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -381,7 +381,7 @@ async def popat(_, CallbackQuery):
         )
         return
     if i == 2:
-        buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
+        buttons = search_markup3(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await CallbackQuery.edit_message_text(
             f"🎧 𝐒𝐢𝐥𝐚𝐡𝐤𝐚𝐧 𝐩𝐢𝐥𝐢𝐡 𝐥𝐚𝐠𝐮 𝐲𝐚𝐧𝐠 𝐢𝐧𝐠𝐢𝐧 𝐚𝐧𝐝𝐚 𝐩𝐮𝐭𝐚𝐫 🎧:\n\n1️⃣ <b>[{title1[:27]}](https://www.youtube.com/watch?v={ID1})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__\n\n2️⃣ <b>[{title2[:27]}](https://www.youtube.com/watch?v={ID2})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__\n\n3️⃣ <b>[{title3[:27]}](https://www.youtube.com/watch?v={ID3})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__\n\n4️⃣ <b>[{title4[:27]}](https://www.youtube.com/watch?v={ID4})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__\n\n5️⃣ <b>[{title5[:27]}](https://youtube.com/watch?v={ID5})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__",
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -389,80 +389,14 @@ async def popat(_, CallbackQuery):
         )
         return
     if i == 2:
-        buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
+        buttons = search_markup3(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await CallbackQuery.edit_message_text(
             f"🎧 𝐒𝐢𝐥𝐚𝐡𝐤𝐚𝐧 𝐩𝐢𝐥𝐢𝐡 𝐥𝐚𝐠𝐮 𝐲𝐚𝐧𝐠 𝐢𝐧𝐠𝐢𝐧 𝐚𝐧𝐝𝐚 𝐩𝐮𝐭𝐚𝐫 🎧:\n\n1️⃣ <b>[{title1[:27]}](https://www.youtube.com/watch?v={ID1})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__\n\n2️⃣ <b>[{title2[:27]}](https://www.youtube.com/watch?v={ID2})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__\n\n3️⃣ <b>[{title3[:27]}](https://www.youtube.com/watch?v={ID3})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__\n\n4️⃣ <b>[{title4[:27]}](https://www.youtube.com/watch?v={ID4})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__\n\n5️⃣ <b>[{title5[:27]}](https://youtube.com/watch?v={ID5})</b>\n ├ 📚 <b>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})</b>\n └ 💎 __Powered by {MUSIC_BOT_NAME}__",
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview = True
         )
         return
-      
-      
-@app.on_callback_query(filters.regex(pattern=r"tomi"))
-async def tomi(_, CallbackQuery):
-    chat_id = CallbackQuery.message.chat.id
-    callback_data = CallbackQuery.data.strip()
-    CallbackQuery.message.chat.title
-    callback_request = callback_data.split(None, 1)[1]
-    try:
-        x, suhu, user_id = callback_request.split("|")
-    except Exception as e:
-        await CallbackQuery.message.reply_text(f"❌ **Error:** `{e}`")
-        return
-    if CallbackQuery.from_user.id != int(user_id):
-        return await CallbackQuery.answer(
-            "Ini bukan untukmu! Cari Audio/Video Anda Sendiri", show_alert=True
-        )
-    await CallbackQuery.message.delete()
-    search = yt_choose(suhu)
-    if search == 0:
-        await CallbackQuery.answer(
-            "`Tidak Menemukan Apapun untuk Kueri yang Diberikan`"
-        )
-    else:
-        title = search[0]
-        url = search[1]
-        duration = search[2]
-        videoid = search[3]
-        thumbnail = f"https://i.ytimg.com/vi/{videoid}/hqdefault.jpg"
-        tm = await yt_music(url)
-        if tm == 0:
-            await CallbackQuery.message.reply_text(
-                f"❌ yt-dl masalah terdeteksi\n\n» `{ytlink}`"
-            )
-        else:
-            await app.send_photo(
-                chat_id,
-                photo=thumbnail,
-                caption=f"""
-**🏷️ Nama:** [{title}]({url})
-**⏱  Durasi:** {duration}
-**💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})**
-**🎧 Atas permintaan:** [{CallbackQuery.from_user.first_name}](tg://user?id={CallbackQuery.from_user.id})
-**⚡️ Powered By:** [{BOT_NAME}](t.me/{BOT_USERNAME})
-""",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                text="🎵 Play Music",
-                                callback_data=f"MusicStream 0|{suhu}|{user_id}",
-                            ),
-                            InlineKeyboardButton(
-                                text="🎥 Play Video",
-                                callback_data=f"Choose 0|{suhu}|{user_id}",
-                            ),
-                        ],
-                        [
-                            InlineKeyboardButton(
-                                text="🗑 Close",
-                                callback_data=f"forceclose {suhu}|{user_id}",
-                            )
-                        ],
-                    ]
-                ),
-            )
-      
+                                                          
       
 @app.on_callback_query(filters.regex(pattern=r"slider"))
 async def slider_query_results(_, CallbackQuery):
