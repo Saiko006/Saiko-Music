@@ -4,7 +4,7 @@ from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
 from Yukki import db_mem
 
 
-def url_markup(videoid, duration, user_id):
+def url_markup2(videoid, duration, user_id):
     buttons = [
         [
             InlineKeyboardButton(
@@ -31,7 +31,7 @@ def url_markup(videoid, duration, user_id):
     return buttons           
         
 
-def url_markup2(videoid, duration, user_id):
+def url_markup(videoid, duration, user_id):
     buttons = [
         [
             InlineKeyboardButton(
