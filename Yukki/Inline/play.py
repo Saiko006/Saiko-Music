@@ -18,7 +18,7 @@ def url_markup(videoid, duration, user_id):
         ],
         [        
             InlineKeyboardButton(
-                text="<", callback_data=f"popat 1|{query}|{user_id}"
+                text="<", callback_data=f"popat 1|{user_id}"
             ),
         ],
         [
