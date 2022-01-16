@@ -167,7 +167,7 @@ async def play(_, message: Message):
             )
             oh = await message.reply_text(
                """
-<b>❌ Lagu tidak ditemukan atau anda tidak menulis judul lagu dengan benar
+<b>❌ Lagu tidak ditemukan atau anda tidak menulis judul lagu dengan benar</b>
 
 ✅ Contoh Menggunakan Bot
 `/play Alone`
