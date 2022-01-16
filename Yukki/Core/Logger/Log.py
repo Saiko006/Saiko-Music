@@ -1,6 +1,6 @@
 from config import LOG_GROUP_ID as _channel_id_
 
-from Yukki.Core.Clients.cli import app, userbot
+from Yukki.Core.Clients.cli import app, LOG_CLIENT
 
 failure = "Make sure your bot is in your log channel and is promoted as an admin with full rights!"
 
