@@ -57,7 +57,7 @@ async def izal(_, CallbackQuery):
         return await CallbackQuery.answer(
             "This is not for you! Search You Own Song.", show_alert=True
         )
-    buttons = url_markup(videoid, duration, user_id)
+    buttons = url_markup2(videoid, duration, user_id)
     await CallbackQuery.edit_message_reply_markup(
         reply_markup=InlineKeyboardMarkup(buttons)
     )                               
