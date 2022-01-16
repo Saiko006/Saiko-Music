@@ -34,6 +34,24 @@ from Yukki.Utilities.youtube import (get_yt_info_id, get_yt_info_query,
 loop = asyncio.get_event_loop()
 
 
+async def yt_music(videoid):
+    proc = await asyncio.create_subprocess_exec(
+        "youtube-dl",
+        "-g",
+        "-f",
+        f"bestaudio",
+        f"{videoid}",
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE,
+    )
+    stdout, stderr = await proc.communicate()
+    if stdout:
+        return 1, stdout.decode().split("\n")[0]
+    else:
+        return 0, stderr.decode()
+
+
+
 def yt_choose(suhu):
     try:
         search = VideosSearch(suhu, limit=1)
