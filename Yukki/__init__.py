@@ -15,6 +15,8 @@ from config import (MUSIC_BOT_NAME, OWNER_ID, STRING1, STRING2, STRING3,
                     UPSTREAM_REPO, get_queue)
 from Yukki.Core.Clients.cli import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4,
                                     ASS_CLI_5, LOG_CLIENT, app)
+from Yukki.Core.Logger.Log import (startup_delete_last, startup_edit_last,
+                                   startup_send_new)
 from Yukki.Utilities.changers import time_to_seconds
 from Yukki.Utilities.tasks import install_requirements
 
