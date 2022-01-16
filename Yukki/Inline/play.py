@@ -149,24 +149,22 @@ def search_markup2(
         ],
     ]
     return buttons
-    
+  J  
 
 def secondary_markup(videoid, user_id):
     buttons = [
         [
-            InlineKeyboardButton(text="▶️", callback_data=f"resumecb"),
-            InlineKeyboardButton(text="⏸️", callback_data=f"pausecb"),
-            InlineKeyboardButton(text="⏭️", callback_data=f"skipcb"),
-            InlineKeyboardButton(text="⏹️", callback_data=f"stopcb"),
-        ],
-        [
+            InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ​", url="https://t.me/musickekiniaan"),
             InlineKeyboardButton(
-                text="🔗 More Menu", callback_data=f"other {videoid}|{user_id}"
+                text="ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
             ),
-            InlineKeyboardButton(text="🗑 Close Menu", callback_data=f"close"),
         ],
+        [      
+            InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data=f'close')
+            ],
     ]
     return buttons
+        
 
 
 def secondary_markup2(videoid, user_id):
@@ -178,7 +176,7 @@ def secondary_markup2(videoid, user_id):
             InlineKeyboardButton(text="⏹️", callback_data=f"stopcb"),
         ],
         [
-            InlineKeyboardButton(text="🗑 Close Menu", callback_data=f"close"),
+            InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data=f"close"),
         ],
     ]
     return buttons
