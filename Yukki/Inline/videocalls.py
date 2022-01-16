@@ -55,7 +55,13 @@ def stream_quality_markup(videoid, duration, user_id):
                 text="📽 480P",
                 callback_data=f"VideoStream 480|{videoid}|{duration}|{user_id}",
             ),
-        ],           
+        ],
+        [
+            InlineKeyboardButton(
+                text="⬅️ Back",
+                callback_data=f"popat 1 {videoid}|{duration}|{user_id}",
+            )
+        ],
         [
             InlineKeyboardButton(
                 text="🗑 Close ",
