@@ -1,6 +1,6 @@
 from .others import download_markup, others_markup
 from .play import (audio_markup, audio_markup2, audio_timer_markup_start,
-                   primary_markup, search_markup, search_markup2, search_markup3, search_markup4,
+                   primary_markup, search_markup, search_markup2,
                    secondary_markup, secondary_markup2, timer_markup,
                    url_markup, url_markup2)
 from .playlist import (add_genre_markup, check_genre_markup, check_markup,
