@@ -16,7 +16,7 @@ def choose_markup(videoid, duration, user_id):
         ],
         [
             InlineKeyboardButton(
-                text="🗑 Close Search",
+                text="🗑 Close ",
                 callback_data=f"forceclose {videoid}|{user_id}",
             )
         ],
