@@ -2,11 +2,7 @@ import asyncio
 import os
 import time
 from os import listdir, mkdir
-
-import heroku3
 from aiohttp import ClientSession
-from git import Repo
-from git.exc import GitCommandError, InvalidGitRepositoryError
 from motor.motor_asyncio import AsyncIOMotorClient as Bot
 from rich.console import Console
 from rich.table import Table
@@ -25,10 +21,6 @@ from Yukki.Utilities.tasks import install_requirements
 loop = asyncio.get_event_loop()
 console = Console()
 
-
-### Heroku Shit
-UPSTREAM_BRANCH = UPSTREAM_BRANCH
-UPSTREAM_REPO = UPSTREAM_REPO
 
 ### Modules
 MOD_LOAD = []
