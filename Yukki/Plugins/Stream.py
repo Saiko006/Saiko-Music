@@ -101,7 +101,7 @@ async def quality_markup(_, CallbackQuery):
         return await CallbackQuery.answer(
             "This is not for you! Search You Own Song.", show_alert=True
         )
-    buttons = stream_quality_markup(videoid, duration, user_id)
+    buttons = stream_quality_markup(videoid, duration, user_id, query)
     await CallbackQuery.edit_message_reply_markup(
         reply_markup=InlineKeyboardMarkup(buttons)
     )
