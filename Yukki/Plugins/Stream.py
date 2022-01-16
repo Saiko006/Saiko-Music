@@ -59,26 +59,8 @@ async def choose_playmode(_, CallbackQuery):
         )
     buttons = choose_markup(videoid, duration, user_id)
     await CallbackQuery.edit_message_reply_markup(
-        reply_markup=InlineKeyboardMarkup(
-          buttons = [
-              [
-                  InlineKeyboardButton(
-                      text="🎵 Play Music",
-                      callback_data=f"MusicStream {videoid}|{duration}|{user_id}",
-                  ),
-                  InlineKeyboardButton(
-                      text="🎥 Play Video",
-                      callback_data=f"Choose {videoid}|{duration}|{user_id}",
-                  ),
-              ],
-              [
-                  InlineKeyboardButton(
-                      text="🗑 Close Search",
-                      callback_data=f"forceclose {videoid}|{user_id}",
-                  )
-              ],
-           ]
-        )
+        reply_markup=InlineKeyboardMarkup(buttons)
+    )                               
 
 
 @app.on_callback_query(filters.regex(pattern=r"Choose"))
