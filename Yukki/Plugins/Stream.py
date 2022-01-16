@@ -59,7 +59,8 @@ async def choose_playmode(_, CallbackQuery):
         )
     buttons = choose_markup(videoid, duration, user_id)
     await CallbackQuery.edit_message_reply_markup(
-        InlineKeyboardMarkup(
+        reply_markup=InlineKeyboardMarkup(buttons)
+    )
           buttons = [
               [
                   InlineKeyboardButton(
