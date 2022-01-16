@@ -40,7 +40,7 @@ def livestream_markup(quality, videoid, duration, user_id):
     return buttons
 
 
-def stream_quality_markup(videoid, duration, user_id):
+def stream_quality_markup(videoid, duration, user_id, query):
     buttons = [
         [
             InlineKeyboardButton(
