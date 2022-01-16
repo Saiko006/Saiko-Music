@@ -216,8 +216,6 @@ async def initiate_bot():
         SUDOERS = (SUDOERS + sudoers + OWNER_ID) if sudoers else SUDOERS
         await asyncio.sleep(1)
         console.print("└ [green]Loaded Sudo Users Successfully!\n")
-        await startup_delete_last(____ok)
-        await startup_delete_last(initial)
 
         
 loop.run_until_complete(initiate_bot())
