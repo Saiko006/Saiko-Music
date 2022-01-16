@@ -151,22 +151,8 @@ def search_markup2(
     return buttons
 
 
-def search_markup3(
-    ID1,
-    ID2,
-    ID3,
-    ID4,
-    ID5,
-    duration1,
-    duration2,
-    duration3,
-    duration4,
-    duration5,
-    user_id,
-    query,
-):
-    buttons = [
-        [
+
+        
             InlineKeyboardButton(
                 text="1️⃣", callback_data=f"Yukki {ID1}|{duration1}|{user_id}"
             ),
