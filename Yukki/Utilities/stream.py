@@ -80,7 +80,7 @@ async def start_stream(
         await music_on(CallbackQuery.message.chat.id)
         await add_active_chat(CallbackQuery.message.chat.id)
         buttons = primary_markup(
-            videoid, CallbackQuery.from_user.id
+            videoid, CallbackQuery.from_user.id, duration_min, duration_min
         )
         await mystic.delete()
         cap:f"🏷️<b>__Judul__:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏱<b>__Durasi:__</b> {duration_min} \n💡<b>__Info:__</b> [Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{videoid}) \n🎧**__Atas permintaan:__** {CallbackQuery.from_user.mention}"
