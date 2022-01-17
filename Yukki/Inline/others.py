@@ -23,14 +23,16 @@ def others_markup(videoid, user_id):
         ],
         [
             InlineKeyboardButton(text="➕ ʏᴏᴜʀ ʟɪsᴛ​", callback_data=f"your_playlist {videoid}|{user_id})",
+            ),
             InlineKeyboardButton(text="➕ ɢʀᴏᴜᴘ ʟɪsᴛ​", callback_data=f"group_playlist {videoid}|{user_id})",
+            ),                     
         ],
         [
             InlineKeyboardButton(
-                text="⇩ ᴜɴᴅᴜʜ ᴀᴜᴅɪᴏ", callback_data=f"gets audio|{videoid}|{user_id}",
+                text="⇩ ᴜɴᴅᴜʜ ᴀᴜᴅɪᴏ", callback_data=f"gets audio|{videoid}|{user_id}"
             ),
             InlineKeyboardButton(
-                text="⇩ ᴜɴᴅᴜʜ ᴠɪᴅᴇᴏ", callback_data=f"gets video|{videoid}|{user_id}",
+                text="⇩ ᴜɴᴅᴜʜ ᴠɪᴅᴇᴏ", callback_data=f"gets video|{videoid}|{user_id}"
             ),
         ],
         [
