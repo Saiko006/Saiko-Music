@@ -5,7 +5,7 @@ from os import path
 from Yukki.Core.Logger.logs import LOG_CHAT
 
 from pyrogram import filters
-from pyrogram.types import (InlineKeyboardMarkup, InlineKeyboardButton, InputMediaPhoto, Message,
+from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto, Message,
                             Voice)
 from youtube_search import YoutubeSearch
 from youtubesearchpython import VideosSearch
@@ -32,7 +32,7 @@ from Yukki.Utilities.url import get_url
 from Yukki.Utilities.videostream import start_stream_video
 from Yukki.Utilities.youtube import (get_yt_info_id, get_yt_info_query,
                                      get_yt_info_query_slider)
-
+from pyrogram.types import InlineKeyboardButton
 
 UPDATES_CHANNEL = os.getenv("UPDATES_CHANNEL")
 from pyrogram.errors import UserNotParticipant
