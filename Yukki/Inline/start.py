@@ -169,12 +169,12 @@ def private_panel():
             ],
             [
                 InlineKeyboardButton(
-                    "❓ ʙᴀsɪᴄ ", callback_data="memekpantek"
+                    text="❓ ʙᴀsɪᴄ ", callback_data="memekpantek"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    " 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar",
+                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar",
                 )
             [
                 InlineKeyboardButton(
@@ -185,7 +185,7 @@ def private_panel():
                 ),
             [
                 InlineKeyboardButton("👑 ᴏᴡɴᴇʀ 👑", url="https://t.me/rumahakhirat"
-                ),
+                )
             ],
         ]
         return f"🎛  **This is {MUSIC_BOT_NAME}**", buttons
