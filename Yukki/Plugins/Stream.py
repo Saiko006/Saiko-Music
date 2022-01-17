@@ -50,6 +50,8 @@ __HELP__ = f"""
 @app.on_callback_query(filters.regex(pattern=r"izal"))
 async def izal(_, CallbackQuery):
     await CallbackQuery.answer()
+    chat_id = CallbackQuery.message.chat.id
+    user_id = CallbackQuery.from_user.id
     callback_data = CallbackQuery.data.strip()
     callback_request = callback_data.split(None, 1)[1]
     videoid, duration, user_id = callback_request.split("|")
@@ -57,10 +59,38 @@ async def izal(_, CallbackQuery):
         return await CallbackQuery.answer(
             "This is not for you! Search You Own Song.", show_alert=True
         )
-    buttons = url_markup2(videoid, duration, user_id)
-    await CallbackQuery.edit_message_reply_markup(
-        reply_markup=InlineKeyboardMarkup(buttons)
-    )                               
+    else:
+        await app.send_photo(
+            chat_id,
+            photo=thumbnail,
+            caption=f"""
+**🏷️ Judul:** [{title[:25]}](https://www.youtube.com/watch?v={videoid})
+**⏱  Durasi:** {duration_min}
+**💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})**
+**🎧 Atas permintaan:** [{CallbackQuery.from_user.first_name}](tg://user?id={CallbackQuery.from_user.id})
+**⚡️ Powered By:** [{BOT_NAME}](t.me/{BOT_USERNAME})
+""",
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="🎵 Play Music",
+                            callback_data=f"MusicStream {videoid}|{duration}|{user_id}",
+                        ),
+                        InlineKeyboardButton(
+                            text="Play Video 🎥",
+                            callback_data=f"Choose {videoid}|{duration}|{user_id}",
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="🗑 ᴄʟᴏsᴇ 🗑",
+                            callback_data=f"forceclose {videoid}|{user_id}",
+                        )
+                    ],
+                ]
+            ),
+        )
 
 
 @app.on_callback_query(filters.regex(pattern=r"Choose"))
