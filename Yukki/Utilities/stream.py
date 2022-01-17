@@ -89,7 +89,7 @@ async def start_stream(
 **💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})**
 **🎧 Atas permintaan:** [{CallbackQuery.from_user.first_name}](tg://user?id={CallbackQuery.from_user.id})
 **⚡️ Powered By:** [{MUSIC_BOT_NAME}](t.me/{BOT_USERNAME})
-""",
+"""
         final_output = await CallbackQuery.message.reply_photo(
             photo=thumb,
             reply_markup=InlineKeyboardMarkup(buttons),
