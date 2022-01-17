@@ -80,17 +80,17 @@ async def izal(_, CallbackQuery):
                 [
                     [
                         InlineKeyboardButton(
-                            text="🎵 Play Music",
+                            text="🎵 ᴘʟᴀʏ ᴍᴜsɪᴄ",
                             callback_data=f"MusicStream {videoid}|{duration}|{user_id}",
                         ),
                         InlineKeyboardButton(
-                            text="Play Video 🎥",
+                            text="ᴘʟᴀʏ ᴠɪᴅᴇᴏ  🎥",
                             callback_data=f"Choose {videoid}|{duration}|{user_id}",
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="🗑 ᴄʟᴏsᴇ 🗑",
+                            text=" ᴄʟᴏsᴇ ",
                             callback_data=f"forceclose {videoid}|{user_id}",
                         )
                     ],
