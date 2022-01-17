@@ -697,35 +697,24 @@ async def kontolanjing(_, CallbackQuery):
 """,
        disable_web_page_preview=True,
        reply_markup=InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton(
-                    "➕ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴛᴏ ɢʀᴏᴜᴘ ➕",
-                    url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="❓ ʙᴀsɪᴄ ", callback_data="memekpantek"
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar",
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                    text="📡ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"{SUPPORT_CHANNEL}"
-                ),
-                InlineKeyboardButton(
-                    text=" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 📨", url=f"{SUPPORT_GROUP}"
-                ),
-            ],
-            [
-                InlineKeyboardButton("👑 ᴏᴡɴᴇʀ 👑", url="https://t.me/rumahakhirat"
-                ),
-            ],
-        ]
-    )
-
+           [
+              [
+                  InlineKeyboardButton(
+                     "➕ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴛᴏ ɢʀᴏᴜᴘ​ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+              ],
+              [
+                  InlineKeyboardButton("❓ ʙᴀsɪᴄ", callback_data="memekpantek"),
+              ],
+              [
+                  InlineKeyboardButton(" ᴄᴏᴍᴍᴀɴᴅ 📚", callback_data="shikhar"),
+              ],
+              [
+                  InlineKeyboardButton("📡ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"https://t.me/musickekiniaan"),
+                  InlineKeyboardButton(" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 📨", url=f"https://t.me/Kekiniangroup"),
+              ],
+              [
+                  InlineKeyboardButton("👑 ᴏᴡɴᴇʀ 👑", url="https://t.me/rumahakhirat")
+              ],   
+          ]
+      ),
+  )
