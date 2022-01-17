@@ -642,18 +642,7 @@ async def down_playlisyts(_, CallbackQuery):
         reply_markup=InlineKeyboardMarkup(buttons)
     )
 
-
-@app.on_callback_query(filters.regex(pattern=r"good"))
-async def good(_, CallbackQuery):
-    await CallbackQuery.answer()
-    callback_data = CallbackQuery.data.strip()
-    callback_request = callback_data.split(None, 1)[1]
-    userid = CallbackQuery.from_user.id
-    videoid, user_id = callback_request.split("|")
-    buttons = download_markup(videoid, user_id)
-    await CallbackQuery.edit_message_reply_markup(
-        reply_markup=InlineKeyboardMarkup(buttons)
-    )
+# callback memek
     
 @app.on_callback_query(filters.regex("memekpantek"))
 async def memekpantek(_, CallbackQuery):
@@ -725,4 +714,18 @@ async def kontolanjing(_, CallbackQuery):
                 ),
             ],
         ]
+    )
+                                          
+  
+                                          
+@app.on_callback_query(filters.regex(pattern=r"good"))
+async def good(_, CallbackQuery):
+    await CallbackQuery.answer()
+    callback_data = CallbackQuery.data.strip()
+    callback_request = callback_data.split(None, 1)[1]
+    userid = CallbackQuery.from_user.id
+    videoid, user_id = callback_request.split("|")
+    buttons = download_markup(videoid, user_id)
+    await CallbackQuery.edit_message_reply_markup(
+        reply_markup=InlineKeyboardMarkup(buttons)
     )
