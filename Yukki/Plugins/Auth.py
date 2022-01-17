@@ -9,7 +9,7 @@ from Yukki.Decorators.admins import AdminActual
 from Yukki.Utilities.changers import (alpha_to_int, int_to_alpha,
                                       time_to_seconds)
 
-__MODULE__ = "Auth Users"
+__MODULE__ = "ᴀᴜᴛʜ ᴜsᴇʀs"
 __HELP__ = """
 
 **Note:**
@@ -28,7 +28,7 @@ __HELP__ = """
 
 
 @app.on_message(filters.command("auth") & filters.group)
-@AdminActual
+@authorized_users_only
 async def auth(_, message: Message):
     if not message.reply_to_message:
         if len(message.command) != 2:
@@ -97,7 +97,7 @@ async def auth(_, message: Message):
 
 
 @app.on_message(filters.command("unauth") & filters.group)
-@AdminActual
+@authorized_users_only
 async def whitelist_chat_func(_, message: Message):
     if not message.reply_to_message:
         if len(message.command) != 2:
@@ -153,6 +153,6 @@ async def authusers(_, message: Message):
                 j += 1
             except Exception:
                 continue
-            msg += f"{j}➤ {user}[`{user_id}`]\n"
+            msg += f"{j}➡️ {user}[`{user_id}`]\n"
             msg += f"    ┗ Added By:- {admin_name}[`{admin_id}`]\n\n"
         await m.edit_text(msg)
