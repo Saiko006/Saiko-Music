@@ -659,9 +659,9 @@ async def good(_, CallbackQuery):
     
 @app.on_callback_query(filters.regex("memekpantek"))
 async def memekpantek(_, CallbackQuery):
-     user_id = CallbackQuery.from_user.id
-     user_name = CallbackQuery.from_user.first_name
-     await CallbackQuery.edit_message_text(
+    user_id = CallbackQuery.from_user.id
+    user_name = CallbackQuery.from_user.first_name
+    await CallbackQuery.edit_message_text(
 f"""❓ **Panduan Dasar untuk menggunakan bot ini:**
 1.) Pertama, tambahkan saya ke grup Anda.
 2.) Kemudian, promosikan saya sebagai administrator dan berikan semua izin kecuali Admin Anonim.
