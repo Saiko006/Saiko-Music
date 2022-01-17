@@ -62,7 +62,7 @@ async def izal(_, CallbackQuery):
     else:
         await app.send_photo(
             chat_id,
-            photo=thumbnail,
+            photo=thumb,
             caption=f"""
 **🏷️ Judul:** [{title[:25]}](https://www.youtube.com/watch?v={videoid})
 **⏱  Durasi:** {duration_min}
