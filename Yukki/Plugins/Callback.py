@@ -654,3 +654,76 @@ async def good(_, CallbackQuery):
     await CallbackQuery.edit_message_reply_markup(
         reply_markup=InlineKeyboardMarkup(buttons)
     )
+    
+@app.on_callback_query(filters.regex("memekpantek"))
+async def memekpantek(_, CallbackQuery):
+     user_id = CallbackQuery.from_user.id
+     user_name = CallbackQuery.from_user.first_name
+     await CallbackQuery.edit_message_text(
+f"""❓ **Panduan Dasar untuk menggunakan bot ini:**
+1.) Pertama, tambahkan saya ke grup Anda.
+2.) Kemudian, promosikan saya sebagai administrator dan berikan semua izin kecuali Admin Anonim.
+3.) Setelah mempromosikan saya, ketik /reload di grup anda.
+4.) Terkadang, memuat ulang bot dengan menggunakan perintah /reload dapat membantu Anda memperbaiki beberapa masalah.
+5.) Nyalakan obrolan video terlebih dahulu sebelum mulai memutar musik.
+6.) Userbot/Asisten akan auto join ke grup anda saat play musik.
+💡 Jika Anda memiliki pertanyaan lanjutan tentang bot ini, Anda dapat menceritakannya di group support: @Kekiniangroup
+""",
+       reply_markup=InlineKeyboardMarkup(
+             [
+                [
+                    InlineKeyboardButton("🔙 Home", callback_data="kontolanjing")
+                ]
+             ]
+          ),
+       )
+
+@app.on_callback_query(filters.regex("kontolanjing"))
+async def kontolanjing(_, CallbackQuery):
+    user_id = CallbackQuery.from_user.id
+    user_name = CallbackQuery.from_user.first_name
+    rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
+    await CallbackQuery.edit_message_text(f"""
+**✨ Selamat Datang {rpk}!
+💬 [{MUSIC_BOT_NAME}](t.me/{BOT_USERNAME}) memungkinkan anda untuk memutar musik pada grup melalui obrolan suara yang baru di Telegram!
+💡 Untuk Mengetahui Semua Perintah Bot Dan Bagaimana Cara Kerja Nya Dengan Menekan Tombol » 📚 ᴄᴏᴍᴍᴀɴᴅ​!**
+""",
+       disable_web_page_preview=True,
+       reply_markup=InlineKeyboardMarkup(
+         buttons = [
+            [
+                InlineKeyboardButton(
+                    "➕ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴛᴏ ɢʀᴏᴜᴘ ➕",
+                    url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="❓ ʙᴀsɪᴄ ", callback_data="memekpantek"
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar",
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    text="📡ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"{SUPPORT_CHANNEL}"
+                ),
+                InlineKeyboardButton(
+                    text=" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 📨", url=f"{SUPPORT_GROUP}"
+                ),
+            ],
+            [
+                InlineKeyboardButton("👑 ᴏᴡɴᴇʀ 👑", url="https://t.me/rumahakhirat"
+                ),
+            ],
+        ]
+
+
+
+
+
+
+
