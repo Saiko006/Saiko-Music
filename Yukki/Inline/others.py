@@ -11,57 +11,57 @@ def others_markup(videoid, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🔎 Search Lyrics",
+                text="🔎 ʟʏʀɪᴄs",
                 callback_data=f"lyrics {videoid}|{user_id}",
             )
         ],
         [
+            InlineKeyboardButton(text="▷", callback_data=f"resumevc2"),
+            InlineKeyboardButton(text="II", callback_data=f"pausevc2"),
+            InlineKeyboardButton(text="‣‣I", callback_data=f"skipvc2"),
+            InlineKeyboardButton(text="▢", callback_data=f"stopvc2"),
+        ],
+        [
+            InlineKeyboardButton(text="➕ ʏᴏᴜʀ ʟɪsᴛ​", callback_data=f"your_playlist {videoid}|{user_id}'),
+            InlineKeyboardButton(text="➕ ɢʀᴏᴜᴘ ʟɪsᴛ​", callback_data=f"group_playlist {videoid}|{user_id}'),
+        ],
+        [
             InlineKeyboardButton(
-                text="✚ Your Playlist",
-                callback_data=f"your_playlist {videoid}|{user_id}",
+                text="⇩ ᴜɴᴅᴜʜ ᴀᴜᴅɪᴏ", callback_data=f"gets audio|{videoid}|{user_id}"
             ),
             InlineKeyboardButton(
-                text="✚ Group Playlist",
-                callback_data=f"group_playlist {videoid}|{user_id}",
+                text="⇩ ᴜɴᴅᴜʜ ᴠɪᴅᴇᴏ", callback_data=f"gets video|{videoid}|{user_id}"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⬇️ Download Audio/Video",
-                callback_data=f"audio_video_download {videoid}|{user_id}",
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="⬅️ Go Back",
-                callback_data=f"pr_go_back_timer {videoid}|{user_id}",
+                text="⬅️", callback_data=f"pr_go_back_timer {videoid}|{user_id}"
             ),
-            InlineKeyboardButton(
-                text="🗑 Close Menu",
-                callback_data=f"close",
-            ),
+            InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data=f"close"),
         ],
     ]
     return buttons
+
+
 
 
 def download_markup(videoid, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="⬇️ Get Audio",
+                text="⇩ ᴜɴᴅᴜʜ ᴀᴜᴅɪᴏ",
                 callback_data=f"gets audio|{videoid}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="⬇️ Get Video",
+                text="⇩ ᴜɴᴅᴜʜ ᴠɪᴅᴇᴏ",
                 callback_data=f"gets video|{videoid}|{user_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⬅️ Go Back", callback_data=f"goback {videoid}|{user_id}"
+                text="⬅️ ʙᴀᴄᴋ", callback_data=f"goback {videoid}|{user_id}"
             ),
-            InlineKeyboardButton(text="🗑 Close Menu", callback_data=f"close"),
+            InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data=f"close"),
         ],
     ]
     return buttons
