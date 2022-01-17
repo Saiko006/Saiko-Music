@@ -684,10 +684,15 @@ async def kontolanjing(_, CallbackQuery):
     user_name = CallbackQuery.from_user.first_name
     rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
     await CallbackQuery.edit_message_text(f"""
-**✨ Selamat Datang {rpk}!
-💬 [{MUSIC_BOT_NAME}](t.me/{BOT_USERNAME}) memungkinkan anda untuk memutar musik pada grup melalui obrolan suara yang baru di Telegram!
-💡 Untuk Mengetahui Semua Perintah Bot Dan Bagaimana Cara Kerja Nya Dengan Menekan Tombol » 📚 ᴄᴏᴍᴍᴀɴᴅ​!**
-""",
+    ✪ *👋 Hello {rpk} !*
+    ✪ ᴍʏ ɴᴀᴍᴇ ɪs ᴍᴜꜱɪᴄ ᴋᴇᴋɪɴɪᴀɴ [🤖](https://telegra.ph/file/ee46c0aba5c12e0d2bb71.jpg)
+    ✪ ɪ'ᴍ ᴀ ᴋᴇᴋɪɴɪᴀɴ ᴛʜᴇᴍᴇ ʙᴏᴛ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ & ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍɪɴɢ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇꜰᴜʟ ꜰᴇᴀᴛᴜʀᴇs!
+    ✪ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ᴢᴀʟ](https://t.me/rumahakhirat)
+    ────────────────────────
+    ✪ *ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ : /*
+    ────────────────────────
+    ✪ *Pᴏᴡᴇʀᴇᴅ 🔰 Bʏ: ᴍᴜꜱɪᴄ ᴋᴇᴋɪɴɪᴀɴ!*
+    """,
        disable_web_page_preview=True,
        reply_markup=InlineKeyboardMarkup(
         [
