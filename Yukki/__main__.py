@@ -229,11 +229,20 @@ async def initiate_bot():
     console.print(f"\n[red]Stopping Bot")
 
 
-home_text_pm = f"""Hello ,
-My name is {BOT_NAME}.
-A Telegram Music+Video Streaming bot with some useful features.
-
-All commands can be used with: / """
+home_text_pm = f"""
+✪ *👋 Hello {first_name} !*
+✪ ᴍʏ ɴᴀᴍᴇ ɪs ᴍᴜꜱɪᴄ ᴋᴇᴋɪɴɪᴀɴ [🤖](https://telegra.ph/file/ee46c0aba5c12e0d2bb71.jpg)
+✪ ɪ'ᴍ ᴀ ᴋᴇᴋɪɴɪᴀɴ ᴛʜᴇᴍᴇ ʙᴏᴛ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ & ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍɪɴɢ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇꜰᴜʟ ꜰᴇᴀᴛᴜʀᴇs!
+ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ᴢᴀʟ](https://t.me/rumahakhirat)
+────────────────────────
+✪ *ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ : /*
+────────────────────────
+✪ *Pᴏᴡᴇʀᴇᴅ 🔰 Bʏ: ᴍᴜꜱɪᴄ ᴋᴇᴋɪɴɪᴀɴ!*
+""".format(
+            first_name=name
+        ),
+        keyboard,
+    )
 
 
 @app.on_message(filters.command("help") & filters.private)
