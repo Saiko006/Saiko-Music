@@ -724,11 +724,5 @@ async def kontolanjing(_, CallbackQuery):
                 InlineKeyboardButton("👑 ᴏᴡɴᴇʀ 👑", url="https://t.me/rumahakhirat"
                 ),
             ],
-        ]   
-
-
-
-
-
-
-
+        ]
+    )
