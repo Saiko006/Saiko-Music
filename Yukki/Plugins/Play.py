@@ -1,4 +1,5 @@
 import asyncio
+import os
 from os import path
 
 from Yukki.Core.Logger.logs import LOG_CHAT
@@ -31,7 +32,51 @@ from Yukki.Utilities.videostream import start_stream_video
 from Yukki.Utilities.youtube import (get_yt_info_id, get_yt_info_query,
                                      get_yt_info_query_slider)
 
+
+UPDATES_CHANNEL = os.getenv("UPDATES_CHANNEL")
+from pyrogram.errors import UserNotParticipant
+
 loop = asyncio.get_event_loop()
+
+
+DISABLED_GROUPS = []
+useer = "NaN"
+
+
+@app.on_message(filters.command(["player", f"player@{BOT_USERNAME}"])& ~filters.edited & ~filters.bot & ~filters.private)
+@AdminRightsCheck
+async def music_onoff(_, message: Message):
+    user_id = message.from_user.id
+    chat_title = message.chat.title
+    global DISABLED_GROUPS
+    try:
+        user_id
+    except:
+        return
+    if len(message.command) != 2:
+        return await message.reply_text(
+            "😕 **Ngetik yang bener ngentot.**\n\n» Coba `/player on` atau `/player off`"
+        )
+    status = message.text.split(None, 1)[1]
+    message.chat.id
+    if status in ("ON", "on", "On"):
+        lel = await message.reply("`Processing...`")
+        if not message.chat.id in DISABLED_GROUPS:
+            return await lel.edit("» **Music Aktif Dek**")
+        DISABLED_GROUPS.remove(message.chat.id)
+        await lel.edit(f"✅ **Music Aktif Di {message.chat.title}**\n\n• Sekarang Bisa Play 🙂...")
+
+    elif status in ("OFF", "off", "Off"):
+        lel = await message.reply("`Processing...`")
+
+        if message.chat.id in DISABLED_GROUPS:
+            return await lel.edit("» **Musicnya Ga Aktif Tolol !**")
+        DISABLED_GROUPS.append(message.chat.id)
+        await lel.edit(f"✅ **Music Dimatiin Di {message.chat.title}**\n\n• Biar Ga Nambah Tolol Lu Musickan Terus...")
+    else:
+        return await message.reply_text(
+            "😕 **Ngetik yang bener ngentot.**\n\n» Coba `/player on` atau `/player off`"
+        )
       
       
 @app.on_message(
@@ -41,7 +86,53 @@ loop = asyncio.get_event_loop()
 @PermissionCheck
 @AssistantAdd
 async def play(_, message: Message):
+        chat_id = message.chat.id
+    user_id = message.from_user.id
+    user_name = message.from_user.first_name
+    rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
+    update_channel = UPDATES_CHANNEL
+    if update_channel:
+        try:
+            user = await app.get_chat_member(update_channel, user_id)
+            if user.status == "banned":
+                await app.send_message(
+                    chat_id,
+                    text=f"**❌ {rpk} anda telah di blokir dari grup dukungan\n\n🔻 Klik tombol dibawah untuk menghubungi admin grup**",
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton(
+                                    "✨ ᴢᴀʟ-ᴇx  ✨",
+                                    url="https://t.me/rumahakhirat",
+                                )
+                            ]
+                        ]
+                    ),
+                    parse_mode="markdown",
+                    disable_web_page_preview=True,
+                )
+                return
+        except UserNotParticipant:
+            await app.send_message(
+                chat_id,
+                text=f"**👋🏻 Halo {rpk}\nᴜɴᴛᴜᴋ ᴍᴇɴɢʜɪɴᴅᴀʀɪ ᴘᴇɴɢɢᴜɴᴀᴀɴ ʏᴀɴɢ ʙᴇʀʟᴇʙɪʜᴀɴ ʙᴏᴛ ɪɴɪ ᴅɪ ᴋʜᴜsᴜsᴋᴀɴ ᴜɴᴛᴜᴋ ʏᴀɴɢ sᴜᴅᴀʜ ᴊᴏɪɴ ᴅɪ ᴄʜᴀɴɴᴇʟ ᴋᴀᴍɪ!​!**",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton(
+                                "💬 ᴊᴏɪɴ ᴄʜ sᴜᴘᴘᴏʀᴛ 💬",
+                                url=f"https://t.me/{update_channel}",
+                            )
+                        ]
+                    ]
+                ),
+                parse_mode="markdown",
+            )
+            return       
     await message.delete()
+    global useer
+    if message.chat.id in DISABLED_GROUPS:
+        return await message.reply_text(f"😕 **Tolol {message.from_user.mention}, Musicnya Dimatiin Sama Admin**")
     if message.chat.id not in db_mem:
         db_mem[message.chat.id] = {}
     if message.sender_chat:
