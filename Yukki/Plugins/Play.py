@@ -5,7 +5,7 @@ from os import path
 from Yukki.Core.Logger.logs import LOG_CHAT
 
 from pyrogram import filters
-from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto, Message,
+from pyrogram.types import (InlineKeyboardMarkup, InlineKeyboardButton, InputMediaPhoto, Message,
                             Voice)
 from youtube_search import YoutubeSearch
 from youtubesearchpython import VideosSearch
