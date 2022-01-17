@@ -87,7 +87,7 @@ async def music_onoff(_, message: Message):
 @PermissionCheck
 @AssistantAdd
 async def play(_, message: Message):
-        chat_id = message.chat.id
+    chat_id = message.chat.id
     user_id = message.from_user.id
     user_name = message.from_user.first_name
     rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
