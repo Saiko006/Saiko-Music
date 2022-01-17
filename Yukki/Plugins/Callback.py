@@ -4,7 +4,7 @@ import random
 from asyncio import QueueEmpty
 
 from pyrogram import filters
-from pyrogram.types import InlineKeyboardMarkup
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from config import get_queue
 from Yukki import BOT_USERNAME, MUSIC_BOT_NAME, app, db_mem
