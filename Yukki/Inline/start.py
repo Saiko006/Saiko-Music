@@ -31,7 +31,7 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
                 ),
             ],
             [
@@ -45,7 +45,7 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
                 ),
             ],
             [
@@ -64,7 +64,7 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="🗂 Helper Commands Menu", callback_data="shikhar"
+                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
                 ),
             ],
             [
