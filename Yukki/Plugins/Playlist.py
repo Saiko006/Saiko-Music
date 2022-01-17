@@ -15,7 +15,7 @@ from Yukki.Inline import (add_genre_markup, check_genre_markup, check_markup,
                           others_markup, play_genre_playlist, playlist_markup,
                           third_playlist_markup)
 
-__MODULE__ = "Playlist"
+__MODULE__ = "ᴘʟᴀʏʟɪsᴛ"
 __HELP__ = """
 
 
