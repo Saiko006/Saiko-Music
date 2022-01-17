@@ -5,7 +5,7 @@ from Yukki import SUDOERS, app
 from Yukki.Database import (_get_authusers, delete_authuser, get_authuser,
                             get_authuser_count, get_authuser_names,
                             save_authuser)
-from Yukki.Decorators.admins import AdminActual
+from Yukki.Decorators.authorized import authorized_users_only
 from Yukki.Utilities.changers import (alpha_to_int, int_to_alpha,
                                       time_to_seconds)
 
