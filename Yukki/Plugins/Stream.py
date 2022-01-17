@@ -74,7 +74,7 @@ async def izal(_, CallbackQuery):
 **⏱  Durasi:** {duration_min}
 **💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})**
 **🎧 Atas permintaan:** [{CallbackQuery.from_user.first_name}](tg://user?id={CallbackQuery.from_user.id})
-**⚡️ Powered By:** [{BOT_NAME}](t.me/{BOT_USERNAME})
+**⚡️ Powered By:** [{MUSIC_BOT_NAME}](t.me/{BOT_USERNAME})
 """,
             reply_markup=InlineKeyboardMarkup(
                 [
