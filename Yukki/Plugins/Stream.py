@@ -59,10 +59,16 @@ async def izal(_, CallbackQuery):
         return await CallbackQuery.answer(
             "This is not for you! Search You Own Song.", show_alert=True
         )
+    await CallbackQuery.message.delete()
+    title, duration_min, duration_sec, thumbnail = get_yt_info_id(videoid)
+    if duration_sec > DURATION_LIMIT:
+        return await CallbackQuery.message.reply_text(
+            f"**Duration Limit Exceeded**\n\n**Allowed Duration: **{DURATION_LIMIT_MIN} minute(s)\n**Received Duration:** {duration_min} minute(s)"
+        )
     else:
         await app.send_photo(
             chat_id,
-            photo=thumb,
+            photo=thumbnail,
             caption=f"""
 **🏷️ Judul:** [{title[:25]}](https://www.youtube.com/watch?v={videoid})
 **⏱  Durasi:** {duration_min}
