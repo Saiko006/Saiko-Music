@@ -176,6 +176,7 @@ def private_panel():
                 InlineKeyboardButton(
                     text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar",
                 )
+            ],
             [
                 InlineKeyboardButton(
                     text="📡 ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"{SUPPORT_CHANNEL}"
@@ -183,9 +184,10 @@ def private_panel():
                 InlineKeyboardButton(
                     text=" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 📨", url=f"{SUPPORT_GROUP}"
                 ),
+            ],
             [
                 InlineKeyboardButton("👑 ᴏᴡɴᴇʀ 👑", url="https://t.me/rumahakhirat"
-                )
+                ),
             ],
         ]
         return f"🎛  **This is {MUSIC_BOT_NAME}**", buttons
