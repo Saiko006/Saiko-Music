@@ -690,7 +690,7 @@ async def kontolanjing(_, CallbackQuery):
 """,
        disable_web_page_preview=True,
        reply_markup=InlineKeyboardMarkup(
-         buttons = [
+        [
             [
                 InlineKeyboardButton(
                     "➕ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴛᴏ ɢʀᴏᴜᴘ ➕",
@@ -719,7 +719,7 @@ async def kontolanjing(_, CallbackQuery):
                 InlineKeyboardButton("👑 ᴏᴡɴᴇʀ 👑", url="https://t.me/rumahakhirat"
                 ),
             ],
-        ]
+        ]   
 
 
 
