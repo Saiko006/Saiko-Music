@@ -33,9 +33,9 @@ def AssistantAdd(mystic):
             ran_ass
         )
         try:
-            b = await app.get_chat_member(message.chat.id , ASSID) 
+            b = await app.get_chat_member(message.chat.id , ASS_ID) 
             if b.status == "kicked":
-                await app.unban_chat_member(message.chat.id, ASSID)
+                await app.unban_chat_member(message.chat.id, ASS_ID)
                 invite_link = await app.export_chat_invite_link(message.chat.id)
                 if "+" in invite_link:
                     kontol = (invite_link.replace("+", "")).split("t.me/")[1]
