@@ -200,7 +200,7 @@ def primary_markup(videoid, user_id, current_time, total_time):
     return buttons
 
 
-def timer_markup(videoid, user_id):
+def timer_markup(videoid, user_id, current_time, total_time):
     buttons = [
         [
             InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ​", url="https://t.me/musickekiniaan"),
@@ -215,7 +215,7 @@ def timer_markup(videoid, user_id):
     return buttons
 
 
-def audio_markup(videoid, user_id):
+def audio_markup(videoid, user_id, current_time, total_time):
     if videoid not in db_mem:
         db_mem[videoid] = {}
     db_mem[videoid]["check"] = 2
@@ -233,7 +233,7 @@ def audio_markup(videoid, user_id):
     return buttons
 
 
-def audio_timer_markup_start(videoid, user_id):
+def audio_timer_markup_start(videoid, user_id, current_time, total_time):
     buttons = [
         [
             InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ​", url="https://t.me/musickekiniaan"),
