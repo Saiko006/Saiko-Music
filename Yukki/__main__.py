@@ -45,15 +45,13 @@ async def initiate_bot():
             for chat in chats:
                 chat_id = int(chat["chat_id"])
                 await remove_active_video_chat(chat_id)
-        except Exception as e:
+        except Exception :
     await app.send_message(LOG_GROUP_ID, f"**{BOT_NAME} Music is activated.**")
     print("[Info]: Started...")
     if AUTO_LEAVE:
         print("[ INFO ] STARTED SCHEDULER")
         scheduler.configure(timezone=pytz.utc)
-        scheduler.add_job(
-            leave_from_inactive_call, "interval", seconds=AUTO_LEAVE
-        )
+        scheduler.add_job(leave_from_inactive_call, "interval", seconds=99999)
         scheduler.start()
             pass
         try:
