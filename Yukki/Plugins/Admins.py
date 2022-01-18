@@ -20,7 +20,7 @@ from Yukki.Database import (is_active_chat, is_music_playing, music_off,
                             music_on, remove_active_chat,
                             remove_active_video_chat)
 from Yukki.Decorators.admins import AdminRightsCheck
-from Yukki.Deocrators.authorized import authorized_users_only
+from Yukki.Decorators.authorized import authorized_users_only
 from Yukki.Decorators.checker import checker, checkerCB
 from Yukki.Inline import audio_markup, primary_markup, secondary_markup2
 from Yukki.Utilities.changers import time_to_seconds
