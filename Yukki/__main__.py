@@ -75,7 +75,7 @@ async def initiate_bot():
                         imported_module.__MODULE__.lower()
                     ] = imported_module
             console.print(
-                f">> [bold kcyan]Successfully imported: [green]{all_module}.py"
+                f">> [bold cyan]Successfully imported: [green]{all_module}.py"
             )
         console.print("")
         status.update(
