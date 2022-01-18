@@ -40,7 +40,7 @@ Only for Sudo Users.
 /logger [enable / disable]
 - When enabled Bot logs the searched queries in logger group.
 
-/clean
+/cleandb
 - Clean Temp Files and Logs.
 """
 # Add Sudo Users!
