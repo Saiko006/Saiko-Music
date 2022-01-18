@@ -31,7 +31,7 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", url="https://t.me/{BOT_USERNAME}?start=help"
+                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", url=f"https://t.me/{BOT_USERNAME}?start=help"
                 ),
             ],
             [
@@ -45,7 +45,7 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", url="https://t.me/{BOT_USERNAME}?start=help"
+                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", url=f"https://t.me/{BOT_USERNAME}?start=help"
                 ),
             ],
             [
@@ -64,7 +64,7 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
+                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", url=f"https://t.me/{BOT_USERNAME}?start=help"
                 ),
             ],
             [
@@ -83,7 +83,7 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", url="https://t.me/{BOT_USERNAME}?start=help
+                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", url=f"https://t.me/{BOT_USERNAME}?start=help"
                 ),
             ],
             [
