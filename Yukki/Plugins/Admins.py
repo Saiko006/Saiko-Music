@@ -283,7 +283,7 @@ async def admins(_, message: Message):
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
                     caption=(
-                        f"<b>__Skipped Voice Chat__</b>\n\n🏷<b>Judul:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳<b>__Duration:__</b> {duration_min} Mins\n👤**__Requested by:__** {mention}"
+                        f"<b>__Skipped Voice Chat__</b>\n\n🏷<b>Judul:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏱️<b>__Durasi:__</b> {duration_min} Mins\n🎧**_Atas permintaan:__** {mention}"
                     ),
                 )
                 os.remove(thumb)
