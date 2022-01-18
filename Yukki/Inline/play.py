@@ -8,17 +8,17 @@ def url_markup2(videoid, duration, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🎵 Play Music",
-                callback_data=f"MusicStream {videoid}|{duration}|{user_id}",
+                text="🎵 ᴘʟᴀʏ ᴍᴜsɪᴄ",
+                callback_data=f"Yukki {videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="🎥 Play Video",
+                text="ᴘʟᴀʏ ᴠɪᴅᴇᴏ 🎥",
                 callback_data=f"Choose {videoid}|{duration}|{user_id}",
             ),
         ],        
         [
             InlineKeyboardButton(
-                text="🗑 Close Search",
+                text=" ᴄʟᴏsᴇ ",
                 callback_data=f"forceclose {videoid}|{user_id}",
             )
         ],
@@ -30,17 +30,17 @@ def url_markup(videoid, duration, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🎵 Play Music",
+                text="🎵 ᴘʟᴀʏ ᴍᴜsɪᴄ",
                 callback_data=f"MusicStream {videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="🎥 Play Video",
+                text="ᴘʟᴀʏ ᴠɪᴅᴇᴏ 🎥",
                 callback_data=f"Choose {videoid}|{duration}|{user_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="🗑 Close Search",
+                text=" ᴄʟᴏsᴇ ",
                 callback_data=f"forceclose {videoid}|{user_id}",
             )
         ],
@@ -154,9 +154,9 @@ def search_markup2(
 def secondary_markup(videoid, user_id):
     buttons = [
         [
-            InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ​", url="https://t.me/musickekiniaan"),
+            InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ ", url="https://t.me/musickekiniaan"),
             InlineKeyboardButton(
-                text="ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
+                text=" ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
             ),
         ],
         [      
@@ -188,9 +188,9 @@ def primary_markup(videoid, user_id, current_time, total_time):
     db_mem[videoid]["check"] = 2
     buttons = [
         [
-            InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ​", url="https://t.me/musickekiniaan"),
+            InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ ", url="https://t.me/musickekiniaan"),
             InlineKeyboardButton(
-                text="ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
+                text=" ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
             ),
         ],
         [      
@@ -203,9 +203,9 @@ def primary_markup(videoid, user_id, current_time, total_time):
 def timer_markup(videoid, user_id, current_time, total_time):
     buttons = [
         [
-            InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ​", url="https://t.me/musickekiniaan"),
+            InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ ", url="https://t.me/musickekiniaan"),
             InlineKeyboardButton(
-                text="ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
+                text=" ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
             ),
         ],
         [      
@@ -221,9 +221,9 @@ def audio_markup(videoid, user_id, current_time, total_time):
     db_mem[videoid]["check"] = 2
     buttons = [
         [
-            InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ​", url="https://t.me/musickekiniaan"),
+            InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ ", url="https://t.me/musickekiniaan"),
             InlineKeyboardButton(
-                text="ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
+                text=" ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
             ),
         ],
         [      
@@ -236,9 +236,9 @@ def audio_markup(videoid, user_id, current_time, total_time):
 def audio_timer_markup_start(videoid, user_id, current_time, total_time):
     buttons = [
         [
-            InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ​", url="https://t.me/musickekiniaan"),
+            InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ ", url="https://t.me/musickekiniaan"),
             InlineKeyboardButton(
-                text="ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
+                text=" ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
             ),
         ],
         [      
