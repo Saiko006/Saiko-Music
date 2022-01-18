@@ -9,6 +9,14 @@ from Yukki import BOT_USERNAME, SUDOERS, app
 from Yukki.Decorators.admins import AdminRightsCheck as authorized_users_only
 from config import SUP_GROUP
 
+__MODULE__ = "ʙᴜɢ"
+__HELP__ = """
+
+/bug [To report a problem]
+- ex : /bug bot silent
+"""
+
+
 
 # ganti nama dan username telegram kalian
 OWNER_NAME = "ᴢᴀʟ"
