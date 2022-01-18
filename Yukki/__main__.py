@@ -75,7 +75,7 @@ async def initiate_bot():
                         imported_module.__MODULE__.lower()
                     ] = imported_module
             console.print(
-                f">> [bold cyan]Successfully imported: [green]{all_module}.py"
+                f">> [bold kcyan]Successfully imported: [green]{all_module}.py"
             )
         console.print("")
         status.update(
@@ -115,8 +115,8 @@ async def initiate_bot():
             console.print(f"\n[red]Stopping Bot")
             return
         try:
-            await ASS_CLI_1.join_chat("OfficialYukki")
-            await ASS_CLI_1.join_chat("YukkiSupport")
+            await ASS_CLI_1.join_chat("musickekiniaan")
+            await ASS_CLI_1.join_chat("Kekiniangroup")
         except:
             pass
         console.print(f"├[red] Assistant 1 Started as {ASSNAME1}!")
@@ -230,7 +230,7 @@ async def initiate_bot():
 
 
 home_text_pm = f"""
-**✪ 👋 Hello {umention} !
+**✪ 👋 Hello !
 ✪ ᴍʏ ɴᴀᴍᴇ ɪs ᴍᴜꜱɪᴄ ᴋᴇᴋɪɴɪᴀɴ [🤖](https://telegra.ph/file/ee46c0aba5c12e0d2bb71.jpg)
 ✪ ɪ'ᴍ ᴀ ᴋᴇᴋɪɴɪᴀɴ ᴛʜᴇᴍᴇ ʙᴏᴛ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ & ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍɪɴɢ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇꜰᴜʟ ꜰᴇᴀᴛᴜʀᴇs!
 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ᴢᴀʟ](https://t.me/rumahakhirat)
