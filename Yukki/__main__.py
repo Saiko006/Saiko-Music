@@ -46,6 +46,8 @@ async def initiate_bot():
                 chat_id = int(chat["chat_id"])
                 await remove_active_video_chat(chat_id)
         except Exception :
+            console.print("[red] Error while clearing Mongo DB.")
+        console.print("└ [green]MongoDB Cleared Successfully!\n\n")
     await app.send_message(LOG_GROUP_ID, f"**{BOT_NAME} Music is activated.**")
     print("[Info]: Started...")
     if AUTO_LEAVE:
