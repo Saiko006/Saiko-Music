@@ -52,24 +52,24 @@ def AssistantAdd(mystic):
                 await ASS_ACC.join_chat(link_bokep)
                 await message.reply(f"{ASSNAME} Berhasil Bergabung",) 
                 await remove_active_chat(chat_id)
+            except UserAlreadyParticipant:
+                pass
+            except Exception as e:
+                return await message.reply_text(
+                        f"""
+**Asisten Gagal Bergabung**
+**Alasan**:{e}
+"""
+                    )
         except UserAlreadyParticipant:
             pass
         except Exception as e:
             return await message.reply_text(
-                    f"""
+                f"""
 **Asisten Gagal Bergabung**
 **Alasan**:{e}
 """
                 )
-        except UserAlreadyParticipant:
-        pass
-    except Exception as e:
-        return await message.reply_text(
-            f"""
-**Asisten Gagal Bergabung**
-**Alasan**:{e}
-"""
-            )
             return
         return await mystic(_, message)
 
