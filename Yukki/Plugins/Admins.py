@@ -20,6 +20,7 @@ from Yukki.Database import (is_active_chat, is_music_playing, music_off,
                             music_on, remove_active_chat,
                             remove_active_video_chat)
 from Yukki.Decorators.admins import AdminRightsCheck
+from Yukki.Deocrators.authorized import authorized_users_only
 from Yukki.Decorators.checker import checker, checkerCB
 from Yukki.Inline import audio_markup, primary_markup, secondary_markup2
 from Yukki.Utilities.changers import time_to_seconds
@@ -196,7 +197,7 @@ async def admins(_, message: Message):
                         photo="Utils/Telegram.JPEG",
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=(
-                            f"<b>__Skipped Video Chat__</b>\n\n👤**__Requested by:__** {mention}"
+                            f"<b>__Skipped Video Chat__</b>\n\n🎧**__Atas permintaan:__** {mention}"
                         ),
                     )
                     await mystic.delete()
@@ -236,7 +237,7 @@ async def admins(_, message: Message):
                         photo=thumb,
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=(
-                            f"<b>__Skipped Video Chat__</b>\n\n🎥<b>__Started Video Playing:__ </b> [{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n👤**__Requested by:__** {mention}"
+                            f"<b>__Skipped Video Chat__</b>\n\n🏷<b>__Judul:__ </b> [{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n🎧**__Atas permintaan:__** {mention}"
                         ),
                     )
                     await mystic.delete()
@@ -282,7 +283,7 @@ async def admins(_, message: Message):
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
                     caption=(
-                        f"<b>__Skipped Voice Chat__</b>\n\n🎥<b>__Started Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳<b>__Duration:__</b> {duration_min} Mins\n👤**__Requested by:__** {mention}"
+                        f"<b>__Skipped Voice Chat__</b>\n\n🏷<b>Judul:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳<b>__Duration:__</b> {duration_min} Mins\n👤**__Requested by:__** {mention}"
                     ),
                 )
                 os.remove(thumb)
@@ -295,3 +296,14 @@ async def admins(_, message: Message):
                     message.from_user.id,
                     aud,
                 )
+                
+                
+# reload asu
+@app.on_message(filters.command(["reload", f"reload@{BOT_USERNAME}"]))
+@authorized_users_only
+async def reload(client, message):
+     chat_id = message.chat.id
+     await client.send_message(
+     chat_id,
+     f"✅ **Bot** telah diperbarui ulang sayang\n\n✅ **Daftar Admin** telah di perbarui."
+)
