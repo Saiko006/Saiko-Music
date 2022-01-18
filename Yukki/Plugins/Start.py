@@ -108,7 +108,6 @@ async def useradd(_, message: Message):
 
 
 @app.on_message(filters.command("settings") & filters.group)
-@PermissionCheck
 async def settings(_, message: Message):
     c_id = message.chat.id
     _check = await get_start(c_id, "assistant")
