@@ -270,7 +270,7 @@ def usermarkup():
                 text="📋 Authorized Users Lists", callback_data="USERLIST"
             )
         ],
-        [InlineKeyboardButton(text="🔙 Go back", callback_data="settingm")],
+        [InlineKeyboardButton(text="🔙 Back", callback_data="settingm")],
     ]
     return f"⚙️  **{MUSIC_BOT_NAME} sᴇᴛᴛɪɴɢs**", buttons
 
@@ -287,4 +287,4 @@ def dashmarkup():
         ],
         [InlineKeyboardButton(text="🔙 Go back", callback_data="settingm")],
     ]
-    return f"⚙️ **{MUSIC_BOT_NAME} Se**", buttons
+    return f"⚙️ **{MUSIC_BOT_NAME} sᴇᴛᴛɪɴɢs**", buttons
