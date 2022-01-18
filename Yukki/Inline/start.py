@@ -31,7 +31,7 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
+                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", url="https://t.me/{BOT_USERNAME}?start=help"
                 ),
             ],
             [
@@ -45,7 +45,7 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
+                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", url="https://t.me/{BOT_USERNAME}?start=help"
                 ),
             ],
             [
@@ -55,7 +55,7 @@ def start_pannel():
             ],
             [
                 InlineKeyboardButton(
-                    text=" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 📨", url=f"{SUPPORT_GROUP}"
+                    text=" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ📨 ", url=f"{SUPPORT_GROUP}"
                 ),
             ],
         ]
@@ -74,7 +74,7 @@ def start_pannel():
             ],
             [
                 InlineKeyboardButton(
-                    text="📡ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"{SUPPORT_CHANNEL}"
+                    text=" 📡ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"{SUPPORT_CHANNEL}"
                 ),
             ],
         ]
@@ -83,7 +83,7 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
+                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", url="https://t.me/{BOT_USERNAME}?start=help
                 ),
             ],
             [
@@ -169,7 +169,7 @@ def private_panel():
             ],
             [
                 InlineKeyboardButton(
-                    text="❓ʙᴀsɪᴄ ", callback_data="memekpantek"
+                    text=" ❓ʙᴀsɪᴄ ", callback_data="memekpantek"
                 ),
             ],
             [
