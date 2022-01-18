@@ -46,22 +46,20 @@ def AssistantAdd(mystic):
                 f"{ubot.first_name} Berhasil Bergabung",
             )
         except UserNotParticipant:
-        try:
-            invite_link = await app.export_chat_invite_link(message.chat.id)
-            if "+" in invite_link:
-                invite = (invite_link.replace("+", "")).split("t.me/")[1]
-                link_invite = f"https://t.me/joinchat/{invite}"
-            await ASS_ACC.join_chat(link_invite)
-            await app.send_message(
+            try:
+                invite_link = await app.export_chat_invite_link(message.chat.id)
+                if "+" in invite_link:
+                    invite = (invite_link.replace("+", "")).split("t.me/")[1]
+                    link_invite = f"https://t.me/joinchat/{invite}"
+                await ASS_ACC.join_chat(link_invite)
+                await app.send_message(
                 message.chat.id,
-                f"{ubot.first_name} Berhasil Bergabung",
-            )
-        except UserAlreadyParticipant:
-            pass
-        except Exception as e:
-            return await message.reply_text(
-                f"❌ **@{ubot.username} Assistant gagal bergabung**\n\n**Alasan**: `{e}`"
-            )                     
+                f"{ubot.first_name} Berhasil Bergabung",)
+            except UserAlreadyParticipant:
+                pass
+            except Exception as e:
+                return await message.reply_text(
+                f"❌ **@{ubot.username} Assistant gagal bergabung**\n\n**Alasan**: `{e}`")                                    
             return
         return await mystic(_, message)
 
