@@ -478,6 +478,10 @@ async def playout_end(pytgclients, chat_id):
             await remove_active_chat(chat_id)
             await remove_active_video_chat(chat_id)
             await pytgclients.leave_group_call(chat_id)
+            await app.send_message(
+                chat_id,
+                "**✅ Antrian kosong.\n\n• Assistant meninggalkan obrolan suara**",
+            )
         else:
             afk = Queues.get(chat_id)["file"]
             finxx = f"{afk[0]}{afk[1]}{afk[2]}"
