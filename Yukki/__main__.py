@@ -297,7 +297,7 @@ async def start_command(_, message):
         if name == "help":
             text, keyboard = await help_parser(message.from_user.mention)
             await message.delete()
-            return await app.send_text(
+            return await app.send_message(
                 message.chat.id,
                 text,
                 reply_markup=keyboard,
