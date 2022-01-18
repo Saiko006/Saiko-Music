@@ -33,33 +33,43 @@ def AssistantAdd(mystic):
             ran_ass
         )
         try:
-            b = await app.get_chat_member(message.chat.id, ASS_ID)      
-            if b.status == "banned":
-                await app.unban_chat_member(message.chat.id, ubot.id)
-            invite_link = await app.export_chat_invite_link(message.chat.id)
-            if "+" in invite_link:
-                invite = (invite_link.replace("+", "")).split("t.me/")[1]
-                link_invite = f"https://t.me/joinchat/{invite}"
-            await ASS_ACC.join_chat(link_invite)
-            await app.send_message(
-                message.chat.id,
-                f"{ubot.first_name} Berhasil Bergabung",
-            )
-        except UserNotParticipant:
+            b = await app.get_chat_member(message.chat.id , ASSID) 
+            if b.status == "kicked":
+                await app.unban_chat_member(message.chat.id, ASSID)
+                invite_link = await app.export_chat_invite_link(message.chat.id)
+                if "+" in invite_link:
+                    kontol = (invite_link.replace("+", "")).split("t.me/")[1]
+                    link_bokep = f"https://t.me/joinchat/{kontol}"
+            await ASS_ACC.join_chat(link_bokep)
+            await message.reply(f"{ASSNAME} Berhasil Bergabung",) 
+            await remove_active_chat(chat_id)
+        except UserNotParticipant::
             try:
                 invite_link = await app.export_chat_invite_link(message.chat.id)
                 if "+" in invite_link:
-                    invite = (invite_link.replace("+", "")).split("t.me/")[1]
-                    link_invite = f"https://t.me/joinchat/{invite}"
-                await ASS_ACC.join_chat(link_invite)
-                await app.send_message(
-                message.chat.id,
-                f"{ubot.first_name} Berhasil Bergabung",)
-            except UserAlreadyParticipant:
-                pass
-            except Exception as e:
-                return await message.reply_text(
-                f"❌ **@{ubot.username} Assistant gagal bergabung**\n\n**Alasan**: `{e}`")                                    
+                    kontol = (invite_link.replace("+", "")).split("t.me/")[1]
+                    link_bokep = f"https://t.me/joinchat/{kontol}"
+                await ASS_ACC.join_chat(link_bokep)
+                await message.reply(f"{ASSNAME} Berhasil Bergabung",) 
+                await remove_active_chat(chat_id)
+        except UserAlreadyParticipant:
+            pass
+        except Exception as e:
+            return await message.reply_text(
+                    f"""
+**Asisten Gagal Bergabung**
+**Alasan**:{e}
+"""
+                )
+        except UserAlreadyParticipant:
+        pass
+    except Exception as e:
+        return await message.reply_text(
+            f"""
+**Asisten Gagal Bergabung**
+**Alasan**:{e}
+"""
+            )
             return
         return await mystic(_, message)
 
