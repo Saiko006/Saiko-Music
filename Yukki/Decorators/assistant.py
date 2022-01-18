@@ -43,7 +43,7 @@ def AssistantAdd(mystic):
                 await ASS_ACC.join_chat(link_bokep)
                 await message.reply(f"{ASSNAME} Berhasil Bergabung",) 
                 await remove_active_chat(chat_id)
-        except UserNotParticipant::
+        except UserNotParticipant:
             try:
                 invite_link = await app.export_chat_invite_link(message.chat.id)
                 if "+" in invite_link:
