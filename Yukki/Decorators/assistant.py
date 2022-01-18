@@ -3,11 +3,11 @@ from typing import Dict, List, Union
 
 from pyrogram import filters
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
-from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
-                            InlineKeyboardMarkup, InputMediaPhoto, Message)
+from pyrogram.types import (CallbackQuery, InputMediaPhoto, Message)
 
 from Yukki import BOT_ID, MUSIC_BOT_NAME, app, random_assistant
 from Yukki.Database import get_assistant, save_assistant
+from Yukki.Database import remove_active_chat
 from Yukki.Utilities.assistant import get_assistant_details
 
 
@@ -34,7 +34,7 @@ def AssistantAdd(mystic):
         )
         try:
             b = await app.get_chat_member(message.chat.id , ASS_ID) 
-            if b.status == "kicked":
+            if b.status == "banned":
                 await app.unban_chat_member(message.chat.id, ASS_ID)
                 invite_link = await app.export_chat_invite_link(message.chat.id)
                 if "+" in invite_link:
