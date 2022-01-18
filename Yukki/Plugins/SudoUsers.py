@@ -16,7 +16,7 @@ from Yukki.Database import (add_gban_user, add_off, add_on, add_sudo,
                             remove_gban_user, remove_served_chat, remove_sudo,
                             set_video_limit)
 
-__MODULE__ = "SudoUsers"
+__MODULE__ = "sᴜᴅᴏᴜsᴇʀs"
 __HELP__ = """
 
 
@@ -128,7 +128,7 @@ async def userdel(_, message: Message):
 @app.on_message(filters.command("sudolist"))
 async def sudoers_list(_, message: Message):
     sudoers = await get_sudoers()
-    text = "⭐️<u> **Owners:**</u>\n"
+    text = "👑<u> **Owners:**</u>\n"
     sex = 0
     for x in OWNER_ID:
         try:
@@ -137,7 +137,7 @@ async def sudoers_list(_, message: Message):
             sex += 1
         except Exception:
             continue
-        text += f"{sex}➤ {user}\n"
+        text += f"{sex}➡️ {user}\n"
     smex = 0
     for count, user_id in enumerate(sudoers, 1):
         if user_id not in OWNER_ID:
@@ -146,9 +146,9 @@ async def sudoers_list(_, message: Message):
                 user = user.first_name if not user.mention else user.mention
                 if smex == 0:
                     smex += 1
-                    text += "\n⭐️<u> **Sudo Users:**</u>\n"
+                    text += "\n🔱<u> **Sudo Users:**</u>\n"
                 sex += 1
-                text += f"{sex}➤ {user}\n"
+                text += f"{sex}➡️ {user}\n"
             except Exception:
                 continue
     if not text:
@@ -395,7 +395,7 @@ async def unban_globally(_, message):
 # Broadcast Message
 
 
-@app.on_message(filters.command("broadcast_pin") & filters.user(SUDOERS))
+@app.on_message(filters.command("gcastpin") & filters.user(SUDOERS))
 async def broadcast_message_pin_silent(_, message):
     if not message.reply_to_message:
         pass
@@ -426,7 +426,7 @@ async def broadcast_message_pin_silent(_, message):
         return
     if len(message.command) < 2:
         await message.reply_text(
-            "**Usage**:\n/broadcast [MESSAGE] or [Reply to a Message]"
+            "**Usage**:\n/gcastpin [MESSAGE] or [Reply to a Message]"
         )
         return
     text = message.text.split(None, 1)[1]
@@ -453,7 +453,7 @@ async def broadcast_message_pin_silent(_, message):
     )
 
 
-@app.on_message(filters.command("broadcast_pin_loud") & filters.user(SUDOERS))
+@app.on_message(filters.command("gcastpinloud") & filters.user(SUDOERS))
 async def broadcast_message_pin_loud(_, message):
     if not message.reply_to_message:
         pass
@@ -484,7 +484,7 @@ async def broadcast_message_pin_loud(_, message):
         return
     if len(message.command) < 2:
         await message.reply_text(
-            "**Usage**:\n/broadcast [MESSAGE] or [Reply to a Message]"
+            "**Usage**:\n/gcastpinloud [MESSAGE] or [Reply to a Message]"
         )
         return
     text = message.text.split(None, 1)[1]
@@ -511,7 +511,7 @@ async def broadcast_message_pin_loud(_, message):
     )
 
 
-@app.on_message(filters.command("broadcast") & filters.user(SUDOERS))
+@app.on_message(filters.command("gcast") & filters.user(SUDOERS))
 async def broadcast(_, message):
     if not message.reply_to_message:
         pass
@@ -534,7 +534,7 @@ async def broadcast(_, message):
         return
     if len(message.command) < 2:
         await message.reply_text(
-            "**Usage**:\n/broadcast [MESSAGE] or [Reply to a Message]"
+            "**Usage**:\n/gcast [MESSAGE] or [Reply to a Message]"
         )
         return
     text = message.text.split(None, 1)[1]
@@ -556,7 +556,7 @@ async def broadcast(_, message):
 # Clean
 
 
-@app.on_message(filters.command("clean") & filters.user(SUDOERS))
+@app.on_message(filters.command("cleandb") & filters.user(SUDOERS))
 async def clean(_, message):
     dir = "downloads"
     dir1 = "cache"
