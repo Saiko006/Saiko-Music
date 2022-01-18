@@ -18,7 +18,7 @@ from Yukki.Utilities.assistant import get_assistant_details
 
 loop = asyncio.get_event_loop()
 
-__MODULE__ = "Join/Leave"
+__MODULE__ = "ᴊᴏɪɴ/ʟᴇᴀᴠᴇ"
 __HELP__ = """
 
 **Note:**
