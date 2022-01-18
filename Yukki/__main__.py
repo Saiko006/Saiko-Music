@@ -55,7 +55,6 @@ async def initiate_bot():
         scheduler.configure(timezone=pytz.utc)
         scheduler.add_job(leave_from_inactive_call, "interval", seconds=99999)
         scheduler.start()
-            pass
         try:
             chats = await get_active_chats()
             for chat in chats:
