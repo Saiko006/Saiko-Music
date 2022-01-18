@@ -1,6 +1,7 @@
 from Yukki import BOT_USERNAME
 from Yukki.Core.Clients.cli import app
 from config import LOG_GROUP_ID
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton 
 
 
 async def LOG_CHAT(message, what):
