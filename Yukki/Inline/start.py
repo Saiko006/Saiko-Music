@@ -23,7 +23,7 @@ def setting_markup2():
             InlineKeyboardButton(text="✖️ Close", callback_data="close"),
         ],
     ]
-    return f"🔧  **{MUSIC_BOT_NAME} Settings**", buttons
+    return f"⚙️  **{MUSIC_BOT_NAME} sᴇᴛᴛɪɴɢs**", buttons
 
 
 def start_pannel():
@@ -31,12 +31,12 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
+                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="🔧 Settings", callback_data="settingm"
+                    text=" sᴇᴛᴛɪɴɢs⚙️", callback_data="settingm"
                 )
             ],
         ]
@@ -45,12 +45,12 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
+                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="🔧 Settings", callback_data="settingm"
+                    text=" sᴇᴛᴛɪɴɢs⚙️", callback_data="settingm"
                 )
             ],
             [
@@ -64,12 +64,12 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
+                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="🔧 Settings", callback_data="settingm"
+                    text=" sᴇᴛᴛɪɴɢs⚙️", callback_data="settingm"
                 )
             ],
             [
@@ -83,12 +83,12 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
+                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="🔧 Settings", callback_data="settingm"
+                    text=" sᴇᴛᴛɪɴɢs⚙️", callback_data="settingm"
                 )
             ],
             [
@@ -96,7 +96,7 @@ def start_pannel():
                     text="📡ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"{SUPPORT_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text=" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 📨", url=f"{SUPPORT_GROUP}"
+                    text=" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ📨", url=f"{SUPPORT_GROUP}"
                 ),
             ],
         ]
@@ -134,7 +134,7 @@ def private_panel():
             ],
             [
                 InlineKeyboardButton(
-                    text=" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 📨", url=f"{SUPPORT_GROUP}"
+                    text=" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ📨", url=f"{SUPPORT_GROUP}"
                 ),
             ],
         ]
@@ -169,12 +169,12 @@ def private_panel():
             ],
             [
                 InlineKeyboardButton(
-                    text="❓ ʙᴀsɪᴄ ", callback_data="memekpantek"
+                    text="❓ʙᴀsɪᴄ ", callback_data="memekpantek"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar",
+                    text=" ᴄᴏᴍᴍᴀɴᴅ📚", callback_data="shikhar",
                 )
             ],
             [
@@ -182,7 +182,7 @@ def private_panel():
                     text="📡ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"{SUPPORT_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text=" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 📨", url=f"{SUPPORT_GROUP}"
+                    text=" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ📨", url=f"{SUPPORT_GROUP}"
                 ),
             ],
             [
@@ -212,7 +212,7 @@ def setting_markup():
             InlineKeyboardButton(text="🔙 Go Back", callback_data="okaybhai"),
         ],
     ]
-    return f"🔧  **{MUSIC_BOT_NAME} Settings**", buttons
+    return f"⚙️  **{MUSIC_BOT_NAME} sᴇᴛᴛɪɴɢs**", buttons
 
 
 def volmarkup():
@@ -237,7 +237,7 @@ def volmarkup():
         ],
         [InlineKeyboardButton(text="🔙 Go back", callback_data="settingm")],
     ]
-    return f"🔧  **{MUSIC_BOT_NAME} Settings**", buttons
+    return f"⚙️  **{MUSIC_BOT_NAME} sᴇᴛᴛɪɴɢs**", buttons
 
 
 def custommarkup():
@@ -256,7 +256,7 @@ def custommarkup():
         ],
         [InlineKeyboardButton(text="🔼Custom Volume 🔼", callback_data="AV")],
     ]
-    return f"🔧  **{MUSIC_BOT_NAME} Settings**", buttons
+    return f"⚙️  **{MUSIC_BOT_NAME} sᴇᴛᴛɪɴɢs**", buttons
 
 
 def usermarkup():
@@ -272,7 +272,7 @@ def usermarkup():
         ],
         [InlineKeyboardButton(text="🔙 Go back", callback_data="settingm")],
     ]
-    return f"🔧  **{MUSIC_BOT_NAME} Settings**", buttons
+    return f"⚙️  **{MUSIC_BOT_NAME} sᴇᴛᴛɪɴɢs**", buttons
 
 
 def dashmarkup():
@@ -287,4 +287,4 @@ def dashmarkup():
         ],
         [InlineKeyboardButton(text="🔙 Go back", callback_data="settingm")],
     ]
-    return f"🔧  **{MUSIC_BOT_NAME} Settings**", buttons
+    return f"⚙️ **{MUSIC_BOT_NAME} Se**", buttons
