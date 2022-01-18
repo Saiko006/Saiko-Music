@@ -32,7 +32,7 @@ from Yukki.Utilities.youtube import (get_m3u8, get_yt_info_id,
 
 loop = asyncio.get_event_loop()
 
-__MODULE__ = "VideoCalls"
+__MODULE__ = "ᴠɪᴅᴇᴏᴄᴀʟʟs"
 __HELP__ = f"""
 
 /play [Reply to any Video] or [YT Link] or [Music Name]
@@ -71,7 +71,7 @@ async def izal(_, CallbackQuery):
             photo=thumbnail,
             caption=f"""
 **🏷️ Judul:** [{title[:25]}](https://www.youtube.com/watch?v={videoid})
-**⏱  Durasi:** {duration_min}
+**⏱ Durasi:** {duration_min}
 **💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})**
 **🎧 Atas permintaan:** [{CallbackQuery.from_user.first_name}](tg://user?id={CallbackQuery.from_user.id})
 **⚡️ Powered By:** [{MUSIC_BOT_NAME}](t.me/{BOT_USERNAME})
