@@ -230,14 +230,14 @@ async def initiate_bot():
 
 
 home_text_pm = f"""
-✪ *👋 Hello "[" + user_name + "](tg://user?id=" + str(user_id) + ")" !*
+**✪ 👋 Hello "[{sender_name}](tg://user?id={int(sender_id)})" !
 ✪ ᴍʏ ɴᴀᴍᴇ ɪs ᴍᴜꜱɪᴄ ᴋᴇᴋɪɴɪᴀɴ [🤖](https://telegra.ph/file/ee46c0aba5c12e0d2bb71.jpg)
 ✪ ɪ'ᴍ ᴀ ᴋᴇᴋɪɴɪᴀɴ ᴛʜᴇᴍᴇ ʙᴏᴛ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ & ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍɪɴɢ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇꜰᴜʟ ꜰᴇᴀᴛᴜʀᴇs!
 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ᴢᴀʟ](https://t.me/rumahakhirat)
 ────────────────────────
-✪ *ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ : /*
+✪ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ : /
 ────────────────────────
-✪ *Pᴏᴡᴇʀᴇᴅ 🔰 Bʏ: ᴍᴜꜱɪᴄ ᴋᴇᴋɪɴɪᴀɴ!*
+✪ Pᴏᴡᴇʀᴇᴅ 🔰 Bʏ: ᴍᴜꜱɪᴄ ᴋᴇᴋɪɴɪᴀɴ!**
 """
 
 
@@ -253,7 +253,7 @@ async def start_command(_, message):
         name = (message.text.split(None, 1)[1]).lower()
         if name[0] == "s":
             sudoers = await get_sudoers()
-            text = "⭐️<u> **Owners:**</u>\n"
+            text = "👑<u> **Owners:**</u>\n"
             sex = 0
             for x in OWNER_ID:
                 try:
@@ -264,7 +264,7 @@ async def start_command(_, message):
                     sex += 1
                 except Exception:
                     continue
-                text += f"{sex}➤ {user}\n"
+                text += f"{sex}➡️ {user}\n"
             smex = 0
             for count, user_id in enumerate(sudoers, 1):
                 if user_id not in OWNER_ID:
@@ -277,9 +277,9 @@ async def start_command(_, message):
                         )
                         if smex == 0:
                             smex += 1
-                            text += "\n⭐️<u> **Sudo Users:**</u>\n"
+                            text += "\n🔱<u> **Sudo Users:**</u>\n"
                         sex += 1
-                        text += f"{sex}➤ {user}\n"
+                        text += f"{sex}➡️ {user}\n"
                     except Exception:
                         continue
             if not text:
