@@ -40,9 +40,9 @@ def AssistantAdd(mystic):
                 if "+" in invite_link:
                     kontol = (invite_link.replace("+", "")).split("t.me/")[1]
                     link_bokep = f"https://t.me/joinchat/{kontol}"
-            await ASS_ACC.join_chat(link_bokep)
-            await message.reply(f"{ASSNAME} Berhasil Bergabung",) 
-            await remove_active_chat(chat_id)
+                await ASS_ACC.join_chat(link_bokep)
+                await message.reply(f"{ASSNAME} Berhasil Bergabung",) 
+                await remove_active_chat(chat_id)
         except UserNotParticipant::
             try:
                 invite_link = await app.export_chat_invite_link(message.chat.id)
