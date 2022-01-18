@@ -18,7 +18,7 @@ from Yukki.Utilities.download import get_formats, get_type
 user_time = {}
 flex = {}
 
-__MODULE__ = "Global Ban"
+__MODULE__ = "ɢʟᴏʙᴀɴ ʙᴀɴ"
 __HELP__ = """
 
 **Note:**
@@ -123,9 +123,9 @@ async def boom(_, CallbackQuery):
         fetched = f"""
 🔍**Track Downloaded**
 
-❇️**Title:** {title}
+🏷**Judul:** {title}
 
-⏳**Duration:** {duration} Mins
+⏱️**Duration:** {duration} Mins
 👀**Views:** `{views}`
 🎥**Channel Name:** {channel}
 🔗**Video Link:** [Link]({yturl})
