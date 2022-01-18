@@ -174,7 +174,7 @@ def private_panel():
             ],
             [
                 InlineKeyboardButton(
-                    text=" ᴄᴏᴍᴍᴀɴᴅ📚", callback_data="shikhar",
+                    text=" ᴄᴏᴍᴍᴀɴᴅ 📚 ", callback_data="shikhar",
                 )
             ],
             [
