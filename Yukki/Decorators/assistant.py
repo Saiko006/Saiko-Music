@@ -42,7 +42,7 @@ def AssistantAdd(mystic):
                     link_bokep = f"https://t.me/joinchat/{kontol}"
                 await ASS_ACC.join_chat(link_bokep)
                 await message.reply(f"{ASS_NAME} Berhasil Bergabung",) 
-                await remove_active_chat(chat_id)
+                await remove_active_chat(message.chat.id)
         except UserNotParticipant:
             try:
                 invite_link = await app.export_chat_invite_link(message.chat.id)
@@ -51,7 +51,7 @@ def AssistantAdd(mystic):
                     link_bokep = f"https://t.me/joinchat/{kontol}"
                 await ASS_ACC.join_chat(link_bokep)
                 await message.reply(f"{ASS_NAME} Berhasil Bergabung",) 
-                await remove_active_chat(chat_id)
+                await remove_active_chat(message.chat.id)
             except UserAlreadyParticipant:
                 pass
             except Exception as e:
