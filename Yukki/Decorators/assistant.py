@@ -46,7 +46,7 @@ def AssistantAdd(mystic):
                 f"{ubot.first_name} Berhasil Bergabung",
             )
         except UserNotParticipant:
-            try:
+        try:
             invite_link = await app.export_chat_invite_link(message.chat.id)
             if "+" in invite_link:
                 invite = (invite_link.replace("+", "")).split("t.me/")[1]
