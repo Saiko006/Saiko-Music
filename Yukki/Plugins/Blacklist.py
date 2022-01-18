@@ -4,7 +4,7 @@ from pyrogram.types import Message
 from Yukki import SUDOERS, app
 from Yukki.Database import blacklist_chat, blacklisted_chats, whitelist_chat
 
-__MODULE__ = "Blacklist"
+__MODULE__ = "ʙʟᴀᴄᴋʟɪsᴛ"
 __HELP__ = """
 
 
