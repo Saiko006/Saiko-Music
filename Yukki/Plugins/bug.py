@@ -9,12 +9,6 @@ from Yukki import BOT_USERNAME, SUDOERS, app
 from Yukki.Decorators.admins import AdminRightsCheck as authorized_users_only
 from config import SUP_GROUP
 
-__MODULE__ = "ʙᴜɢ"
-__HELP__ = """
-
-/bug [Membuat laporan masalah pada bot Music Kekinian]
-- ex : /bug asistant ga naik
-"""
 
 
 
