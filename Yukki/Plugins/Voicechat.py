@@ -137,7 +137,7 @@ async def activevc(_, message: Message):
         else:
             await mystic.edit(msg)
     else:
-        await message.reply_text(f"Nothing in Queue")
+        await message.reply_text(f"TIDAK ADA DAFTAR PUTAR!")
 
 
 @app.on_message(filters.command("activevc") & filters.user(SUDOERS))
