@@ -32,15 +32,15 @@ __HELP__ = """
 
 
 /start 
-- Start the Bot.
+- Start Bot.
 
 
 /help 
-- Get Commands Helper Menu.
+- Command Menu.
 
 
 /settings 
-- Get Settings button.
+- Mengatur volume & auththorized/unauthorized .
 """
 
 
