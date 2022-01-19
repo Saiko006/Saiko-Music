@@ -40,14 +40,14 @@ async def initiate_bot():
             for chat in chats:
                 chat_id = int(chat["chat_id"])
                 await remove_active_video_chat(chat_id)
-        except Exception as e:
+        except Exception:
             pass
         try:
             chats = await get_active_chats()
             for chat in chats:
                 chat_id = int(chat["chat_id"])
                 await remove_active_chat(chat_id)
-        except Exception as e:
+        except Exception:
             pass
         status.update(
             status="[bold blue]Scanning for Plugins", spinner="earth"
@@ -82,7 +82,7 @@ async def initiate_bot():
             status="[bold blue]Importation Completed!",
         )
     console.print(
-        "[bold green]Congrats!! Yukki Music Bot has started successfully!\n"
+        "[bold green]Congrats!! Kekinian Music Bot has started successfully!\n"
     )
     try:
         await app.send_message(
