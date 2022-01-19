@@ -37,15 +37,16 @@ from Yukki.Utilities.youtube import get_m3u8, get_yt_info_id
 loop = asyncio.get_event_loop()
 
 
-@app.on_callback_query(filters.regex("forceclose"))
+@app.on_callback_query(filters.regex(pattern=r"forceclose"))
 async def forceclose(_, CallbackQuery):
     callback_data = CallbackQuery.data.strip()
     callback_request = callback_data.split(None, 1)[1]
     query, user_id = callback_request.split("|")
     if CallbackQuery.from_user.id != int(user_id):
-        return await CallbackQuery.answer(
+        await CallbackQuery.answer(
             "You're not allowed to close this.", show_alert=True
         )
+        return
     await CallbackQuery.message.delete()
     await CallbackQuery.answer()
 
