@@ -100,9 +100,6 @@ async def initiate_bot():
     console.print(f"├[green] ID :- {BOT_ID}!")
     if STRING1 != "None":
         except Exception as e:
-            print(
-                "\nAssistant Account 1 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
-            )
             console.print(f"\n[red]Stopping Bot")
             return
         try:
@@ -114,9 +111,6 @@ async def initiate_bot():
         console.print(f"├[green] ID :- {ASSID1}!")
     if STRING2 != "None":
         except Exception as e:
-            print(
-                "\nAssistant Account 2 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
-            )
             console.print(f"\n[red]Stopping Bot")
             return
         try:
@@ -128,9 +122,6 @@ async def initiate_bot():
         console.print(f"├[green] ID :- {ASSID2}!")
     if STRING3 != "None":
         except Exception as e:
-            print(
-                "\nAssistant Account 3 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
-            )
             console.print(f"\n[red]Stopping Bot")
             return
         try:
@@ -142,9 +133,6 @@ async def initiate_bot():
         console.print(f"├[green] ID :- {ASSID3}!")
     if STRING4 != "None":
         except Exception as e:
-            print(
-                "\nAssistant Account 4 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
-            )
             console.print(f"\n[red]Stopping Bot")
             return
         try:
@@ -156,9 +144,6 @@ async def initiate_bot():
         console.print(f"├[green] ID :- {ASSID4}!")
     if STRING5 != "None":
         except Exception as e:
-            print(
-                "\nAssistant Account 5 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
-            )
             console.print(f"\n[red]Stopping Bot")
             return
         try:
