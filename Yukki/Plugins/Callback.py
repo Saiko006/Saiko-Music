@@ -753,6 +753,7 @@ async def cbbasic(_, CallbackQuery):
 » /queue - untuk melihat daftar putar lagu
 » /song (query) - untuk mendownload lagu/video youtube
 » /ping - show the bot ping status
+» /bug - untuk melaporkan masalah pada bot
 » /settings - untuk mengatur volume
 ⚡️ __Powered by {MUSIC_BOT_NAME}__""",
         reply_markup=InlineKeyboardMarkup(
@@ -835,6 +836,8 @@ async def ccbasic(_, CallbackQuery):
 » /queue - untuk melihat daftar putar streaming
 » /song (query) - untuk mendownload lagu/video youtube
 » /ping - show the bot ping status
+» /bug - untuk melaporkan masalah pada bot
+» /settings - mengatur volume
 ⚡️ __Powered by {MUSIC_BOT_NAME}__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 ʙᴀᴄᴋ", callback_data="anjeng")]]
