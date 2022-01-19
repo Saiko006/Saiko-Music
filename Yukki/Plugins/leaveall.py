@@ -1,8 +1,15 @@
 import asyncio
 
+from pyrogram import filters
+
 from Yukki import BOT_USERNAME, SUDOERS, app
-from Yukki.Core.Clients.cli import ASS_CLI_1 as USER
-from pyrogram import Client, filters
+from Yukki.Core.Clients.cli import ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5
+
+A1 = ASS_CLI_1
+A2 = ASS_CLI_2
+A3 = ASS_CLI_3
+A4 = ASS_CLI_4
+A5 = ASS_CLI_5
 
 
 @app.on_message(
@@ -11,13 +18,14 @@ from pyrogram import Client, filters
     & ~filters.edited
 )
 async def bye(client, message):
+    assisten = message.text.split(None, 1)[1]
     if message.from_user.id in SUDOERS:
         left = 0
         failed = 0
         lol = await message.reply("Asisten Meninggalkan semua obrolan")
-        async for dialog in USER.iter_dialogs():
+        async for dialog in assisten.iter_dialogs():
             try:
-                await USER.leave_chat(dialog.chat.id)
+                await assisten.leave_chat(dialog.chat.id)
                 left = left + 1
                 await lol.edit(
                     f"""
