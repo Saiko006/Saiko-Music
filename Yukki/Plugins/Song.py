@@ -19,8 +19,8 @@ __MODULE__ = "sᴏɴɢ"
 __HELP__ = """
 
 
-/song [Youtube URL or Search Query] 
-- Download the particular query in audio or video format.
+/song [Youtube URL atau Search Judul] 
+- Download audio.
 
 
 
