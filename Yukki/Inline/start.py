@@ -5,7 +5,7 @@ from config import MUSIC_BOT_NAME, SUPPORT_CHANNEL, SUPPORT_GROUP
 from Yukki import BOT_USERNAME
 
 
-def setting_markup2():
+def setting_markup2(user_id):
     buttons = [
         [
             InlineKeyboardButton(text="🔈 Audio Quality", callback_data="AQ"),
@@ -20,13 +20,13 @@ def setting_markup2():
             ),
         ],
         [
-            InlineKeyboardButton(text="✖️ Close", callback_data="forceclose"),
+            InlineKeyboardButton(text="✖ ᴄʟᴏsᴇ", callback_data="forceclose {user_id}"),
         ],
     ]
     return f"⚙️  **{MUSIC_BOT_NAME} sᴇᴛᴛɪɴɢs**", buttons
 
 
-def start_pannel():
+def start_pannel(user_id):
     if not SUPPORT_CHANNEL and not SUPPORT_GROUP:
         buttons = [
             [
@@ -100,7 +100,7 @@ def start_pannel():
                 ),
             ],
             [
-                InlineKeyboardButton(text=" ᴄʟᴏsᴇ ", callback_data="forceclose"
+                InlineKeyboardButton(text=" ᴄʟᴏsᴇ ", callback_data="forceclose {user_id}"
                 ),
             ],
         ]
