@@ -103,7 +103,7 @@ async def initiate_bot():
     console.print(f"\n┌[red] Bot Started as {BOT_NAME}!")
     console.print(f"├[green] ID :- {BOT_ID}!")
     if STRING1 != "None":
-        except Exception as e:
+        except Exception:
             console.print(f"\n[red]Stopping Bot")
             return
         try:
@@ -114,7 +114,7 @@ async def initiate_bot():
         console.print(f"├[red] Assistant 1 Started as {ASSNAME1}!")
         console.print(f"├[green] ID :- {ASSID1}!")
     if STRING2 != "None":
-        except Exception as e:
+        except Exception:
             console.print(f"\n[red]Stopping Bot")
             return
         try:
@@ -125,7 +125,7 @@ async def initiate_bot():
         console.print(f"├[red] Assistant 2 Started as {ASSNAME2}!")
         console.print(f"├[green] ID :- {ASSID2}!")
     if STRING3 != "None":
-        except Exception as e:
+        except Exception:
             console.print(f"\n[red]Stopping Bot")
             return
         try:
@@ -136,7 +136,7 @@ async def initiate_bot():
         console.print(f"├[red] Assistant 3 Started as {ASSNAME3}!")
         console.print(f"├[green] ID :- {ASSID3}!")
     if STRING4 != "None":
-        except Exception as e:
+        except Exception:
             console.print(f"\n[red]Stopping Bot")
             return
         try:
@@ -147,7 +147,7 @@ async def initiate_bot():
         console.print(f"├[red] Assistant 4 Started as {ASSNAME4}!")
         console.print(f"├[green] ID :- {ASSID4}!")
     if STRING5 != "None":
-        except Exception as e:
+        except Exception:
             console.print(f"\n[red]Stopping Bot")
             return
         try:
@@ -163,7 +163,7 @@ async def initiate_bot():
                 LOG_GROUP_ID,
                 "<b>Congrats!! Logger Client has started successfully!</b>",
             )
-        except Exception as e:
+        except Exception:
             print(
                 "\nLogger Client has failed to access the log Channel. Make sure that you have added your Logger Account to your log channel and promoted as admin!"
             )
@@ -174,7 +174,7 @@ async def initiate_bot():
             await LOG_CLIENT.join_chat("Kekiniangroup")
         except:
             pass
-    console.print(f"└[red] Yukki Music Bot Boot Completed.")
+    console.print(f"└[red] MusicBot Boot Completed.")
     if STRING1 != "None":
         await pytgcalls1.start()
     if STRING2 != "None":
