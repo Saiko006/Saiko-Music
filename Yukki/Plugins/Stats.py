@@ -31,8 +31,8 @@ __HELP__ = """
 
 
 /stats
-- Check the Stats of Bot.
-- Gets the stat of MongoDb , Assistant, System etc
+- Check Statistik Bot.
+- stat of MongoDb , Assistant, System etc
 """
 
 
