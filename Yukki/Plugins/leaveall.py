@@ -1,6 +1,6 @@
 import asyncio
 
-from Yukki import BOT_USERNAME, SUDOERS
+from Yukki import BOT_USERNAME, SUDOERS, app
 from Yukki import ASSIDS as USER
 from pyrogram import Client, filters
 
