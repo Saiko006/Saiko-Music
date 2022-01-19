@@ -319,9 +319,9 @@ async def start_command(_, message):
             searched_text = f"""
 🔍__**Video Track Information**__
 
-❇️**Title:** {title}
+🏷**Judul:** {title}
 
-⏳**Duration:** {duration} Mins
+⏱️**Durasi:** {duration} Mins
 👀**Views:** `{views}`
 ⏰**Published Time:** {published}
 🎥**Channel Name:** {channel}
@@ -378,7 +378,7 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello {first_name},
+        """**Hello {first_name}**,
 
 Click on the buttons for more information.
 
