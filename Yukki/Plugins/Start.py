@@ -94,7 +94,7 @@ async def welcome(_, message: Message):
             return
 
 
-@app.on_message(filters.command(["start", "help", f"start@{BOT_USERNAME}", f"help@{BOT_USERNAME}"] & filters.group)
+@app.on_message(filters.command(["start", "help", f"start@{BOT_USERNAME}", f"help@{BOT_USERNAME}"]) & filters.group)
 @PermissionCheck
 async def useradd(_, message: Message):
     out = start_pannel()
