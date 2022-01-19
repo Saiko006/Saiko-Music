@@ -706,7 +706,7 @@ async def kontolanjing(_, CallbackQuery):
                   InlineKeyboardButton("❓ʙᴀsɪᴄ ", callback_data="memekpantek"),
               ],
               [
-                  InlineKeyboardButton(" ᴄᴏᴍᴍᴀɴᴅ 📚 ", callback_data="cbcmds"),
+                  InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅ📚", callback_data="cbcmds"),
               ],
               [
                   InlineKeyboardButton("📡 ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"https://t.me/musickekiniaan"),
