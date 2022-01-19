@@ -705,7 +705,7 @@ async def kontolanjing(_, CallbackQuery):
                   InlineKeyboardButton("❓ ʙᴀsɪᴄ ", callback_data="memekpantek"),
               ],
               [
-                  InlineKeyboardButton(" ᴄᴏᴍᴍᴀɴᴅ 📚 ", callback_data="shikhar"),
+                  InlineKeyboardButton(" ᴄᴏᴍᴍᴀɴᴅ 📚 ", callback_data="cbcmds"),
               ],
               [
                   InlineKeyboardButton("📡 ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"https://t.me/musickekiniaan"),
@@ -717,3 +717,192 @@ async def kontolanjing(_, CallbackQuery):
           ]
       ),
   )
+    
+    
+# callback cbcmds
+
+@Client.on_callback_query(filters.regex("cbcmds"))
+async def cbcmds(_, CallbackQuery):
+    user_id = CallbackQuery.from_user.id
+    user_name = CallbackQuery.from_user.first_name
+    rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
+    await CallbackQuery.edit_message_text(
+        f"""✨ **Hello {rpk} !**
+» **Tekan tombol di bawah ini untuk membaca penjelasan dan melihat daftar perintah yang tersedia !**
+⚡ __Powered by {MUSIC_BOT_NAME}__""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("👷🏻 ᴀᴅᴍɪɴ ᴄᴍᴅ", callback_data="cbadmin"),
+                    InlineKeyboardButton("🧙🏻 sᴜᴅᴏ ᴄᴍᴅ", callback_data="cbsudo"),
+                ],[
+                    InlineKeyboardButton("📚 ʙᴀsɪᴄ ᴄᴍᴅ", callback_data="cbbasic")
+                ],[
+                    InlineKeyboardButton("🔙 ʙᴀᴄᴋ", callback_data="kontolanjing")
+                ],
+            ]
+        ),
+    )
+        
+    
+@Client.on_callback_query(filters.regex("cbbasic"))
+async def cbbasic(_, CallbackQuery):
+    await CallbackQuery.edit_message_text(
+        f"""🏮 here is the basic commands:
+» /play (Judul/link) - untuk memutar lagu/video yang di inginkan
+» /queue - untuk melihat daftar putar lagu
+» /song (query) - untuk mendownload lagu/video youtube
+» /ping - show the bot ping status
+» /settings - untuk mengatur volume
+⚡️ __Powered by {MUSIC_BOT_NAME}__""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 ʙᴀᴄᴋ", callback_data="cbcmds")]]
+        ),
+    )
+    
+    
+@Client.on_callback_query(filters.regex("cbadmin"))
+async def cbadmin(_, CallbackQuery):
+    await CallbackQuery.edit_message_text(
+        f"""🏮 here is the admin commands:
+» /pause - untuk menjeda pemutaran streaming
+» /resume - untuk melanjutkan pemutaran streaming yang di jeda
+» /skip - untuk memutar streaming berikutnya yang ada didalam antrian
+» /end - untuk menghentikan pemutaran streaming
+» /reload - memuat ulang bot dan data admid
+» /music off - untuk mematikan bot Kekinian Music di dalam group
+» /music on - untuk menyalakan bot Kekinian Music di dalam group
+» /auth - authorized user untuk Menggunakan Command Admin Permission Bot Kekinian Music
+» /unauth - unauthorizer user tidak dapat lagi Menggunakan Command Admin Permission
+» /settings - untuk mengatur volume dan auththorized/unauthorized
+⚡️ __Powered by {MUSIC_BOT_NAME}__""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 ʙᴀᴄᴋ", callback_data="cbcmds")]]
+        ),
+    )
+    
+    
+@Client.on_callback_query(filters.regex("cbsudo"))
+async def cbsudo(_, CallbackQuery):
+    await CallbackQuery.edit_message_text(
+        f"""🏮 here is the sudo commands:
+» /restart - restart bot
+» /reload - memperbarui bot dan daftar admin
+» /speedtest - cek speedtest
+» /gcast - broadcast obrolan di semua group obrolan music yang di sajikan
+» /music on/off - menyalakan/mematikan Bot Kekinian Music di dalam group
+» /auth - authorized user untuk Menggunakan Command Admin Permission Bot Kekinian Music
+» /unauth - unauthorizer user tidak dapat lagi Menggunakan Command Admin Permission
+» /settings - untuk mengatur volume dan auththorized/unauthorized
+⚡ __Powered by {MUSIC_BOT_NAME}__""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 ʙᴀᴄᴋ", callback_data="cbcmds")]]
+        ),
+    )  
+
+    
+# callback anjeng
+   
+@Client.on_callback_query(filters.regex("anjeng"))
+async def anjeng(_, CallbackQuery):
+    user_id = CallbackQuery.from_user.id
+    user_name = CallbackQuery.from_user.first_name
+    rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
+    await CallbackQuery.edit_message_text(
+        f"""✨ **Hello {rpk} !**
+» **Tekan tombol di bawah ini untuk membaca penjelasan dan melihat daftar perintah yang tersedia !**
+⚡ __Powered by {BOT_NAME}__""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("👷🏻 ᴀᴅᴍɪɴ ᴄᴍᴅ", callback_data="ccadmin"),
+                    InlineKeyboardButton("🧙🏻 sᴜᴅᴏ ᴄᴍᴅ", callback_data="ccsudo"),
+                ],[
+                    InlineKeyboardButton("📚 ʙᴀsɪᴄ ᴄᴍᴅ", callback_data="ccbasic")
+                ],[
+                    InlineKeyboardButton(" 🔙 ʙᴀᴄᴋ ", callback_data="tomi")
+                ],
+            ]
+        ),
+    )
+    
+    
+@Client.on_callback_query(filters.regex("ccbasic"))
+async def ccbasic(_, CallbackQuery):
+    await CallbackQuery.edit_message_text(
+        f"""🏮 here is the basic commands:
+» /play (Judul/link) - untuk memutar lagu/video yang di inginkan
+» /queue - untuk melihat daftar putar streaming
+» /song (query) - untuk mendownload lagu/video youtube
+» /ping - show the bot ping status
+⚡️ __Powered by {BOT_NAME}__""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 ʙᴀᴄᴋ", callback_data="anjeng")]]
+        ),
+    )
+    
+    
+@Client.on_callback_query(filters.regex("ccadmin"))
+async def ccadmin(_, CallbackQuery):
+    await CallbackQuery.edit_message_text(
+        f"""🏮 here is the admin commands:
+» /pause - untuk menjeda pemutaran streaming
+» /resume - untuk melanjutkan pemutaran streaming yang di jeda
+» /skip - untuk memutar streaming berikutnya yang ada didalam antrian
+» /end - untuk menghentikan pemutaran streaming
+» /reload - memuat ulang bot dan data admid
+» /music off - untuk mematikan bot Kekinian Music di dalam group
+» /music on - untuk menyalakan bot Kekinian Music di dalam group
+» /auth - authorized user untuk Menggunakan Command Admin Permission Bot Kekinian Music
+» /unauth - unauthorizer user tidak dapat lagi Menggunakan Command Admin Permission
+» /settings - untuk mengatur volume dan auththorized/unauthorized
+⚡️ __Powered by {BOT_NAME}__""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 ʙᴀᴄᴋ", callback_data="anjeng")]]
+        ),
+    )
+    
+    
+@Client.on_callback_query(filters.regex("ccsudo"))
+async def ccsudo(_, CallbackQuery):
+    await CallbackQuery.edit_message_text(
+        f"""🏮 here is the sudo commands:
+» /restart - restart musik
+» /reload - memperbarui bot dan daftar admin
+» /speedtest - cek speedtest
+» /gcast - broadcast obrolan di semua group obrolan music yang di sajikan
+» /music on/off - menyalakan/mematikan Bot Kekinian Music di dalam group
+» /auth - authorized user untuk Menggunakan Command Admin Permission Bot Kekinian Music
+» /unauth - unauthorizer user tidak dapat lagi Menggunakan Command Admin Permission
+» /settings - untuk mengatur volume dan auththorized/unauthorized
+⚡ __Powered by {BOT_NAME}__""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 ʙᴀᴄᴋ", callback_data="anjeng")]]
+        ),
+    )  
+    
+    
+
+@Client.on_callback_query(filters.regex("tomi"))
+async def cstart(_, CallbackQuery):
+    out = start_pannel()
+    await CallbackQuery.edit_message_text(
+        f"""
+Terima kasih telah memasukkan saya di {CallbackQuery.message.chat.title}.
+Musik itu hidup.
+Untuk bantuan silahkan klik tombol COMMAND dibawah.
+""",
+        reply_markup=InlineKeyboardMarkup(out[1]),
+        disable_web_page_preview=True
+    )
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
