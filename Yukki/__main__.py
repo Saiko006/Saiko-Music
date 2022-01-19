@@ -33,7 +33,7 @@ HELPABLE = {}
 
 async def initiate_bot():
     with console.status(
-        "[magenta] Finalizing Booting...",
+        "[magenta] Booting up The MusicBot...",
     ) as status:
         try:
             chats = await get_active_video_chats()
