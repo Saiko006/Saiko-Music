@@ -35,7 +35,7 @@ loop = asyncio.get_event_loop()
 __MODULE__ = "ᴠɪᴅᴇᴏᴄᴀʟʟs"
 __HELP__ = f"""
 
-/play [Reply to any Video] or [YT Link] or [Music Name]
+/play [Reply to any Video] atau [YT Link] atau [Music Name]
 - Stream Video on Voice Chat
 
 **For Sudo User:-**
