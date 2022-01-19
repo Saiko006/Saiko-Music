@@ -73,7 +73,7 @@ async def music_onoff(_, message: Message):
         if message.chat.id in DISABLED_GROUPS:
             return await lel.edit("» **Musicnya Ga Aktif Tolol !**")
         DISABLED_GROUPS.append(message.chat.id)
-        await lel.edit(f"✅ **Music Dimatiin Di {message.chat.title}**\n\n• Biar Ga Nambah Tolol Lu Musickan Terus...")
+        await lel.edit(f"✅ **Music Dimatiin Di {message.chat.title}**\n\n• Biar Ga Nambah Tolol Lu Denger Music Terus...")
     else:
         return await message.reply_text(
             "😕 **Ngetik yang bener ngentot.**\n\n» Coba `/player on` atau `/player off`"
