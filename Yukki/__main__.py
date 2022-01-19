@@ -33,67 +33,51 @@ HELPABLE = {}
 
 async def initiate_bot():
     with console.status(
-        "[magenta] Booting up The Kekinian Music Bot...",
+        "[magenta] Finalizing Booting...",
     ) as status:
-        console.print("┌ [red]Clearing MongoDB cache...")
+        try:
+            chats = await get_active_video_chats()
+            for chat in chats:
+                chat_id = int(chat["chat_id"])
+                await remove_active_video_chat(chat_id)
+        except Exception:
+            pass
         try:
             chats = await get_active_chats()
             for chat in chats:
                 chat_id = int(chat["chat_id"])
                 await remove_active_chat(chat_id)
         except Exception:
-            console.print("[red] Error while clearing Mongo DB.")
-        console.print("└ [green]MongoDB Cleared Successfully!\n\n")
-    await app.send_message(LOG_GROUP_ID, f"**{BOT_NAME} Music is activated.**")
-    print("[Info]: Started...")
-    if AUTO_LEAVE:
-        print("[ INFO ] STARTED SCHEDULER")
-        scheduler.configure(timezone=pytz.utc)
-        scheduler.add_job(leave_from_inactive_call, "interval", seconds=99999)
-        scheduler.start()
-        ____ = await startup_send_new("Importing All Plugins...")
+            pass
         status.update(status="[bold blue]Scanning for Plugins", spinner="earth")
-        await asyncio.sleep(1.7)
         console.print("Found {} Plugins".format(len(ALL_MODULES)) + "\n")
         status.update(
             status="[bold red]Importing Plugins...",
             spinner="bouncingBall",
             spinner_style="yellow",
         )
-        await asyncio.sleep(1.2)
         for all_module in ALL_MODULES:
             imported_module = importlib.import_module("Yukki.Plugins." + all_module)
             if hasattr(imported_module, "__MODULE__") and imported_module.__MODULE__:
                 imported_module.__MODULE__ = imported_module.__MODULE__
-                   if (
-                       hasattr(imported_module, "__HELP__")
-                       and imported_module.__HELP__
-                   ):
-                       HELPABLE[
-                           imported_module.__MODULE__.lower()
-                       ] = imported_module
+                if hasattr(imported_module, "__HELP__") and imported_module.__HELP__:
+                    HELPABLE[imported_module.__MODULE__.lower()] = imported_module
             console.print(
                 f">> [bold cyan]Successfully imported: [green]{all_module}.py"
             )
-            await asyncio.sleep(0.2)
         console.print("")
-        _____ = await startup_edit_last(____, "Finalizing...")
         status.update(
             status="[bold blue]Importation Completed!",
         )
-        await asyncio.sleep(2.4)
-        await startup_delete_last(_____)
-    console.print(
-        "[bold green]Congrats!! Kekinian Music Bot Has Started Successfully!\n"
-    )
+    console.print("[bold green]Congrats!! Yukki Music Bot has started successfully!\n")
     try:
         await app.send_message(
             LOG_GROUP_ID,
-            "<b>Congrats!! Music Bot Has Started Successfully!</b>",
+            "<b>Congrats!! Music Bot has started successfully!</b>",
         )
     except Exception:
         print(
-            "Bot has failed to access the log Channel. Make sure that you have added your bot to your log channel and promoted as admin!"
+            "\nBot has failed to access the log Channel. Make sure that you have added your bot to your log channel and promoted as admin!"
         )
         console.print(f"\n[red]Stopping Bot")
         return
@@ -102,14 +86,131 @@ async def initiate_bot():
         print("Promote Bot as Admin in Logger Channel")
         console.print(f"\n[red]Stopping Bot")
         return
-    try:
-        await userbot.join_chat("musickekiniaan")
-    except BaseException:
-        pass
     console.print(f"\n┌[red] Bot Started as {BOT_NAME}!")
     console.print(f"├[green] ID :- {BOT_ID}!")
-    console.print(f"├[red] Assistant Started as {ASSNAME}!")
-    console.print(f"└[green] ID :- {ASSID}!")
+    if STRING1 != "None":
+        try:
+            await ASS_CLI_1.send_message(
+                LOG_GROUP_ID,
+                "<b>Congrats!! Assistant Client 1  has started successfully!</b>",
+            )
+        except Exception:
+            print(
+                "\nAssistant Account 1 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
+            )
+            console.print(f"\n[red]Stopping Bot")
+            return
+        try:
+            await ASS_CLI_1.join_chat("OfficialYukki")
+            await ASS_CLI_1.join_chat("YukkiSupport")
+        except:
+            pass
+        console.print(f"├[red] Assistant 1 Started as {ASSNAME1}!")
+        console.print(f"├[green] ID :- {ASSID1}!")
+    if STRING2 != "None":
+        try:
+            await ASS_CLI_2.send_message(
+                LOG_GROUP_ID,
+                "<b>Congrats!! Assistant Client 2 has started successfully!</b>",
+            )
+        except Exception:
+            print(
+                "\nAssistant Account 2 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
+            )
+            console.print(f"\n[red]Stopping Bot")
+            return
+        try:
+            await ASS_CLI_2.join_chat("OfficialYukki")
+            await ASS_CLI_2.join_chat("YukkiSupport")
+        except:
+            pass
+        console.print(f"├[red] Assistant 2 Started as {ASSNAME2}!")
+        console.print(f"├[green] ID :- {ASSID2}!")
+    if STRING3 != "None":
+        try:
+            await ASS_CLI_3.send_message(
+                LOG_GROUP_ID,
+                "<b>Congrats!! Assistant Client 3 has started successfully!</b>",
+            )
+        except Exception:
+            print(
+                "\nAssistant Account 3 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
+            )
+            console.print(f"\n[red]Stopping Bot")
+            return
+        try:
+            await ASS_CLI_3.join_chat("OfficialYukki")
+            await ASS_CLI_3.join_chat("YukkiSupport")
+        except:
+            pass
+        console.print(f"├[red] Assistant 3 Started as {ASSNAME3}!")
+        console.print(f"├[green] ID :- {ASSID3}!")
+    if STRING4 != "None":
+        try:
+            await ASS_CLI_4.send_message(
+                LOG_GROUP_ID,
+                "<b>Congrats!! Assistant Client 4 has started successfully!</b>",
+            )
+        except Exception:
+            print(
+                "\nAssistant Account 4 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
+            )
+            console.print(f"\n[red]Stopping Bot")
+            return
+        try:
+            await ASS_CLI_4.join_chat("OfficialYukki")
+            await ASS_CLI_4.join_chat("YukkiSupport")
+        except:
+            pass
+        console.print(f"├[red] Assistant 4 Started as {ASSNAME4}!")
+        console.print(f"├[green] ID :- {ASSID4}!")
+    if STRING5 != "None":
+        try:
+            await ASS_CLI_5.send_message(
+                LOG_GROUP_ID,
+                "<b>Congrats!! Assistant Client 5 has started successfully!</b>",
+            )
+        except Exception:
+            print(
+                "\nAssistant Account 5 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
+            )
+            console.print(f"\n[red]Stopping Bot")
+            return
+        try:
+            await ASS_CLI_5.join_chat("OfficialYukki")
+            await ASS_CLI_5.join_chat("YukkiSupport")
+        except:
+            pass
+        console.print(f"├[red] Assistant 5 Started as {ASSNAME5}!")
+        console.print(f"├[green] ID :- {ASSID5}!")
+    if LOG_SESSION != "None":
+        try:
+            await LOG_CLIENT.send_message(
+                LOG_GROUP_ID,
+                "<b>Congrats!! Logger Client has started successfully!</b>",
+            )
+        except Exception:
+            print(
+                "\nLogger Client has failed to access the log Channel. Make sure that you have added your Logger Account to your log channel and promoted as admin!"
+            )
+            console.print(f"\n[red]Stopping Bot")
+            return
+        try:
+            await LOG_CLIENT.join_chat("OfficialYukki")
+            await LOG_CLIENT.join_chat("YukkiSupport")
+        except:
+            pass
+    console.print(f"└[red] Yukki Music Bot Boot Completed.")
+    if STRING1 != "None":
+        await pytgcalls1.start()
+    if STRING2 != "None":
+        await pytgcalls2.start()
+    if STRING3 != "None":
+        await pytgcalls3.start()
+    if STRING4 != "None":
+        await pytgcalls4.start()
+    if STRING5 != "None":
+        await pytgcalls5.start()
     await idle()
     console.print(f"\n[red]Stopping Bot")
 
