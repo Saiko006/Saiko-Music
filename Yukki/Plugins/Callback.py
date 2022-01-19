@@ -721,7 +721,7 @@ async def kontolanjing(_, CallbackQuery):
     
 # callback cbcmds
 
-@Client.on_callback_query(filters.regex("cbcmds"))
+@app.on_callback_query(filters.regex("cbcmds"))
 async def cbcmds(_, CallbackQuery):
     user_id = CallbackQuery.from_user.id
     user_name = CallbackQuery.from_user.first_name
@@ -745,7 +745,7 @@ async def cbcmds(_, CallbackQuery):
     )
         
     
-@Client.on_callback_query(filters.regex("cbbasic"))
+@app.on_callback_query(filters.regex("cbbasic"))
 async def cbbasic(_, CallbackQuery):
     await CallbackQuery.edit_message_text(
         f"""🏮 here is the basic commands:
@@ -761,7 +761,7 @@ async def cbbasic(_, CallbackQuery):
     )
     
     
-@Client.on_callback_query(filters.regex("cbadmin"))
+@app.on_callback_query(filters.regex("cbadmin"))
 async def cbadmin(_, CallbackQuery):
     await CallbackQuery.edit_message_text(
         f"""🏮 here is the admin commands:
@@ -782,7 +782,7 @@ async def cbadmin(_, CallbackQuery):
     )
     
     
-@Client.on_callback_query(filters.regex("cbsudo"))
+@app.on_callback_query(filters.regex("cbsudo"))
 async def cbsudo(_, CallbackQuery):
     await CallbackQuery.edit_message_text(
         f"""🏮 here is the sudo commands:
@@ -803,7 +803,7 @@ async def cbsudo(_, CallbackQuery):
     
 # callback anjeng
    
-@Client.on_callback_query(filters.regex("anjeng"))
+@app.on_callback_query(filters.regex("anjeng"))
 async def anjeng(_, CallbackQuery):
     user_id = CallbackQuery.from_user.id
     user_name = CallbackQuery.from_user.first_name
@@ -827,7 +827,7 @@ async def anjeng(_, CallbackQuery):
     )
     
     
-@Client.on_callback_query(filters.regex("ccbasic"))
+@app.on_callback_query(filters.regex("ccbasic"))
 async def ccbasic(_, CallbackQuery):
     await CallbackQuery.edit_message_text(
         f"""🏮 here is the basic commands:
@@ -842,7 +842,7 @@ async def ccbasic(_, CallbackQuery):
     )
     
     
-@Client.on_callback_query(filters.regex("ccadmin"))
+@app.on_callback_query(filters.regex("ccadmin"))
 async def ccadmin(_, CallbackQuery):
     await CallbackQuery.edit_message_text(
         f"""🏮 here is the admin commands:
@@ -863,7 +863,7 @@ async def ccadmin(_, CallbackQuery):
     )
     
     
-@Client.on_callback_query(filters.regex("ccsudo"))
+@app.on_callback_query(filters.regex("ccsudo"))
 async def ccsudo(_, CallbackQuery):
     await CallbackQuery.edit_message_text(
         f"""🏮 here is the sudo commands:
@@ -883,7 +883,7 @@ async def ccsudo(_, CallbackQuery):
     
     
 
-@Client.on_callback_query(filters.regex("tomi"))
+@app.on_callback_query(filters.regex("tomi"))
 async def cstart(_, CallbackQuery):
     out = start_pannel()
     await CallbackQuery.edit_message_text(
