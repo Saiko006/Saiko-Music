@@ -1,7 +1,7 @@
 import asyncio
 
 from Yukki import BOT_USERNAME, SUDOERS, app
-from config import STRING1 as USER
+from Yukki.Core.Clients.cli import ASS_CLI_1 as USER
 from pyrogram import Client, filters
 
 
