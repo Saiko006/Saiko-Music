@@ -20,7 +20,7 @@ def setting_markup2():
             ),
         ],
         [
-            InlineKeyboardButton(text="✖️ Close", callback_data="close"),
+            InlineKeyboardButton(text="✖️ Close", callback_data="forceclose"),
         ],
     ]
     return f"⚙️  **{MUSIC_BOT_NAME} sᴇᴛᴛɪɴɢs**", buttons
@@ -97,6 +97,10 @@ def start_pannel():
                 ),
                 InlineKeyboardButton(
                     text=" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ📨", url=f"{SUPPORT_GROUP}"
+                ),
+            ],
+            [
+                InlineKeyboardButton(text=" ᴄʟᴏsᴇ ", callback_data="forceclose"
                 ),
             ],
         ]
