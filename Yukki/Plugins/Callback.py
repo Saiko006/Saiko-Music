@@ -811,7 +811,7 @@ async def anjeng(_, CallbackQuery):
     await CallbackQuery.edit_message_text(
         f"""✨ **Hello {rpk} !**
 » **Tekan tombol di bawah ini untuk membaca penjelasan dan melihat daftar perintah yang tersedia !**
-⚡ __Powered by {BOT_NAME}__""",
+⚡ __Powered by {MUSIC_BOT_NAME}__""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -835,7 +835,7 @@ async def ccbasic(_, CallbackQuery):
 » /queue - untuk melihat daftar putar streaming
 » /song (query) - untuk mendownload lagu/video youtube
 » /ping - show the bot ping status
-⚡️ __Powered by {BOT_NAME}__""",
+⚡️ __Powered by {MUSIC_BOT_NAME}__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 ʙᴀᴄᴋ", callback_data="anjeng")]]
         ),
@@ -856,7 +856,7 @@ async def ccadmin(_, CallbackQuery):
 » /auth - authorized user untuk Menggunakan Command Admin Permission Bot Kekinian Music
 » /unauth - unauthorizer user tidak dapat lagi Menggunakan Command Admin Permission
 » /settings - untuk mengatur volume dan auththorized/unauthorized
-⚡️ __Powered by {BOT_NAME}__""",
+⚡️ __Powered by {MUSIC_BOT_NAME}__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 ʙᴀᴄᴋ", callback_data="anjeng")]]
         ),
@@ -867,7 +867,7 @@ async def ccadmin(_, CallbackQuery):
 async def ccsudo(_, CallbackQuery):
     await CallbackQuery.edit_message_text(
         f"""🏮 here is the sudo commands:
-» /restart - restart musik
+» /restart - restart bot
 » /reload - memperbarui bot dan daftar admin
 » /speedtest - cek speedtest
 » /gcast - broadcast obrolan di semua group obrolan music yang di sajikan
@@ -875,7 +875,7 @@ async def ccsudo(_, CallbackQuery):
 » /auth - authorized user untuk Menggunakan Command Admin Permission Bot Kekinian Music
 » /unauth - unauthorizer user tidak dapat lagi Menggunakan Command Admin Permission
 » /settings - untuk mengatur volume dan auththorized/unauthorized
-⚡ __Powered by {BOT_NAME}__""",
+⚡ __Powered by {MUSIC_BOT_NAME}__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 ʙᴀᴄᴋ", callback_data="anjeng")]]
         ),
