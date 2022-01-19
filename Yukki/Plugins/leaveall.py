@@ -47,8 +47,7 @@ async def bye(client, message):
                 )
             await asyncio.sleep(10)
         await lol.delete()
-        await client.send_message(
-            message.chat.id,
+        await message.reply(
             f"""
 **💡 Assistant Telah Keluar**
 
