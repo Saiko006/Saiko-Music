@@ -20,19 +20,19 @@ __HELP__ = """
 
 
 /playplaylist 
-- Start playing Your Saved Playlist.
+- Play yang lu save di Playlist.
 
 
 /playlist 
-- Check Your Saved Playlist On Servers.
+- Cek daftar Playlist yang anda save di Playlist On Servers.
 
 
 /delmyplaylist
-- Delete any saved music in your playlist
+- Hapus daftar playlist yang anda save di playlist.
 
 
 /delgroupplaylist
-- Delete any saved music in your group's playlist [Requires Admin Rights.]
+- Hapus daftar playlist yang ada di playlist group [Requires Admin Rights.]
 """
 
 
