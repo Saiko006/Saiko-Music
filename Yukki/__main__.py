@@ -89,10 +89,6 @@ async def initiate_bot():
             LOG_GROUP_ID,
             "<b>Congrats!! Music Bot has started successfully!</b>",
         )
-    except Exception as e:
-        print(
-            "\nBot has failed to access the log Channel. Make sure that you have added your bot to your log channel and promoted as admin!"
-        )
         console.print(f"\n[red]Stopping Bot")
         return
     a = await app.get_chat_member(LOG_GROUP_ID, BOT_ID)
@@ -103,11 +99,6 @@ async def initiate_bot():
     console.print(f"\n┌[red] Bot Started as {BOT_NAME}!")
     console.print(f"├[green] ID :- {BOT_ID}!")
     if STRING1 != "None":
-        try:
-            await ASS_CLI_1.send_message(
-                LOG_GROUP_ID,
-                "<b>Congrats!! Assistant Client 1  has started successfully!</b>",
-            )
         except Exception as e:
             print(
                 "\nAssistant Account 1 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
@@ -122,11 +113,6 @@ async def initiate_bot():
         console.print(f"├[red] Assistant 1 Started as {ASSNAME1}!")
         console.print(f"├[green] ID :- {ASSID1}!")
     if STRING2 != "None":
-        try:
-            await ASS_CLI_2.send_message(
-                LOG_GROUP_ID,
-                "<b>Congrats!! Assistant Client 2 has started successfully!</b>",
-            )
         except Exception as e:
             print(
                 "\nAssistant Account 2 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
@@ -141,11 +127,6 @@ async def initiate_bot():
         console.print(f"├[red] Assistant 2 Started as {ASSNAME2}!")
         console.print(f"├[green] ID :- {ASSID2}!")
     if STRING3 != "None":
-        try:
-            await ASS_CLI_3.send_message(
-                LOG_GROUP_ID,
-                "<b>Congrats!! Assistant Client 3 has started successfully!</b>",
-            )
         except Exception as e:
             print(
                 "\nAssistant Account 3 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
@@ -160,11 +141,6 @@ async def initiate_bot():
         console.print(f"├[red] Assistant 3 Started as {ASSNAME3}!")
         console.print(f"├[green] ID :- {ASSID3}!")
     if STRING4 != "None":
-        try:
-            await ASS_CLI_4.send_message(
-                LOG_GROUP_ID,
-                "<b>Congrats!! Assistant Client 4 has started successfully!</b>",
-            )
         except Exception as e:
             print(
                 "\nAssistant Account 4 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
@@ -179,11 +155,6 @@ async def initiate_bot():
         console.print(f"├[red] Assistant 4 Started as {ASSNAME4}!")
         console.print(f"├[green] ID :- {ASSID4}!")
     if STRING5 != "None":
-        try:
-            await ASS_CLI_5.send_message(
-                LOG_GROUP_ID,
-                "<b>Congrats!! Assistant Client 5 has started successfully!</b>",
-            )
         except Exception as e:
             print(
                 "\nAssistant Account 5 has failed to access the log Channel. Make sure that you have added your Assistant to your log channel and promoted as admin!"
