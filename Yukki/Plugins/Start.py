@@ -97,7 +97,7 @@ async def welcome(_, message: Message):
 @app.on_message(filters.command(["start", "help", f"start@{BOT_USERNAME}", f"help@{BOT_USERNAME}"]) & filters.group)
 @PermissionCheck
 async def useradd(_, message: Message):
-    out = start_pannel()
+    out = start_pannel(user_id)
     await asyncio.gather(
         message.delete(),
         message.reply_text(
