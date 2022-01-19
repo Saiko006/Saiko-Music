@@ -5,7 +5,7 @@ import re
 
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from pytgcalls import idle
+from pytgcalls import run
 from rich.console import Console
 from rich.table import Table
 from youtubesearchpython import VideosSearch
@@ -153,7 +153,7 @@ async def initiate_bot():
     console.print(f"├[red] Assistant 5 Started as {ASSNAME5}!")
     console.print(f"├[green] ID :- {ASSID5}!")
     console.print(f"└[red] MusicBot Boot Completed.")
-    await idle()
+    await run()
     console.print(f"\n[red]Stopping Bot")
 
 
