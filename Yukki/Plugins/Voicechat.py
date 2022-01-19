@@ -110,8 +110,8 @@ async def activevc(_, message: Message):
         msg = "**Queued List**\n\n"
         msg += "**Currently Playing:**"
         msg += "\n▶️" + current_playing[:30]
-        msg += f"\n   ╚By:- {user_name}"
-        msg += f"\n   ╚Duration:- Remaining `{dur_left}` out of `{duration_min}` Mins."
+        msg += f"\n   By:- {user_name}"
+        msg += f"\n   Durasi:- Remaining `{dur_left}` out of `{duration_min}` Mins."
         fetched.pop(0)
         if fetched:
             msg += "\n\n"
@@ -121,8 +121,8 @@ async def activevc(_, message: Message):
                 usr = song[1]
                 dur = song[2]
                 msg += f"\n⏸️{name}"
-                msg += f"\n   ╠Duration : {dur}"
-                msg += f"\n   ╚Requested by : {usr}\n"
+                msg += f"\n   Durasi : {dur}"
+                msg += f"\n   Atas permintaan : {usr}\n"
         if len(msg) > 4096:
             await mystic.delete()
             filename = "queue.txt"
