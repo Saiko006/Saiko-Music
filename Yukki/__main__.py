@@ -5,7 +5,7 @@ import re
 
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from pytgcalls import run
+from pytgcalls import idle
 from rich.console import Console
 from rich.table import Table
 from youtubesearchpython import VideosSearch
@@ -50,8 +50,7 @@ async def initiate_bot():
         except Exception:
             pass
         status.update(
-            status="[bold blue]Scanning for Plugins", spinner="earth"
-        )
+        status="[bold blue]Scanning for Plugins", spinner="earth")
         console.print("Found {} Plugins".format(len(ALL_MODULES)) + "\n")
         status.update(
             status="[bold red]Importing Plugins...",
@@ -153,7 +152,7 @@ async def initiate_bot():
     console.print(f"├[red] Assistant 5 Started as {ASSNAME5}!")
     console.print(f"├[green] ID :- {ASSID5}!")
     console.print(f"└[red] MusicBot Boot Completed.")
-    await run()
+    await idle()
     console.print(f"\n[red]Stopping Bot")
 
 
