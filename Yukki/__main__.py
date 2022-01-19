@@ -10,7 +10,7 @@ from rich.console import Console
 from rich.table import Table
 from youtubesearchpython import VideosSearch
 
-from config import (LOG_GROUP_ID, LOG_SESSION, STRING1, STRING2, STRING3,
+from config import (LOG_GROUP_ID, STRING1, STRING2, STRING3,
                     STRING4, STRING5)
 from Yukki import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5,
                    ASSID1, ASSID2, ASSID3, ASSID4, ASSID5, ASSNAME1, ASSNAME2,
@@ -152,23 +152,6 @@ async def initiate_bot():
         pass
     console.print(f"├[red] Assistant 5 Started as {ASSNAME5}!")
     console.print(f"├[green] ID :- {ASSID5}!")
-    if LOG_SESSION != "None":
-        try:
-            await LOG_CLIENT.send_message(
-                LOG_GROUP_ID,
-                "<b>Congrats!! Logger Client has started successfully!</b>",
-            )
-        except Exception as e:
-            print(
-                "\nLogger Client has failed to access the log Channel. Make sure that you have added your Logger Account to your log channel and promoted as admin!"
-            )
-            console.print(f"\n[red]Stopping Bot")
-            return
-        try:
-            await LOG_CLIENT.join_chat("musickekiniaan")
-            await LOG_CLIENT.join_chat("Kekiniangroup")
-        except:
-            pass
     console.print(f"└[red] MusicBot Boot Completed.")
     if STRING1 != "None":
         await pytgcalls1.start()
