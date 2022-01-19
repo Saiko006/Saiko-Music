@@ -702,7 +702,7 @@ async def kontolanjing(_, CallbackQuery):
                      "➕ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴛᴏ ɢʀᴏᴜᴘ​ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
               ],
               [
-                  InlineKeyboardButton("❓ ʙᴀsɪᴄ ", callback_data="memekpantek"),
+                  InlineKeyboardButton("❓ʙᴀsɪᴄ ", callback_data="memekpantek"),
               ],
               [
                   InlineKeyboardButton(" ᴄᴏᴍᴍᴀɴᴅ 📚 ", callback_data="cbcmds"),
@@ -887,14 +887,9 @@ async def ccsudo(_, CallbackQuery):
     
 
 @app.on_callback_query(filters.regex("tomi"))
-async def cstart(_, CallbackQuery):
+async def cuseradd(_, CallbackQuery):
     out = start_pannel()
-    await CallbackQuery.edit_message_text(
-        f"""
-Terima kasih telah memasukkan saya di {CallbackQuery.message.chat.title}.
-Musik itu hidup.
-Untuk bantuan silahkan klik tombol COMMAND dibawah.
-""",
+    await CallbackQuery.edit_message_text(f"**Thanks for having me in {message.chat.title}**.\n{MUSIC_BOT_NAME} aktif.\n\n**Untuk bantuan silahkan klik tombol COMMAND dibawah.**",
         reply_markup=InlineKeyboardMarkup(out[1]),
         disable_web_page_preview=True
     )
