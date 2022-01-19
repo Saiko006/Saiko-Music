@@ -98,7 +98,7 @@ async def initiate_bot():
     )
     console.print(header)
     with console.status(
-        "[magenta] Yukki Music Bot Booting...",
+        "[magenta] MusicBot Booting...",
     ) as status:
         console.print("┌ [red]Booting Up The Clients...\n")
         await app.start()
