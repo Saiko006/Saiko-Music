@@ -890,7 +890,7 @@ async def ccsudo(_, CallbackQuery):
 @app.on_callback_query(filters.regex("tomi"))
 async def cuseradd(_, CallbackQuery):
     out = start_pannel()
-    await CallbackQuery.edit_message_text(f"**Thanks for having me in {CallbackQuery.message.chat.title}**.\n{MUSIC_BOT_NAME} aktif.\n\n**Untuk bantuan silahkan klik tombol COMMAND dibawah.**",
+    await CallbackQuery.edit_message_text(f"**Thanks for having me in {CallbackQuery.message.chat.title}**.\n{MUSIC_BOT_NAME}\n\n**Untuk bantuan silahkan klik tombol COMMAND dibawah.**",
         reply_markup=InlineKeyboardMarkup(out[1]),
         disable_web_page_preview=True
     )
