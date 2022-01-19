@@ -12,8 +12,8 @@ from config import SUP_GROUP
 __MODULE__ = "ʙᴜɢ"
 __HELP__ = """
 
-/bug [To report a problem]
-- ex : /bug asistant bot silent
+/bug [Membuat laporan masalah pada bot Music Kekinian]
+- ex : /bug asistant ga naik
 """
 
 
