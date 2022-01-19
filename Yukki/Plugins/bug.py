@@ -13,7 +13,7 @@ __MODULE__ = "ʙᴜɢ"
 __HELP__ = """
 
 /bug [To report a problem]
-- ex : /bug bot silent
+- ex : /bug asistant bot silent
 """
 
 
