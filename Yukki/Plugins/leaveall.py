@@ -5,7 +5,8 @@ from Yukki import client as USER
 from pyrogram import Client, filters
 
 
-@app.on_message(filters.command(["leaveall", f"leaveall@{BOT_USERNAME}"])
+@app.on_message(
+    filters.command(["leaveall", f"leaveall@{BOT_USERNAME}"])
     & filters.user(SUDOERS)
     & ~filters.edited
 )
