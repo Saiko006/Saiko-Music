@@ -24,11 +24,11 @@ __HELP__ = """
 **Note:**
 Only for Sudo Users.
 
-/gban [Username or Reply to a user]
-- Ban a user globally in Bot's Served Chats and prevents user from using bot commands.
+/gban [Username atau Reply akun target]
+- Ban jamet secara globally di server Bot Chats dan tidak dapat menggunakan bot commands.
 
 /ungban [Username or Reply to a user]
-- Remove a user from Bot's GBan List.
+- Hapus jamet dari List GBan.
 """
 
 
