@@ -1,6 +1,7 @@
 import asyncio
 
-from Yukki import BOT_USERNAME, SUDOERS, app
+from Yukki import BOT_USERNAME, SUDOERS
+from Yukki import app as USER
 from pyrogram import Client, filters
 
 
@@ -14,9 +15,9 @@ async def bye(client, message):
         left = 0
         failed = 0
         lol = await message.reply("Asisten Meninggalkan semua obrolan")
-        async for dialog in app.iter_dialogs():
+        async for dialog in USER.iter_dialogs():
             try:
-                await app.leave_chat(dialog.chat.id)
+                await USER.leave_chat(dialog.chat.id)
                 left = left + 1
                 await lol.edit(
                     f"""
