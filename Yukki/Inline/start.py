@@ -31,12 +31,12 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", url=f"https://t.me/{BOT_USERNAME}?start=help"
+                    text=" 📚ᴄᴏᴍᴍᴀɴᴅ ", callback_data="anjeng"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text=" sᴇᴛᴛɪɴɢs⚙️", callback_data="settingm"
+                    text=" sᴇᴛᴛɪɴɢs⚙️ ", callback_data="settingm"
                 )
             ],
         ]
@@ -45,12 +45,12 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", url=f"https://t.me/{BOT_USERNAME}?start=help"
+                    text=" 📚ᴄᴏᴍᴍᴀɴᴅ ", callback_data="anjeng"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text=" sᴇᴛᴛɪɴɢs⚙️", callback_data="settingm"
+                    text=" sᴇᴛᴛɪɴɢs⚙️ ", callback_data="settingm"
                 )
             ],
             [
@@ -64,7 +64,7 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", url=f"https://t.me/{BOT_USERNAME}?start=help"
+                    text=" 📚ᴄᴏᴍᴍᴀɴᴅ ", callback_data="anjeng"
                 ),
             ],
             [
@@ -83,12 +83,12 @@ def start_pannel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text="📚ᴄᴏᴍᴍᴀɴᴅ ", url=f"https://t.me/{BOT_USERNAME}?start=help"
+                    text=" 📚ᴄᴏᴍᴍᴀɴᴅ ", callback_data="anjeng"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text=" sᴇᴛᴛɪɴɢs⚙️", callback_data="settingm"
+                    text=" sᴇᴛᴛɪɴɢs⚙️ ", callback_data="settingm"
                 )
             ],
             [
@@ -108,7 +108,7 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
+                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="cbcmds"
                 ),
             ],
             [
@@ -123,7 +123,7 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
+                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="cbcmds"
                 ),
             ],
             [
@@ -143,7 +143,7 @@ def private_panel():
         buttons = [
             [
                 InlineKeyboardButton(
-                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="shikhar"
+                    text=" 📚 ᴄᴏᴍᴍᴀɴᴅ ", callback_data="cbcmds"
                 ),
             ],
             [
@@ -169,12 +169,12 @@ def private_panel():
             ],
             [
                 InlineKeyboardButton(
-                    text=" ❓ʙᴀsɪᴄ ", callback_data="memekpantek"
+                    text="❓ʙᴀsɪᴄ ", callback_data="memekpantek"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text=" ᴄᴏᴍᴍᴀɴᴅ 📚 ", callback_data="shikhar",
+                    text=" ᴄᴏᴍᴍᴀɴᴅ 📚 ", callback_data="cbcmds",
                 )
             ],
             [
