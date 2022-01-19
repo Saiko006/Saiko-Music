@@ -244,7 +244,7 @@ async def admin_risghts(_, CallbackQuery):
                         photo=thumb,
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=(
-                            f"⏭️<b>__Skipped Video Chat__</b>\n\n🏷<b>__Judul:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n🎧**__Atas permintaan:__** {mention}"
+                            f"⏭️<b>__Skipped Video Chat__</b>\n\n🏷<b>__Judul:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏱**__Durasi__**: {duration_min} \n🎧**__Atas permintaan:__** {mention}"
                         ),
                     )
                     os.remove(thumb)
@@ -446,7 +446,7 @@ async def play_playlist(_, CallbackQuery):
                 got_queue.append(to_append)
                 await music_on(chat_id)
                 await add_active_chat(chat_id)
-                cap = f"🏷<b>__Judul:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>__Info:__</b> [Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n🎧**_Atas permintaan:__** {CallbackQuery.from_user.mention}"
+                cap = f"🏷<b>__Judul:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n💡<b>__Info:__</b> [Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n⏱**__Durasi__**: {duration_min} \n🎧**_Atas permintaan:__** {CallbackQuery.from_user.mention}"
                 final_output = await CallbackQuery.message.reply_photo(
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
@@ -702,13 +702,13 @@ async def kontolanjing(_, CallbackQuery):
                      "➕ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴛᴏ ɢʀᴏᴜᴘ​ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
               ],
               [
-                  InlineKeyboardButton("❓ ʙᴀsɪᴄ", callback_data="memekpantek"),
+                  InlineKeyboardButton("❓ ʙᴀsɪᴄ ", callback_data="memekpantek"),
               ],
               [
-                  InlineKeyboardButton(" ᴄᴏᴍᴍᴀɴᴅ 📚", callback_data="shikhar"),
+                  InlineKeyboardButton(" ᴄᴏᴍᴍᴀɴᴅ 📚 ", callback_data="shikhar"),
               ],
               [
-                  InlineKeyboardButton("📡ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"https://t.me/musickekiniaan"),
+                  InlineKeyboardButton("📡 ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"https://t.me/musickekiniaan"),
                   InlineKeyboardButton(" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 📨", url=f"https://t.me/Kekiniangroup"),
               ],
               [
