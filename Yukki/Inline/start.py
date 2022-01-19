@@ -173,12 +173,12 @@ def private_panel():
             ],
             [
                 InlineKeyboardButton(
-                    text="❓ʙᴀsɪᴄ ", callback_data="memekpantek"
+                    text="❓ ʙᴀsɪᴄ ", callback_data="memekpantek"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text=" ᴄᴏᴍᴍᴀɴᴅ 📚 ", callback_data="cbcmds",
+                    text="📚ᴄᴏᴍᴍᴀɴᴅ", callback_data="cbcmds",
                 )
             ],
             [
