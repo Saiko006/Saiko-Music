@@ -43,10 +43,9 @@ async def forceclose(_, CallbackQuery):
     callback_request = callback_data.split(None, 1)[1]
     query, user_id = callback_request.split("|")
     if CallbackQuery.from_user.id != int(user_id):
-        await CallbackQuery.answer(
+        return await CallbackQuery.answer(
             "You're not allowed to close this.", show_alert=True
         )
-        return
     await CallbackQuery.message.delete()
     await CallbackQuery.answer()
 
