@@ -153,16 +153,6 @@ async def initiate_bot():
     console.print(f"├[red] Assistant 5 Started as {ASSNAME5}!")
     console.print(f"├[green] ID :- {ASSID5}!")
     console.print(f"└[red] MusicBot Boot Completed.")
-    if STRING1 != "None":
-        await pytgcalls1.start()
-    if STRING2 != "None":
-        await pytgcalls2.start()
-    if STRING3 != "None":
-        await pytgcalls3.start()
-    if STRING4 != "None":
-        await pytgcalls4.start()
-    if STRING5 != "None":
-        await pytgcalls5.start()
     await idle()
     console.print(f"\n[red]Stopping Bot")
 
