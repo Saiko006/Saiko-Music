@@ -46,8 +46,9 @@ async def forceclose(_, CallbackQuery):
         return await CallbackQuery.answer(
             "You're not allowed to close this.", show_alert=True
         )
-    await CallbackQuery.message.delete()
-    await CallbackQuery.answer()
+        await CallbackQuery.message.delete()
+    else:
+        await CallbackQuery.answer()
 
 
 @app.on_callback_query(
