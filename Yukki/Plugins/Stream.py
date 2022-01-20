@@ -32,19 +32,6 @@ from Yukki.Utilities.youtube import (get_m3u8, get_yt_info_id,
 
 loop = asyncio.get_event_loop()
 
-__MODULE__ = "ᴠɪᴅᴇᴏᴄᴀʟʟs"
-__HELP__ = f"""
-
-/play [Reply to any Video] atau [YT Link] atau [Music Name]
-- Stream Video on Voice Chat
-
-**For Sudo User:-**
-
-/set_video_limit [Number of Chats]
-- Set a maximum Number of Chats allowed for Video Calls at a time.
-
-
-"""
 
 
 @app.on_callback_query(filters.regex(pattern=r"izal"))
