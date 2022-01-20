@@ -91,7 +91,7 @@ async def useradd(_, message: Message):
     )
 
 
-@app.on_message(filters.command("settings") & filters.group)
+@app.on_message(filters.command(["settings", f"settings@{BOT_USERNAME}"]) & filters.group)
 async def settings(_, message: Message):
     c_id = message.chat.id
     _check = await get_start(c_id, "assistant")
