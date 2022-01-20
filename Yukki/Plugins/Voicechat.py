@@ -72,7 +72,7 @@ async def timer_checkup_markup(_, CallbackQuery):
         )
 
 
-@app.on_message(filters.command(["queue" f"queue@{BOT_USERNAME}"]))
+@app.on_message(filters.command(["queue", f"queue@{BOT_USERNAME}"]))
 async def activevc(_, message: Message):
     global get_queue
     if await is_active_chat(message.chat.id):
@@ -93,8 +93,8 @@ async def activevc(_, message: Message):
         msg = "**Queued List**\n\n"
         msg += "**Currently Playing:**"
         msg += "\n▶️" + current_playing[:30]
-        msg += f"\n   By:- {user_name}"
-        msg += f"\n   Durasi:- Remaining `{dur_left}` out of `{duration_min}` Mins."
+        msg += f"\n   **__Atas permintaan__**:- {user_name}"
+        msg += f"\n   **__Durasi__**:- Remaining `{dur_left}` out of `{duration_min}` Mins."
         fetched.pop(0)
         if fetched:
             msg += "\n\n"
@@ -104,8 +104,8 @@ async def activevc(_, message: Message):
                 usr = song[1]
                 dur = song[2]
                 msg += f"\n⏸️{name}"
-                msg += f"\n   Durasi : {dur}"
-                msg += f"\n   Atas permintaan : {usr}\n"
+                msg += f"\n   **__Durasi__**: {dur}"
+                msg += f"\n   **__Atas permintaan__**: {usr}\n"
         if len(msg) > 4096:
             await mystic.delete()
             filename = "queue.txt"
