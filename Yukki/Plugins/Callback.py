@@ -44,10 +44,10 @@ async def forceclose(_, CallbackQuery):
     query, user_id = callback_request.split("|")
     if CallbackQuery.from_user.id != int(user_id):
         return await CallbackQuery.answer(
-            "You're not allowed to close this.", show_alert=True
+            "💡**Anda tidak dapat menutup menu ini!**", show_alert=True
         )
-        await CallbackQuery.message.delete()
-        await CallbackQuery.answer()
+    await CallbackQuery.message.delete()
+    await CallbackQuery.answer()
         
         
 @app.on_callback_query(filters.regex("cls"))
