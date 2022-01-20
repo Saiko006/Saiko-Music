@@ -72,7 +72,7 @@ async def timer_checkup_markup(_, CallbackQuery):
         )
 
 
-@app.on_message(filters.command("queue" f"queue@{BOT_USERNAME}"))
+@app.on_message(filters.command(["queue" f"queue@{BOT_USERNAME}"]))
 async def activevc(_, message: Message):
     global get_queue
     if await is_active_chat(message.chat.id):
