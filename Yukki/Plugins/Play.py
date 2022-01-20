@@ -44,7 +44,7 @@ DISABLED_GROUPS = []
 useer = "NaN"
 
 
-@app.on_message(filters.command(["player", f"player@{BOT_USERNAME}"])& ~filters.edited & ~filters.bot & ~filters.private)
+@app.on_message(filters.command(["music", f"music@{BOT_USERNAME}"])& ~filters.edited & ~filters.bot & ~filters.private)
 @AdminRightsCheck
 async def music_onoff(_, message: Message):
     user_id = message.from_user.id
@@ -56,7 +56,7 @@ async def music_onoff(_, message: Message):
         return
     if len(message.command) != 2:
         return await message.reply_text(
-            "😕 **Ngetik yang bener ngentot.**\n\n» Coba `/player on` atau `/player off`"
+            "😕 **Ngetik yang bener ngentot.**\n\n» Coba `/music on` atau `/music off`"
         )
     status = message.text.split(None, 1)[1]
     message.chat.id
@@ -76,7 +76,7 @@ async def music_onoff(_, message: Message):
         await lel.edit(f"✅ **Musicnya Dimatiin Di {message.chat.title}**\n\n• Biar Ga Nambah Tolol Lu Denger Music Terus...")
     else:
         return await message.reply_text(
-            "😕 **Ngetik yang bener ngentot.**\n\n» Coba `/player on` atau `/player off`"
+            "😕 **Ngetik yang bener ngentot.**\n\n» Coba `/music on` atau `/music off`"
         )
       
       
