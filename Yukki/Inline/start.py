@@ -55,7 +55,7 @@ def start_pannel():
             ],
             [
                 InlineKeyboardButton(
-                    text=" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ📨 ", url=f"{SUPPORT_GROUP}"
+                    text=" ɢʀᴏᴜᴘ📨 ", url=f"{SUPPORT_GROUP}"
                 ),
             ],
         ]
@@ -74,7 +74,7 @@ def start_pannel():
             ],
             [
                 InlineKeyboardButton(
-                    text=" 📡ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"{SUPPORT_CHANNEL}"
+                    text=" 📡ᴄʜᴀɴɴᴇʟ ", url=f"{SUPPORT_CHANNEL}"
                 ),
             ],
         ]
@@ -93,10 +93,10 @@ def start_pannel():
             ],
             [
                 InlineKeyboardButton(
-                    text="📡ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"{SUPPORT_CHANNEL}"
+                    text="📡ᴄʜᴀɴɴᴇʟ ", url=f"{SUPPORT_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text=" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ📨", url=f"{SUPPORT_GROUP}"
+                    text=" ɢʀᴏᴜᴘ📨", url=f"{SUPPORT_GROUP}"
                 ),
             ],
             [
@@ -138,7 +138,7 @@ def private_panel():
             ],
             [
                 InlineKeyboardButton(
-                    text=" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ📨", url=f"{SUPPORT_GROUP}"
+                    text=" ɢʀᴏᴜᴘ📨", url=f"{SUPPORT_GROUP}"
                 ),
             ],
         ]
@@ -158,7 +158,7 @@ def private_panel():
             ],
             [
                 InlineKeyboardButton(
-                    text="📡ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"{SUPPORT_CHANNEL}"
+                    text="📡ᴄʜᴀɴɴᴇʟ ", url=f"{SUPPORT_CHANNEL}"
                 ),
             ],
         ]
@@ -183,10 +183,10 @@ def private_panel():
             ],
             [
                 InlineKeyboardButton(
-                    text="📡ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"{SUPPORT_CHANNEL}"
+                    text="📡ᴄʜᴀɴɴᴇʟ ", url=f"{SUPPORT_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text=" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ📨", url=f"{SUPPORT_GROUP}"
+                    text=" ɢʀᴏᴜᴘ📨", url=f"{SUPPORT_GROUP}"
                 ),
             ],
             [
