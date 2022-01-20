@@ -8,10 +8,6 @@ __MODULE__ = "ʙʟᴀᴄᴋʟɪsᴛ"
 __HELP__ = """
 
 
-/blacklistedchat 
-- Check Blacklisted Chats of Bot.
-
-
 **Note:**
 Only for Sudo Users.
 
