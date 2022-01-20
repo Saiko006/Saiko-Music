@@ -18,18 +18,6 @@ from Yukki.Utilities.download import get_formats, get_type
 user_time = {}
 flex = {}
 
-__MODULE__ = "ɢʟᴏʙᴀɴ ʙᴀɴ"
-__HELP__ = """
-
-**Note:**
-Only for Sudo Users.
-
-/gban [Username atau Reply akun target]
-- Ban jamet secara globally di server Bot Chats dan tidak dapat menggunakan bot commands.
-
-/ungban [Username or Reply to a user]
-- Hapus jamet dari List GBan.
-"""
 
 
 @app.on_callback_query(filters.regex("close"))
