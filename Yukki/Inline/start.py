@@ -36,7 +36,7 @@ def start_pannel():
             ],
             [
                 InlineKeyboardButton(
-                    text=" sᴇᴛᴛɪɴɢs⚙️ ", callback_data="settingm"
+                    text=" ⚙️sᴇᴛᴛɪɴɢs ", callback_data="settingm"
                 )
             ],
         ]
@@ -50,7 +50,7 @@ def start_pannel():
             ],
             [
                 InlineKeyboardButton(
-                    text=" sᴇᴛᴛɪɴɢs⚙️ ", callback_data="settingm"
+                    text=" ⚙️sᴇᴛᴛɪɴɢs ", callback_data="settingm"
                 )
             ],
             [
@@ -69,7 +69,7 @@ def start_pannel():
             ],
             [
                 InlineKeyboardButton(
-                    text=" sᴇᴛᴛɪɴɢs⚙️", callback_data="settingm"
+                    text=" ⚙️sᴇᴛᴛɪɴɢs ", callback_data="settingm"
                 )
             ],
             [
@@ -88,7 +88,7 @@ def start_pannel():
             ],
             [
                 InlineKeyboardButton(
-                    text=" sᴇᴛᴛɪɴɢs⚙️ ", callback_data="settingm"
+                    text=" ⚙️sᴇᴛᴛɪɴɢs ", callback_data="settingm"
                 )
             ],
             [
