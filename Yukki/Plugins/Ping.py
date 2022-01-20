@@ -9,13 +9,7 @@ from pyrogram.types import Message
 from Yukki import BOT_USERNAME, MUSIC_BOT_NAME, app, boottime
 from Yukki.Utilities.ping import get_readable_time
 
-__MODULE__ = "ᴘɪɴɢ"
-__HELP__ = """
-
-/ping - Mengecek bot aktif atau tidak.
-"""
-
-
+ 
 async def bot_sys_stats():
     bot_uptime = int(time.time() - boottime)
     cpu = psutil.cpu_percent(interval=0.5)
