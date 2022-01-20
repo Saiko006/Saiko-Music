@@ -48,6 +48,19 @@ async def forceclose(_, CallbackQuery):
         )
         await CallbackQuery.message.delete()
         await CallbackQuery.answer()
+        
+        
+@app.on_callback_query(filters.regex("cls"))
+async def close(_, query: CallbackQuery):
+    a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
+    if not a.can_manage_voice_chats:
+        return await query.answer(
+            "💡**Anda tidak dapat menutup menu ini!**",
+            show_alert=True,
+        )
+    await query.message.delete()
+
+
 
 
 @app.on_callback_query(
