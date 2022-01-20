@@ -47,7 +47,6 @@ async def forceclose(_, CallbackQuery):
             "You're not allowed to close this.", show_alert=True
         )
         await CallbackQuery.message.delete()
-    else:
         await CallbackQuery.answer()
 
 
@@ -895,14 +894,3 @@ async def cuseradd(_, CallbackQuery):
         reply_markup=InlineKeyboardMarkup(out[1]),
         disable_web_page_preview=True
     )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-   
