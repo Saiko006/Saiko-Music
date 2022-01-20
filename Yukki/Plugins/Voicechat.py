@@ -18,24 +18,7 @@ from Yukki.Utilities.assistant import get_assistant_details
 
 loop = asyncio.get_event_loop()
 
-__MODULE__ = "ᴊᴏɪɴ/ʟᴇᴀᴠᴇ"
-__HELP__ = """
 
-**Note:**
-Only for Sudo Users
-
-
-/joinassistant [Chat Username or Chat ID]
-- Join assistant to a group.
-
-
-/leaveassistant [Chat Username or Chat ID]
-- Assistant will leave the particular group.
-
-
-/leavebot [Chat Username or Chat ID]
-- Bot will leave the particular chat.
-"""
 
 @app.on_callback_query(filters.regex("gback_list_chose_stream"))
 async def gback_list_chose_stream(_, CallbackQuery):
@@ -89,7 +72,7 @@ async def timer_checkup_markup(_, CallbackQuery):
         )
 
 
-@app.on_message(filters.command("queue"))
+@app.on_message(filters.command("queue" f"queue@{BOT_USERNAME}"))
 async def activevc(_, message: Message):
     global get_queue
     if await is_active_chat(message.chat.id):
