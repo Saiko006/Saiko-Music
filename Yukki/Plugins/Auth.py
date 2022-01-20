@@ -9,23 +9,6 @@ from Yukki.Decorators.authorized import authorized_users_only
 from Yukki.Utilities.changers import (alpha_to_int, int_to_alpha,
                                       time_to_seconds)
 
-__MODULE__ = "ᴀᴜᴛʜ ᴜsᴇʀs"
-__HELP__ = """
-
-**Note:**
--Auth users Dapat Menggunakan Command Admin Permission Bot Kekinian Music Seperti end, pause, resume, skip .
-
-
-/auth [Username atau Reply chat orang tujuan] 
-- Tambahkan pengguna ke daftar auth grup.
-
-/unauth [Username atau Reply chat orang tujuan] 
-- Menghapus pengguna dari authuser.
-
-/authusers 
-- Mekihat daftar authusers pada grub.
-"""
-
 
 @app.on_message(filters.command("auth") & filters.group)
 @authorized_users_only
