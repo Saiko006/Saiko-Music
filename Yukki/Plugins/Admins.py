@@ -33,36 +33,6 @@ from Yukki.Utilities.youtube import get_m3u8, get_yt_info_id
 loop = asyncio.get_event_loop()
 
 
-__MODULE__ = "ᴠᴏɪᴄᴇ ᴄʜᴀᴛ"
-__HELP__ = """
-
-
-/pause
-- Menjeda streaming yang sedang memutar.
-
-/resume
-- Melanjutkan pemutaran streaming yang di jeda.
-
-/skip
-- Melanjutkan ke pemutaran selanjutnya
-
-/end or /stop
-- Menghentikan streaming.
-
-/queue
-- Cek daftar putar.
-
-
-**Note:**
-Only for Sudo Users
-
-/activevc
-- Cek daftar music yang aktif pada bot.
-
-/activevideo
-- Cek daftar videi yang aktif pada bot.
-"""
-
 
 @app.on_message(
     filters.command(["pause", "skip", "resume", "stop", "end"])
