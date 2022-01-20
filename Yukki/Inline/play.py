@@ -1,5 +1,5 @@
 from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
-                            InlineKeyboardMarkup, InputMediaPhoto, Message)
+                            InlineKeyboardMarkup, InputMediaPhoto)
 
 from Yukki import db_mem
 
