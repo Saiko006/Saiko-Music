@@ -4,7 +4,7 @@ import random
 from asyncio import QueueEmpty
 
 from pyrogram import filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, Message
 
 from config import get_queue
 from Yukki.Inline.start import start_pannel
