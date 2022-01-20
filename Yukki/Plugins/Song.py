@@ -15,17 +15,6 @@ from Yukki.Utilities.youtube import get_yt_info_query, get_yt_info_query_slider
 
 loop = asyncio.get_event_loop()
 
-__MODULE__ = "sᴏɴɢ"
-__HELP__ = """
-
-
-/song [Youtube URL atau Search Judul] 
-- Download audio.
-
-
-
-"""
-
 
 @app.on_message(
     filters.command(["song", f"song@{BOT_USERNAME}"])
