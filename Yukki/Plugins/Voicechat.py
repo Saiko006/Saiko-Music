@@ -9,7 +9,7 @@ from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto, Message,
                             Voice)
 
 from config import get_queue
-from Yukki import SUDOERS, app, db_mem, random_assistant
+from Yukki import SUDOERS,BOT_USERNAME, app, db_mem, random_assistant
 from Yukki.Database import (get_active_chats, get_active_video_chats,
                             get_assistant, is_active_chat, save_assistant)
 from Yukki.Decorators.checker import checker, checkerCB
