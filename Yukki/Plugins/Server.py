@@ -25,33 +25,6 @@ from Yukki.Utilities.paste import isPreviewUp, paste_queue
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
-__MODULE__ = "sᴇʀᴠᴇʀ"
-__HELP__ = f"""
-
-**Note:**
-**Only for Sudo Users**
-
-/get_log
-- Get log of last 100 lines from Heroku.
-
-/get_var
-- Get a config var from Heroku or .env.
-
-/del_var
-- Delete any var on Heroku or .env.
-
-/set_var [Var Name] [Value]
-- Set a Var or Update a Var on heroku or .env. Seperate Var and its Value with a space.
-
-/usage
-- Get Dyno Usage.
-
-/update
-- Update Your Bot.
-
-/restart 
-- Restart Bot [All downloads, cache, raw files will be cleared too]. 
-"""
 
 
 XCB = [
