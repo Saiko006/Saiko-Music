@@ -15,25 +15,6 @@ from Yukki.Inline import (add_genre_markup, check_genre_markup, check_markup,
                           others_markup, play_genre_playlist, playlist_markup,
                           third_playlist_markup)
 
-__MODULE__ = "ᴘʟᴀʏʟɪsᴛ"
-__HELP__ = """
-
-
-/playplaylist 
-- Play yang lu save di Playlist.
-
-
-/playlist 
-- Cek daftar Playlist yang anda save di Playlist On Servers.
-
-
-/delmyplaylist
-- Hapus daftar playlist yang anda save di playlist.
-
-
-/delgroupplaylist
-- Hapus daftar playlist yang ada di playlist group [Requires Admin Rights.]
-"""
 
 
 @app.on_message(filters.command("playplaylist") & filters.group)
