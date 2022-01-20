@@ -85,7 +85,7 @@ async def useradd(_, message: Message):
     await asyncio.gather(
         message.delete(),
         message.reply_text(
-            f"**Thanks for having me in {message.chat.title}**.\n{MUSIC_BOT_NAME}✅\n\n**Untuk bantuan silahkan klik tombol COMMAND dibawah.**",
+            f"**Thanks for having me in {message.chat.title}**\n\n{MUSIC_BOT_NAME}✅\n\n**Untuk bantuan silahkan klik tombol COMMAND dibawah.**",
             reply_markup=InlineKeyboardMarkup(out[1]),
         ),
     )
