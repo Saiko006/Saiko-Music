@@ -1,5 +1,5 @@
 from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
-                            InlineKeyboardMarkup, InputMediaPhoto)
+                            InlineKeyboardMarkup, InputMediaPhoto, Message)
 
 from config import MUSIC_BOT_NAME, SUPPORT_CHANNEL, SUPPORT_GROUP
 from Yukki import BOT_USERNAME
@@ -20,7 +20,7 @@ def setting_markup2():
             ),
         ],
         [
-            InlineKeyboardButton(text="✖ ᴄʟᴏsᴇ", callback_data="cls"),
+            InlineKeyboardButton(text="✖ ᴄʟᴏsᴇ", callback_data=f"forceclose"),
         ],
     ]
     return f"⚙️  **{MUSIC_BOT_NAME} sᴇᴛᴛɪɴɢs**", buttons
@@ -100,7 +100,7 @@ def start_pannel():
                 ),
             ],
             [
-                InlineKeyboardButton(text=" ᴄʟᴏsᴇ ", callback_data="cls"
+                InlineKeyboardButton(text=" ᴄʟᴏsᴇ ", callback_data=f"forceclose"
                 ),
             ],
         ]
@@ -212,7 +212,7 @@ def setting_markup():
             ),
         ],
         [
-            InlineKeyboardButton(text="✖️ Close", callback_data="cls"),
+            InlineKeyboardButton(text="✖️ Close", callback_data=f"forceclose"),
             InlineKeyboardButton(text="🔙 Go Back", callback_data="okaybhai"),
         ],
     ]
