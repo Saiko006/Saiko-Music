@@ -90,20 +90,20 @@ async def activevc(_, message: Message):
         current_playing = fetched[0][0]
         user_name = fetched[0][1]
 
-        msg = "**Queued List**\n\n"
-        msg += "**Currently Playing:**"
-        msg += "\n▶️" + current_playing[:30]
+        msg = "**DAFTAR PUTAR**\n\n"
+        msg += "**SEDANG DI PUTAR:**"
+        msg += "\n▶️" + **current_playing[:30]**
         msg += f"\n   **__Atas permintaan__**:- {user_name}"
-        msg += f"\n   **__Durasi__**:- Remaining `{dur_left}` out of `{duration_min}` Mins."
+        msg += f"\n   **__Durasi__**:- Tersisa `{dur_left}` Dari `{duration_min}` Mins."
         fetched.pop(0)
         if fetched:
             msg += "\n\n"
-            msg += "**Up Next In Queue:**"
+            msg += "**BERIKUTNYA DALAM ANTRIAN:**"
             for song in fetched:
                 name = song[0][:30]
                 usr = song[1]
                 dur = song[2]
-                msg += f"\n⏸️{name}"
+                msg += f"\n⏸️**{name}**"
                 msg += f"\n   **__Durasi__**: {dur}"
                 msg += f"\n   **__Atas permintaan__**: {usr}\n"
         if len(msg) > 4096:
@@ -113,7 +113,7 @@ async def activevc(_, message: Message):
                 out_file.write(str(msg.strip()))
             await message.reply_document(
                 document=filename,
-                caption=f"**OUTPUT:**\n\n`Queued List`",
+                caption=f"**OUTPUT:**\n\n`DAFTAR PUTAR`",
                 quote=False,
             )
             os.remove(filename)
