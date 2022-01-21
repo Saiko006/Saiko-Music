@@ -26,7 +26,7 @@ def AdminRightsCheck(mystic):
                     if token not in _check:
                         return await message.reply(
                             "Anda tidak memiliki izin yang diperlukan untuk melakukan tindakan ini.\n\n__HANYA ADMIN/AUTH USERS YANG DAPAT MELAKUKANNYA__"
-                        
+                        )
         return await mystic(_, message)
 
     return wrapper
