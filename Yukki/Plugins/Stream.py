@@ -50,7 +50,7 @@ async def izal(_, CallbackQuery):
     title, duration_min, duration_sec, thumbnail = get_yt_info_id(videoid)
     if duration_sec > DURATION_LIMIT:
         return await CallbackQuery.message.reply_text(
-            f"**Duration Limit Exceeded**\n\n**Allowed Duration: **{DURATION_LIMIT_MIN} minute(s)\n**Received Duration:** {duration_min} minute(s)"
+            f"**Melampaui batas durasi**\n\n**Durasi yang di izinkan: **{DURATION_LIMIT_MIN} minute(s)\n**Durasi yang di terima:** {duration_min} minute(s)"
         )
     else:
         await app.send_photo(
@@ -92,7 +92,7 @@ async def quality_markup(_, CallbackQuery):
     if not limit:
         await CallbackQuery.message.delete()
         return await CallbackQuery.message.reply_text(
-            "**No Limit Defined for Video Calls**\n\nSet a Limit for Number of Maximum Video Calls allowed on Bot by /set_video_limit [Sudo Users Only]"
+            "**Tidak ada batas yang ditentukan untuk pemutaran video**\n\nTetapkan batas durasi untuk pemutaran video maksimum yang diizinkan pada BOT oleh /set_video_limit [Sudo Users Only]"
         )
     count = len(await get_active_video_chats())
     if int(count) == int(limit):
