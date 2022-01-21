@@ -44,7 +44,7 @@ async def izal(_, CallbackQuery):
     videoid, duration, user_id = callback_request.split("|")
     if CallbackQuery.from_user.id != int(user_id):
         return await CallbackQuery.answer(
-            "This is not for you! Search You Own Song.", show_alert=True
+            "😏 Ini bukan untukmu! Cari music/video anda sendiri.", show_alert=True
         )
     await CallbackQuery.message.delete()
     title, duration_min, duration_sec, thumbnail = get_yt_info_id(videoid)
