@@ -187,7 +187,7 @@ async def set_video_limit_kid(_, message: Message):
 
 @app.on_message(filters.command("maintenance") & filters.user(SUDOERS))
 async def maintenance(_, message):
-    usage = "**Usage:**\n/maintenance [enable|disable]"
+    usage = "**Ketik:**\n/maintenance [enable|disable]"
     if len(message.command) != 2:
         return await message.reply_text(usage)
     chat_id = message.chat.id
