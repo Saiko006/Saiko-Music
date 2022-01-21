@@ -28,7 +28,7 @@ async def gback_list_chose_stream(_, CallbackQuery):
     videoid, duration, user_id = callback_request.split("|")
     if CallbackQuery.from_user.id != int(user_id):
         return await CallbackQuery.answer(
-            "This is not for you! Search You Own Song.", show_alert=True
+            "😏Ini Bukan Untukmu! Cari lagu Anda sendiri!", show_alert=True
         )
     buttons = choose_markup(videoid, duration, user_id)
     await CallbackQuery.edit_message_reply_markup(
@@ -62,13 +62,13 @@ async def timer_checkup_markup(_, CallbackQuery):
             dur_left = db_mem[CallbackQuery.message.chat.id]["left"]
             duration_min = db_mem[CallbackQuery.message.chat.id]["total"]
             return await CallbackQuery.answer(
-                f"Remaining {dur_left} out of {duration_min} Mins.",
+                f"Tersisa {dur_left} Dari {duration_min} Mins.",
                 show_alert=True,
             )
         return await CallbackQuery.answer(f"Not Playing.", show_alert=True)
     else:
         return await CallbackQuery.answer(
-            f"No Active Voice Chat", show_alert=True
+            f"Tidak ada obrolan suara aktif!", show_alert=True
         )
 
 
@@ -148,10 +148,10 @@ async def activevc(_, message: Message):
             text += f"<b>{j + 1}. {title}</b> [`{x}`]\n"
         j += 1
     if not text:
-        await message.reply_text("No Active Voice Chats")
+        await message.reply_text("Tidak ada obrolan suara aktif")
     else:
         await message.reply_text(
-            f"**Active Voice Chats:-**\n\n{text}",
+            f"**Daftar Obrolan Suara Yang Aktif:-**\n\n{text}",
             disable_web_page_preview=True,
         )
 
@@ -181,10 +181,10 @@ async def activevi_(_, message: Message):
             text += f"<b>{j + 1}. {title}</b> [`{x}`]\n"
         j += 1
     if not text:
-        await message.reply_text("No Active Voice Chats")
+        await message.reply_text("Tidak ada obrolan suara aktif")
     else:
         await message.reply_text(
-            f"**Active Video Calls:-**\n\n{text}",
+            f"**Daftar Obrolan Suara Video Yang Aktif:-**\n\n{text}",
             disable_web_page_preview=True,
         )
 
