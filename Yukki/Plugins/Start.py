@@ -485,5 +485,5 @@ async def start_markup_check(_, CallbackQuery):
     if command == "DIT":
         diske = psutil.disk_usage("/").percent
         await CallbackQuery.answer(
-            f"Yukki Disk Usage: {diske}%", show_alert=True
+            f"Disk Usage: {diske}%", show_alert=True
         )
