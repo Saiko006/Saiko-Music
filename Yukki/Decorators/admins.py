@@ -43,8 +43,7 @@ def AdminActual(mystic):
         )
         if not member.can_manage_voice_chats:
             return await message.reply(
-                "
-                            "Anda tidak memiliki izin yang diperlukan untuk melakukan tindakan ini.\n\n__HANYA ADMIN/AUTH USERS YANG DAPAT MELAKUKANNYA__"
+                "Anda tidak memiliki izin yang diperlukan untuk melakukan tindakan ini.\n\n__HANYA ADMIN/AUTH USERS YANG DAPAT MELAKUKANNYA__"
             )
         return await mystic(_, message)
 
