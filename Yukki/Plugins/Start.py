@@ -60,7 +60,7 @@ async def welcome(_, message: Message):
                 ) = await get_assistant_details(ran_ass)
                 out = start_pannel()
                 await message.reply_text(
-                    f"Welcome To {MUSIC_BOT_NAME}\n\nPromote me as administrator in your group otherwise I will not function properly.\n\nAssistant Username:- @{ASS_USERNAME}\nAssistant ID:- {ASS_ID}",
+                    f"Welcome To {MUSIC_BOT_NAME}\n\nJadikan saya sebagai admin di group anda\njika tidak, saya tidak akan berfungsi dengan baik!",
                     reply_markup=InlineKeyboardMarkup(out[1]),
                 )
             if member.id in ASSIDS:
@@ -118,7 +118,7 @@ async def okaybhai(_, CallbackQuery):
     await CallbackQuery.answer("Going Back ...")
     out = start_pannel()
     await CallbackQuery.edit_message_text(
-        text=f"Thanks for having me in {CallbackQuery.message.chat.title}.\n{MUSIC_BOT_NAME}is alive.\n\nFor any assistance or help, checkout our support group and channel.",
+        text=f"Thanks for having me in {CallbackQuery.message.chat.title}**\n\n{MUSIC_BOT_NAME}✅\n\n**Untuk bantuan silahkan klik tombol COMMAND dibawah.** ",
         reply_markup=InlineKeyboardMarkup(out[1]),
     )
 
@@ -156,12 +156,12 @@ async def EVE(_, CallbackQuery):
         await CallbackQuery.answer("Changes Saved")
         await add_nonadmin_chat(chat_id)
         await CallbackQuery.edit_message_text(
-            text=f"{text}\n\nAdmins Commands Mode to **Everyone**\n\nNow anyone present in this group can skip, pause, resume, stop music.\n\nChanges Done By @{checking}",
+            text=f"{text}\n\nAdmins Commands Set To Mode **Everyone**\n\nSekarang siapa pun yang hadir dalam grup ini dapat melakukan skip, pause, resume, end music/video.\n\nChanges Done By @{checking}",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
         await CallbackQuery.answer(
-            "Commands Mode is Already Set To EVERYONE", show_alert=True
+            "Commands Set To Mode EVERYONE", show_alert=True
         )
 
 
@@ -174,13 +174,13 @@ async def AMS(_, CallbackQuery):
     is_non_admin = await is_nonadmin_chat(chat_id)
     if not is_non_admin:
         await CallbackQuery.answer(
-            "Commands Mode is Already Set To ADMINS ONLY", show_alert=True
+            "Commands Set To Mode ADMINS ONLY", show_alert=True
         )
     else:
         await CallbackQuery.answer("Changes Saved")
         await remove_nonadmin_chat(chat_id)
         await CallbackQuery.edit_message_text(
-            text=f"{text}\n\nSet Commands Mode to **Admins**\n\nNow only Admins present in this group can skip, pause, resume, stop musics.\n\nChanges Done By @{checking}",
+            text=f"{text}\n\nCommands Set To Mode **Admins**\n\nSekarang hanya Admin saja yang dapat melakukan skip, pause, resume, end music/video.\n\nChanges Done By @{checking}",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
@@ -215,7 +215,7 @@ async def start_markup_check(_, CallbackQuery):
         else:
             current = "Everyone"
         await CallbackQuery.edit_message_text(
-            text=f"{text}\n\n**Group:** {c_title}\n\nCurrently Who Can Use {MUSIC_BOT_NAME}:- **{current}**\n\n**⁉️ What is This?**\n\n**👥 Everyone :-**Anyone can use {MUSIC_BOT_NAME}'s commands(skip, pause, resume etc) present in this group.\n\n**🙍 Admin Only :-**  Only the admins and authorized users can use all commands of {MUSIC_BOT_NAME}.",
+            text=f"{text}\n\n**Group:** {c_title}\n\nSekarang Siapa Yang Dapat Menggunakan {MUSIC_BOT_NAME}:- **{current}**\n\n**⁉️ What is This?**\n\n**👥 Everyone :-**Semua yang ada disini dapat menggunakan perintah {MUSIC_BOT_NAME} seperti (skip, pause, resume & end) di group ini.\n\n**🙍 Admin Only :-**  Hanya ADMIN & authusers yang dapat menggunakan perintah {MUSIC_BOT_NAME}.",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     if command == "Dashboard":
@@ -438,7 +438,7 @@ async def start_markup_check(_, CallbackQuery):
         _playlist = await get_authuser_names(CallbackQuery.message.chat.id)
         if not _playlist:
             return await CallbackQuery.edit_message_text(
-                text=f"{text}\n\nNo Authorized Users Found\n\nYou can allow any non-admin to use my admin commands by /auth and delete by using /unauth",
+                text=f"{text}\n\nNo Authorized Users Found\n\nAnda dapat membiarkan non-admin untuk menggunakan perintah admin saya dengan /auth dan menghapus dengan menggunakan /unauth",
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
         else:
@@ -461,7 +461,7 @@ async def start_markup_check(_, CallbackQuery):
                     j += 1
                 except Exception:
                     continue
-                msg += f"{j}➤ {user}[`{user_id}`]\n"
+                msg += f"{j}➡️ {user}[`{user_id}`]\n"
                 msg += f"    ┗ Added By:- {admin_name}[`{admin_id}`]\n\n"
             await CallbackQuery.edit_message_text(
                 msg, reply_markup=InlineKeyboardMarkup(buttons)
