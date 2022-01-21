@@ -716,14 +716,14 @@ async def kontolanjing(_, CallbackQuery):
                      "➕ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴛᴏ ɢʀᴏᴜᴘ​ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
               ],
               [
-                  InlineKeyboardButton("❓ʙᴀsɪᴄ ", callback_data="memekpantek"),
+                  InlineKeyboardButton(" ❓ʙᴀsɪᴄ ", callback_data="memekpantek"),
               ],
               [
-                  InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅ📚", callback_data="cbcmds"),
+                  InlineKeyboardButton("📚ᴄᴏᴍᴍᴀɴᴅ", callback_data="cbcmds"),
               ],
               [
-                  InlineKeyboardButton("📡 ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ ", url=f"https://t.me/musickekiniaan"),
-                  InlineKeyboardButton(" sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 📨", url=f"https://t.me/Kekiniangroup"),
+                  InlineKeyboardButton("📡ᴄʜᴀɴɴᴇʟ ", url=f"https://t.me/musickekiniaan"),
+                  InlineKeyboardButton(" ɢʀᴏᴜᴘ📨", url=f"https://t.me/Kekiniangroup"),
               ],
               [
                   InlineKeyboardButton("👑 ᴏᴡɴᴇʀ 👑", url="https://t.me/rumahakhirat")
