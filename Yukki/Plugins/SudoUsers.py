@@ -185,7 +185,7 @@ async def set_video_limit_kid(_, message: Message):
 ## Maintenance Yukki
 
 
-@app.on_message(filters.command("maintenance") & filters.user(SUDOERS))
+@app.on_message(filters.command(["maintenance", f"maintenance@{BOT_USERNAME}"]) & filters.user(SUDOERS))
 async def maintenance(_, message):
     usage = "**Ketik:**\n/maintenance [enable|disable]"
     if len(message.command) != 2:
@@ -196,7 +196,7 @@ async def maintenance(_, message):
     if state == "enable":
         user_id = 1
         await add_on(user_id)
-        await message.reply_text("Enabled for Maintenance")
+        await message.reply_text("Maintenance Mode Enable")
     elif state == "disable":
         user_id = 1
         await add_off(user_id)
@@ -214,7 +214,7 @@ async def logger(_, message):
         return await message.reply_text(
             "No Logger Account Defined.\n\nPlease Set <code>LOG_SESSION</code> var and then try loggging."
         )
-    usage = "**Usage:**\n/logger [enable|disable]"
+    usage = "**Ketik:**\n/logger [enable|disable]"
     if len(message.command) != 2:
         return await message.reply_text(usage)
     chat_id = message.chat.id
@@ -239,7 +239,7 @@ async def logger(_, message):
 async def ban_globally(_, message):
     if not message.reply_to_message:
         if len(message.command) < 2:
-            await message.reply_text("**Usage:**\n/gban [USERNAME | USER_ID]")
+            await message.reply_text("**Ketik:**\n/gban [USERNAME | USER_ID]")
             return
         user = message.text.split(None, 2)[1]
         if "@" in user:
