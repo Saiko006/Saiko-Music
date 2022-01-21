@@ -67,11 +67,11 @@ async def welcome(_, message: Message):
                 return await remove_active_chat(chat_id)
             if member.id in OWNER_ID:
                 return await message.reply_text(
-                    f"{MUSIC_BOT_NAME}'s Owner[{member.mention}] has just joined your chat."
+                    f"👑 Owner {MUSIC_BOT_NAME} [{member.mention}] baru saja bergabung."
                 )
             if member.id in SUDOERS:
                 return await message.reply_text(
-                    f"A member of {MUSIC_BOT_NAME}'s Sudo User[{member.mention}] has just joined your chat."
+                    f"🔱 Admin dari {MUSIC_BOT_NAME} Sudo User[{member.mention}] baru saja bergabung."
                 )
             return
         except:
