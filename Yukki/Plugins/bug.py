@@ -6,10 +6,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from Yukki import BOT_USERNAME, SUDOERS, app
-from Yukki.Decorators.admins import AdminRightsCheck as authorized_users_only
 from config import SUP_GROUP
-
-
 
 
 # ganti nama dan username telegram kalian
@@ -17,80 +14,144 @@ OWNER_NAME = "ᴢᴀʟ"
 OWNER_USERNAME = "rumahakhirat"
 
 
-@app.on_message(filters.user(SUDOERS) & filters.command(["echos", f"echos@{BOT_USERNAME}"]) & filters.group)
-async def s(client, message):
-    r = message.reply_to_message
-    c = message.chat.id
-    if r:
+@app.on_message(
+    filters.user(SUDOERS) & filters.command(["send", f"send@{BOT_USERNAME}"])
+)
+async def send(client, message):
+    rep = message.reply_to_message
+    texted = message.reply_to_message.text
+    chid = message.text.split(None, 1)[1]
+    if texted:
         await message.delete()
+        await rep.delete()
+        await client.send_message(chid, texted)
+        tm = await message.reply(
+            f"**✅ Pesan Yang Anda Balas Telah Dikirim Ke** `{chid}`"
+        )
+        await asyncio.sleep(5)
+        await tm.delete()
+        return
+    media = await client.download_media(rep)
+    if rep.photo:
         await message.delete()
-        await app.send_sticker(c, r.sticker.file_id)
+        await rep.delete()
+        await client.send_photo(chid, photo=media)
+        tm = await message.reply(
+            f"**✅ Gambar Yang Anda Balas Telah Dikirim Ke** `{chid}`"
+        )
+        await asyncio.sleep(5)
+        await tm.delete()
+    elif rep.video:
+        await message.delete()
+        await rep.delete()
+        await client.send_video(chid, video=media)
+        tm = await message.reply(
+            f"**✅ Video Yang Anda Balas Telah Dikirim Ke** `{chid}`"
+        )
+        await asyncio.sleep(5)
+        await tm.delete()
+    elif rep.sticker:
+        await message.delete()
+        await rep.delete()
+        await client.send_sticker(chid, sticker=media)
+        tm = await message.reply(
+            f"**✅ Sticker Yang Anda Balas Telah Dikirim Ke** `{chid}`"
+        )
+        await asyncio.sleep(5)
+        await tm.delete()
+    elif rep.audio:
+        await message.delete()
+        await rep.delete()
+        await client.send_audio(chid, audio=media)
+        tm = await message.reply(
+            f"**✅ Audio Yang Anda Balas Telah Dikirim Ke** `{chid}`"
+        )
+        await asyncio.sleep(5)
+        await tm.delete()
+    elif rep.voice:
+        await message.delete()
+        await rep.delete()
+        await client.send_voice(chid, voice=media)
+        tm = await message.reply(
+            f"**✅ Voice Note Yang Anda Balas Telah Dikirim Ke** `{chid}`"
+        )
+        await asyncio.sleep(5)
+        await tm.delete()
 
 
-@app.on_message(filters.user(SUDOERS) & filters.command(["echor", f"echor@{BOT_USERNAME}"]) & filters.group)
-async def r(client, message):
-    r = message.reply_to_message
-    c = message.chat.id
-    s = message.text.split(None, 1)[1]
-    await message.delete()
-    await app.send_sticker(c, s)
-
-
-@app.on_message(filters.user(SUDOERS) & filters.command(["echo", f"echo@{BOT_USERNAME}"]) & filters.group)
-async def p(client, message):
+@app.on_message(filters.command(["echo", f"echo{BOT_USERNAME}"]) & filters.group)
+async def echo(client, message):
     replied = message.reply_to_message
     chat_id = message.chat.id
     urlissed = message.text.split(None, 1)[1]
     if replied:
         await message.delete()
-        await replied.reply(f"{urlissed}")
+        await replied.reply(urlissed)
         return
     await message.delete()
-    await app.send_message(chat_id, f"{urlissed}")
+    await client.send_message(chat_id, urlissed)
 
 
-@app.on_message(filters.user(SUDOERS) & filters.command(["send", f"send@{BOT_USERNAME}"]))
-async def send(client, message):
-    chat_id = message.text.split(None, 1)[1]
-    replied = message.reply_to_message
-    if replied.text:
-        await message.delete()
-        await client.send_message(chat_id, replied.text)
-        tm = await message.reply(
-            f"**✅ Pesan Yang Anda Balas Telah Dikirim Ke** `{chat_id}`"
+@app.on_callback_query(filters.regex("cbcls"))
+async def cbcls(client, query):
+    a = await client.get_chat_member(query.message.chat.id, query.from_user.id)
+    if not a.can_delete_messages:
+        return await query.answer(
+            "💡 Hanya Admin Yang Dapat Menggunakan Tombol Ini",
+            show_alert=True,
         )
-        await asyncio.sleep(5)
-        await tm.delete()
-    elif replied.sticker.file_id:
-        await message.delete()
-        await client.send_sticker(chat_id, replied.sticker.file_id)
-        tm = await message.reply(
-            f"**✅ Sticker Yang Anda Balas Telah Dikirim Ke** `{chat_id}`"
-        )
-        await asyncio.sleep(5)
-        await tm.delete()
+    await query.message.delete()
+
+
+@app.on_callback_query(filters.regex("no_cb"))
+async def cb_cls(client, query):
+    await query.message.delete()
+    tm = await client.send_message(
+        query.message.chat.id,
+        "**👍 Baiklah {} Semoga Harimu Menyenangkan**".format(query.from_user.mention),
+    )
+    await asyncio.sleep(5)
+    await tm.delete()
 
 
 @app.on_message(filters.command(["bug", f"bug@{BOT_USERNAME}"]) & filters.group)
-async def bug(_, message):
+async def bug(client, message):
+    chat_id = message.chat.id
+    user_name = message.from_user.mention
     report = message.text.split(None, 1)[1]
     if message.chat.username:
-        chatusername = f"[{message.chat.title}](t.me/{message.chat.username})"
+        chat_name = f"[{message.chat.title}](t.me/{message.chat.username})"
     else:
-        chatusername = message.chat.title
+        chat_name = message.chat.title
     if not report:
         await message.reply(
-            "Contoh menggunakan fitur ini\n`/bug assisten nggak mau turun`",
+            f"""
+**🙋🏻‍♂️ Halo {message.from_user.mention} Apa kabar?
+🤖 Ada Yang Bisa Saya Bantu?
+
+- Jika Iya, Silahkan Kirim Perintah
+• Contoh: `/bug musik nya tidak ke putar`
+
+🔻 Klik Tombol Dibawah Jika Tidak Ada Apa-Apa**
+""",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(f"• ᴛᴜᴛᴜᴘ •", callback_data="no_cb"),
+                    ],
+                ]
+            ),
         )
         return
-    await app.send_message(
+    await client.send_message(
         SUP_GROUP,
         f"""
 **✅ [{OWNER_NAME}](t.me/{OWNER_USERNAME}) Ada Laporan Baru
 
-🧑‍💼 Pengguna: {message.from_user.mention}
-💡 Group: {chatusername}
-🆔 Id: `{message.chat.id}`
+🧑‍💼 Pengguna: {user_name}
+💡 Group: {chat_name}
+🆔 Id: `{chat_id}`
 
 💬 Pesan: {report}**
 """,
@@ -104,14 +165,15 @@ async def bug(_, message):
                     ),
                 ],
                 [
-                    InlineKeyboardButton(text=f" ᴄʟᴏsᴇ ", callback_data="cls"),
-                ]
+                    InlineKeyboardButton(f"• ᴛᴜᴛᴜᴘ •", callback_data="cbcls"),
+                ],
             ]
         ),
     )
     await message.reply(
         f"**🙏🏻 Terimakasih {message.from_user.mention} laporan anda telah terkirim ke admin**"
     )
+
 
 
 APAKAH_TEXT = [
