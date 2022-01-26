@@ -185,7 +185,7 @@ async def set_video_limit_kid(_, message: Message):
 ## Maintenance Yukki
 
 
-@app.on_message(command("musicplayer") & filters.user(SUDOERS))
+@app.on_message(filters.command("musicplayer") & filters.user(SUDOERS))
 async def smex(_, message):
     usage = "**Penggunaan:**\n/musicplayer [on|off]"
     if len(message.command) != 2:
