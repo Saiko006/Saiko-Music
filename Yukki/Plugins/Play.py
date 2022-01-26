@@ -14,7 +14,7 @@ from Yukki import (BOT_USERNAME, DURATION_LIMIT, DURATION_LIMIT_MIN,
                    MUSIC_BOT_NAME, app, db_mem)
 from Yukki.Core.PyTgCalls.Converter import convert
 from Yukki.Core.PyTgCalls.Downloader import download
-from Yukki.Daabtase import (
+from Yukki.Database import (
     is_on_off,
     add_on,
     add_off,
