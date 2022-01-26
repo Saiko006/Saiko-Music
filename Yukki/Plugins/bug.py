@@ -123,7 +123,7 @@ async def bug(client, message):
         chat_name = f"[{message.chat.title}](t.me/{message.chat.username})"
     else:
         chat_name = message.chat.title
-    if not report:
+    if len(message.command) < 1:
         await message.reply(
             f"""
 **🙋🏻‍♂️ Halo {message.from_user.mention} Apa kabar?
