@@ -10,7 +10,7 @@ from pyrogram.types import Message
 
 from config import LOG_SESSION, OWNER_ID
 from Yukki import BOT_ID, BOT_USERNAME, MUSIC_BOT_NAME, OWNER_ID, SUDOERS, app
-from Yukki.Database import (add_gban_user, add_off, add_on, add_sudo,
+from Yukki.Database import (add_gban_user, is_on_off, add_off, add_on, add_sudo,
                             get_active_chats, get_served_chats, get_sudoers,
                             is_gbanned_user, remove_active_chat,
                             remove_gban_user, remove_served_chat, remove_sudo,
@@ -185,22 +185,22 @@ async def set_video_limit_kid(_, message: Message):
 ## Maintenance Yukki
 
 
-@app.on_message(filters.command(["maintenance", f"maintenance@{BOT_USERNAME}"]) & filters.user(SUDOERS))
-async def maintenance(_, message):
-    usage = "**Ketik:**\n/maintenance [enable|disable]"
+@app.on_message(command("musicplayer") & filters.user(SUDOERS))
+async def smex(_, message):
+    usage = "**Penggunaan:**\n/musicplayer [on|off]"
     if len(message.command) != 2:
         return await message.reply_text(usage)
     chat_id = message.chat.id
     state = message.text.split(None, 1)[1].strip()
     state = state.lower()
-    if state == "enable":
+    if state == "on":
         user_id = 1
         await add_on(user_id)
-        await message.reply_text("Maintenance Mode Enable")
-    elif state == "disable":
+        await message.reply_text("✅ Maintenance Diaktifkan")
+    elif state == "off":
         user_id = 1
         await add_off(user_id)
-        await message.reply_text("Maintenance Mode Disabled")
+        await message.reply_text("❌ Maintenance Dinonaktifkan")
     else:
         await message.reply_text(usage)
 
