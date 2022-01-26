@@ -14,6 +14,11 @@ from Yukki import (BOT_USERNAME, DURATION_LIMIT, DURATION_LIMIT_MIN,
                    MUSIC_BOT_NAME, app, db_mem)
 from Yukki.Core.PyTgCalls.Converter import convert
 from Yukki.Core.PyTgCalls.Downloader import download
+from Yukki.Daabtase import (
+    is_on_off,
+    add_on,
+    add_off,
+)
 from Yukki.Database import (get_active_video_chats, get_video_limit,
                             is_active_video_chat)
 from Yukki.Decorators.assistant import AssistantAdd
@@ -91,6 +96,15 @@ async def play(_, message: Message):
     user_id = message.from_user.id
     user_name = message.from_user.first_name
     rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
+    if await is_on_off(1):
+        LOG_ID = "-100156899495"
+        if int(chat_id) != int(LOG_ID):
+            return await message.reply_text(
+                f"Bot sedang dalam Maintenance\n\nMaaf untuk ketidaknyamanannya!"
+            )
+        return await message.reply_text(
+            f"Bot sedang dalam Maintenance\n\n Maaf untuk ketidaknyamanannya!"
+        )
     update_channel = UPDATES_CHANNEL
     if update_channel:
         try:
