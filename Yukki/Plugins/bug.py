@@ -116,14 +116,12 @@ async def cb_cls(client, query):
 
 @app.on_message(filters.command(["bug", f"bug@{BOT_USERNAME}"]) & filters.group)
 async def bug(client, message):
-    chat_id = message.chat.id
-    user_name = message.from_user.mention
-    report = message.text.split(None, 1)[1]
+    report = get_text(message)
     if message.chat.username:
-        chat_name = f"[{message.chat.title}](t.me/{message.chat.username})"
+        chatusername = f"[{message.chat.title}](t.me/{message.chat.username})"
     else:
-        chat_name = message.chat.title
-    if len(message.command) < 1:
+        chatusername = message.chat.title
+    if not report:
         await message.reply(
             f"""
 **🙋🏻‍♂️ Halo {message.from_user.mention} Apa kabar?
