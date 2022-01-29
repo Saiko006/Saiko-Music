@@ -51,7 +51,7 @@ __HELP__ = f"""
 ass_num_list = ["1", "2", "3", "4", "5"]
 
 
-@app.on_message(filters.command("changeassistant") & filters.user(SUDOERS))
+@app.on_message(filters.command("changeass") & filters.user(SUDOERS))
 async def assis_change(_, message: Message):
     usage = f"**Usage:**\n/changeassistant [ASS_NO]\n\nSelect from them\n{' | '.join(ass_num_list)}"
     if len(message.command) != 2:
@@ -79,7 +79,7 @@ async def assis_change(_, message: Message):
 ass_num_list2 = ["1", "2", "3", "4", "5", "Random"]
 
 
-@app.on_message(filters.command("setassistant") & filters.user(SUDOERS))
+@app.on_message(filters.command("setass") & filters.user(SUDOERS))
 async def assis_change(_, message: Message):
     usage = f"**Usage:**\n/setassistant [ASS_NO or Random]\n\nSelect from them\n{' | '.join(ass_num_list2)}\n\nUse 'Random' to set random Assistant"
     if len(message.command) != 2:
@@ -94,7 +94,7 @@ async def assis_change(_, message: Message):
     _assistant = await get_assistant(message.chat.id, "assistant")
     if not _assistant:
         await message.reply_text(
-            f"**__Yukki Music Bot Assistant Alloted__**\n\nAssistant No. **{ran_ass}**"
+            f"**__Music Kekinian Bot Assistant Alloted__**\n\nAssistant No. **{ran_ass}**"
         )
         assis = {
             "saveassistant": ran_ass,
@@ -107,7 +107,7 @@ async def assis_change(_, message: Message):
         )
 
 
-@app.on_message(filters.command("checkassistant") & filters.group)
+@app.on_message(filters.command("checkass") & filters.group)
 async def check_ass(_, message: Message):
     _assistant = await get_assistant(message.chat.id, "assistant")
     if not _assistant:
@@ -115,7 +115,7 @@ async def check_ass(_, message: Message):
             "No Pre-Saved Assistant Found.\n\nYou can set Assistant Via /play"
         )
     else:
-        ass = _assistant["saveassistant"]
+        ass = _assistant["saveass"]
         return await message.reply_text(
             f"Pre-Saved Assistant Found\n\nAssistanty Number {ass} "
         )
