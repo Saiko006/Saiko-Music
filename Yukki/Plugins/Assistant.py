@@ -40,10 +40,10 @@ __HELP__ = f"""
 {ASSISTANT_PREFIX[0]}bio [Bio text] 
 - Changes Bio of Assistant Account.
 
-/changeassistant [ASS NUMBER]
+/changeass [ASS NUMBER]
 - Change the previoius alloted assistant to new one.
 
-/setassistant [ASS NUMBER or Random]
+/setass [ASS NUMBER or Random]
 - Set a assistant account for chat. 
 """
 
