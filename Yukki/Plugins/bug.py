@@ -8,7 +8,18 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from Yukki import BOT_USERNAME, SUDOERS, app
 from config import SUP_GROUP
 
-
+def get_text(message) -> [None, str]:
+    text_to_return = message.text
+    if message.text is None:
+        return None
+    if " " not in text_to_return:
+        return None
+    try:
+        return message.text.split(None, 1)[1]
+    except IndexError:
+        return None
+    
+    
 # ganti nama dan username telegram kalian
 OWNER_NAME = "ᴢᴀʟ"
 OWNER_USERNAME = "rumahakhirat"
@@ -116,7 +127,7 @@ async def cb_cls(client, query):
 
 @app.on_message(filters.command(["bug", f"bug@{BOT_USERNAME}"]) & filters.group)
 async def bug(client, message):
-    report = message.text.split(None, 1)[1]
+    report = get_text(message)
     if message.chat.username:
         chatusername = f"[{message.chat.title}](t.me/{message.chat.username})"
     else:
