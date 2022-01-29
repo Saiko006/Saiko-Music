@@ -116,7 +116,7 @@ async def cb_cls(client, query):
 
 @app.on_message(filters.command(["bug", f"bug@{BOT_USERNAME}"]) & filters.group)
 async def bug(client, message):
-    report = get_text(message)
+    report = message.text.split(None, 1)[1]
     if message.chat.username:
         chatusername = f"[{message.chat.title}](t.me/{message.chat.username})"
     else:
