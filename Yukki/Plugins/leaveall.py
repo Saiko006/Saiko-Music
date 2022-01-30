@@ -55,3 +55,34 @@ async def bye(client, message):
 **❌ Gagal: {failed}**
 """,
         )
+
+        
+#ass leave
+@app.on_message(filters.command(["assleave", f"assleave@{BOT_USERNAME}"]) & filters.group & ~filters.edited & filters.user(SUDOERS))
+async def leave_one(client, message):
+    try:
+        await assisten.send_message(message.chat.id, "✅ Asisstant Berhasil Keluar")
+        await assisten.leave_chat(message.chat.id)
+    except BaseException:
+        await message.reply_text(
+            "❌ **userbot couldn't leave your group, may be floodwaits.**\n\n**» or manually kick userbot from your group**"
+        )
+
+        return
+    
+#leavebot
+@app.on_message(filters.command("leavebot") & filters.user(SUDOERS))
+async def baaaf(_, message):
+    if len(message.command) != 2:
+        await message.reply_text(
+            "**Ketik:**\n/leavebot [Chat Username or Chat ID]"
+        )
+        return
+    chat = message.text.split(None, 2)[1]
+    try:
+        await app.leave_chat(chat)
+    except Exception as e:
+        await message.reply_text(f"Failed\n**Possible reason could be**:{e}")
+        print(e)
+        return
+    await message.reply_text("Bot berhasil keluar")
