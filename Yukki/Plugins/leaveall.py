@@ -58,7 +58,7 @@ async def bye(client, message):
 
         
 #ass leave
-@app.on_message(filters.command(["assleave", f"assleave@{BOT_USERNAME}"]) & filters.group & ~filters.edited & filters.user(SUDOERS))
+@app.on_message(filters.command(["leaveass", f"leaveass@{BOT_USERNAME}"]) & filters.group & ~filters.edited & filters.user(SUDOERS))
 async def leave_one(client, message):
     try:
         await assisten.send_message(message.chat.id, "✅ Asisstant Berhasil Keluar")
