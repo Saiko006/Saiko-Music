@@ -14,7 +14,6 @@ from Yukki.Database import (get_active_chats, get_active_video_chats,
                             get_assistant, is_active_chat, save_assistant)
 from Yukki.Decorators.checker import checker, checkerCB
 from Yukki.Inline import primary_markup,choose_markup
-from Yukki.Utilities.assistant import get_assistant_details
 
 loop = asyncio.get_event_loop()
 
