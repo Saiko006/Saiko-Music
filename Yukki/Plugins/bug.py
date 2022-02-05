@@ -180,7 +180,7 @@ async def bug(client, message):
         ),
     )
     await message.reply(
-        f"**🙏🏻 Terimakasih {message.from_user.mention} laporan anda telah terkirim ke admin**"
+        f"**🙏🏻 Terimakasih {message.from_user.mention} laporan anda telah terkirim ke {SUP_GROUP}**"
     )
 
 
