@@ -158,9 +158,9 @@ async def bug(client, message):
         f"""
 **✅ [{OWNER_NAME}](t.me/{OWNER_USERNAME}) Ada Laporan Baru
 
-🧑‍💼 Pengguna: {user_name}
-💡 Group: {chat_name}
-🆔 Id: `{chat_id}`
+🧑‍💼 Pengguna: {message.from_user.mention}
+💡 Group: {chatusername}
+🆔 Id: `{message.chat.id}`
 
 💬 Pesan: {report}**
 """,
