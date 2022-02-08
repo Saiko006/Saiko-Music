@@ -23,6 +23,7 @@ def get_text(message) -> [None, str]:
 # ganti nama dan username telegram kalian
 OWNER_NAME = "ᴢᴀʟ"
 OWNER_USERNAME = "rumahakhirat"
+SUP_NAME = "ᴋᴇᴋɪɴɪᴀɴ sᴜᴘᴘᴏʀᴛ"
 
 
 @app.on_message(
@@ -180,7 +181,7 @@ async def bug(client, message):
         ),
     )
     await message.reply(
-        f"**🙏🏻 Terimakasih {message.from_user.mention} laporan anda telah terkirim ke** (t.me/{SUP_GROUP})"
+        f"**🙏🏻 Terimakasih {message.from_user.mention} laporan anda telah terkirim ke [{SUP_NAME}](t.me/{SUP_GROUP})**"
     )
 
 
