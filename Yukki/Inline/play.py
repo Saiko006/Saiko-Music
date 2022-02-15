@@ -188,7 +188,6 @@ def primary_markup(videoid, user_id, current_time, total_time):
     db_mem[videoid]["check"] = 2
     buttons = [
         [
-            InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ ", url="https://t.me/musickekiniaan"),
             InlineKeyboardButton(
                 text=" ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
             ),
