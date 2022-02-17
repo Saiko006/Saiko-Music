@@ -6,8 +6,7 @@ from Yukki.Core.Logger.logs import LOG_CHAT
 
 from pyrogram import filters
 from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto, Message,
-                            Voice)
-from youtube_search import YoutubeSearch
+                            Voice) 
 from youtubesearchpython import VideosSearch
 
 from Yukki import (BOT_USERNAME, DURATION_LIMIT, DURATION_LIMIT_MIN,
