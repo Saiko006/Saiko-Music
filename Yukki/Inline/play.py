@@ -84,13 +84,12 @@ def search_markup(
         ],
         [
             InlineKeyboardButton(
-                text="⬅️", callback_data=f"popat 1|{query}|{user_id}"
+                text="➡️", callback_data=f"popat 1|{query}|{user_id}"
             ),
+        ],
+        [
             InlineKeyboardButton(
                 text="ᴄʟᴏsᴇ", callback_data=f"forceclose {query}|{user_id}"
-            ),
-            InlineKeyboardButton(
-                text="➡️", callback_data=f"popat 1|{query}|{user_id}"
             ),
         ],
     ]
@@ -140,11 +139,10 @@ def search_markup2(
             InlineKeyboardButton(
                 text="⬅️", callback_data=f"popat 2|{query}|{user_id}"
             ),
+        ],
+        [
             InlineKeyboardButton(
                 text="ᴄʟᴏsᴇ", callback_data=f"forceclose {query}|{user_id}"
-            ),
-            InlineKeyboardButton(
-                text="➡️", callback_data=f"popat 2|{query}|{user_id}"
             ),
         ],
     ]
@@ -154,12 +152,9 @@ def search_markup2(
 def secondary_markup(videoid, user_id):
     buttons = [
         [
-            InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ ", url="https://t.me/musickekiniaan"),
             InlineKeyboardButton(
                 text=" ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
-            ),
-        ],
-        [      
+            ),      
             InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data=f'close')
             ],
     ]
