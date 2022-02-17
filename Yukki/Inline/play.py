@@ -197,12 +197,9 @@ def primary_markup(videoid, user_id, current_time, total_time):
 def timer_markup(videoid, user_id, current_time, total_time):
     buttons = [
         [
-            InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ ", url="https://t.me/musickekiniaan"),
             InlineKeyboardButton(
                 text=" ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
-            ),
-        ],
-        [      
+            ),      
             InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data=f'close')
             ],
     ]
@@ -215,12 +212,9 @@ def audio_markup(videoid, user_id, current_time, total_time):
     db_mem[videoid]["check"] = 2
     buttons = [
         [
-            InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ ", url="https://t.me/musickekiniaan"),
             InlineKeyboardButton(
                 text=" ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
-            ),
-        ],
-        [      
+            ),      
             InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data=f'close')
             ],
     ]
@@ -230,12 +224,9 @@ def audio_markup(videoid, user_id, current_time, total_time):
 def audio_timer_markup_start(videoid, user_id, current_time, total_time):
     buttons = [
         [
-            InlineKeyboardButton(text="📡 ᴄʜᴀɴɴᴇʟ ", url="https://t.me/musickekiniaan"),
             InlineKeyboardButton(
                 text=" ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
             ),
-        ],
-        [      
             InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data=f'close')
             ],
     ]
