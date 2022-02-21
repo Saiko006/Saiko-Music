@@ -81,7 +81,7 @@ ass_num_list2 = ["1", "2", "3", "4", "5", "Random"]
 
 @app.on_message(filters.command("setass") & filters.user(SUDOERS))
 async def assis_change(_, message: Message):
-    usage = f"**Usage:**\n/setassistant [ASS_NO or Random]\n\nSelect from them\n{' | '.join(ass_num_list2)}\n\nUse 'Random' to set random Assistant"
+    usage = f"**Usage:**\n/setass [ASS_NO or Random]\n\nSelect from them\n{' | '.join(ass_num_list2)}\n\nUse 'Random' to set random Assistant"
     if len(message.command) != 2:
         return await message.reply_text(usage)
     query = message.text.split(None, 1)[1].strip()
