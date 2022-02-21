@@ -53,7 +53,7 @@ ass_num_list = ["1", "2", "3", "4", "5"]
 
 @app.on_message(filters.command("changeass") & filters.user(SUDOERS))
 async def assis_change(_, message: Message):
-    usage = f"**Usage:**\n/changeassistant [ASS_NO]\n\nSelect from them\n{' | '.join(ass_num_list)}"
+    usage = f"**Usage:**\n/changeass [ASS_NO]\n\nSelect from them\n{' | '.join(ass_num_list)}"
     if len(message.command) != 2:
         return await message.reply_text(usage)
     num = message.text.split(None, 1)[1].strip()
