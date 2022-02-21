@@ -78,20 +78,7 @@ async def welcome(_, message: Message):
             return
 
 
-@app.on_message(filters.command(["start", "help", f"start@{BOT_USERNAME}", f"help@{BOT_USERNAME}"]) & filters.group)
-@PermissionCheck
-async def useradd(_, message: Message):
-    out = start_pannel()
-    await asyncio.gather(
-        message.delete(),
-        message.reply_text(
-            f"**Thanks for having me in {message.chat.title}**\n\n{MUSIC_BOT_NAME}✅\n\n**Untuk bantuan silahkan klik tombol COMMAND dibawah.**",
-            reply_markup=InlineKeyboardMarkup(out[1]),
-        ),
-    )
-
-
-@app.on_message(filters.command(["settings", f"settings@{BOT_USERNAME}"]) & filters.group)
+@app.on_message(filters.command(["setting", f"settings@{BOT_USERNAME}"]) & filters.group)
 async def settings(_, message: Message):
     c_id = message.chat.id
     _check = await get_start(c_id, "assistant")
