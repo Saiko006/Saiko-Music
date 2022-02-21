@@ -115,7 +115,7 @@ async def check_ass(_, message: Message):
             "No Pre-Saved Assistant Found.\n\nYou can set Assistant Via /play"
         )
     else:
-        ass = _assistant["saveass"]
+        ass = _assistant["saveassistant"]
         return await message.reply_text(
             f"Pre-Saved Assistant Found\n\nAssistanty Number {ass} "
         )
