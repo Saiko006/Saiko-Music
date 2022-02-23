@@ -21,9 +21,9 @@ def get_text(message) -> [None, str]:
     
     
 # ganti nama dan username telegram kalian
-OWNER_NAME = "ᴢᴀʟ"
-OWNER_USERNAME = "rumahakhirat"
-SUP_NAME = "ᴋᴇᴋɪɴɪᴀɴ sᴜᴘᴘᴏʀᴛ"
+OWNER_NAME = "ꜱᴀɪᴋᴏ • 🇮🇩"
+OWNER_USERNAME = "Unrealsaiko06"
+SUP_NAME = "ᴢɪxᴇɴ | ꜱᴜᴘᴘᴏʀᴛ 🇮🇩"
 
 
 @app.on_message(
@@ -89,19 +89,6 @@ async def send(client, message):
         )
         await asyncio.sleep(5)
         await tm.delete()
-
-
-@app.on_message(filters.command(["echo", f"echo{BOT_USERNAME}"]) & filters.group)
-async def echo(client, message):
-    replied = message.reply_to_message
-    chat_id = message.chat.id
-    urlissed = message.text.split(None, 1)[1]
-    if replied:
-        await message.delete()
-        await replied.reply(urlissed)
-        return
-    await message.delete()
-    await client.send_message(chat_id, urlissed)
 
 
 @app.on_callback_query(filters.regex("cbcls"))
