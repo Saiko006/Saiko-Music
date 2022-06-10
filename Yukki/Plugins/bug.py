@@ -21,9 +21,9 @@ def get_text(message) -> [None, str]:
     
     
 # ganti nama dan username telegram kalian
-OWNER_NAME = "ꜱᴀɪᴋᴏ • 🇮🇩"
-OWNER_USERNAME = "Unrealsaiko06"
-SUP_NAME = "ᴢɪxᴇɴ | ꜱᴜᴘᴘᴏʀᴛ 🇮🇩"
+OWNER_NAME = "夢 | ꜱᴧɪᴋᴏ̷"
+OWNER_USERNAME = "saikobukanbot"
+SUP_NAME = "TELEGRAM MUSIC"
 
 
 @app.on_message(
