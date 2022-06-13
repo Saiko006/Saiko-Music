@@ -190,7 +190,7 @@ def private_panel():
                 ),
             ],
             [
-                InlineKeyboardButton("👑 ᴏᴡɴᴇʀ 👑", url="https://t.me/rumahakhirat"
+                InlineKeyboardButton("👑 ᴏᴡɴᴇʀ 👑", url="https://t.me/teleudahrusak"
                 ),
             ],
         ]
