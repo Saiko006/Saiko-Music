@@ -227,10 +227,10 @@ async def initiate_bot():
  """
 
 
-#@app.on_message(filters.command("help") & filters.private)
-#async def help_command(_, message):
-#    text, keyboard = await help_parser(message.from_user.mention)
-#    await app.send_message(message.chat.id, text, reply_markup=keyboard)
+ @app.on_message(filters.command("help") & filters.private)
+ async def help_command(_, message):
+     text, keyboard = await help_parser(message.from_user.mention)
+     await app.send_message(message.chat.id, text, reply_markup=keyboard)
 
 
 @app.on_message(filters.command("mstart") & filters.private)
