@@ -215,16 +215,16 @@ async def initiate_bot():
     console.print(f"\n[red]Stopping Bot")
 
 
-#home_text_pm = f"""
-#**✪ 👋 Hello !
-#✪ ᴍʏ ɴᴀᴍᴇ ɪs saiko [🤖](https://telegra.ph/file/ee46c0aba5c12e0d2bb71.jpg)
-#✪ ɪ'ᴍ ᴀ saiko ᴛʜᴇᴍᴇ ʙᴏᴛ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ & ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍɪɴɢ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇꜰᴜʟ ꜰᴇᴀᴛᴜʀᴇs!
-#ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ꜱᴧɪᴋᴏ̷](https://t.me/teleudahhina)
-#─────────────────────
-#✪ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ : /
-#─────────────────────
-#✪ Pᴏᴡᴇʀᴇᴅ 🔰 Bʏ: Saiko Music!**
-#"""
+ home_text_pm = f"""
+ **✪ 👋 Hello !
+ ✪ ᴍʏ ɴᴀᴍᴇ ɪs saiko [🤖]
+ ✪ ɪ'ᴍ ᴀ saiko ᴛʜᴇᴍᴇ ʙᴏᴛ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ & ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍɪɴɢ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇꜰᴜʟ ꜰᴇᴀᴛᴜʀᴇs!
+ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ꜱᴧɪᴋᴏ̷](https://t.me/teleudahhina)
+ ─────────────────────
+ ✪ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ : /
+ ─────────────────────
+ ✪ Pᴏᴡᴇʀᴇᴅ 🔰 Bʏ: Saiko Music!**
+ """
 
 
 #@app.on_message(filters.command("help") & filters.private)
