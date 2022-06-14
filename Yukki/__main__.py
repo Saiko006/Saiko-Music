@@ -217,13 +217,13 @@ async def initiate_bot():
 
 #home_text_pm = f"""
 #**✪ 👋 Hello !
-#✪ ᴍʏ ɴᴀᴍᴇ ɪs • 𝙏𝙀𝙇𝙀𝙂𝙍𝘼𝙈 𝙈𝙐𝙎𝙄𝘾 • [🤖](https://telegra.ph/file/ee46c0aba5c12e0d2bb71.jpg)
-#✪ ɪ'ᴍ ᴀ TELEGRAM MUSIC ᴛʜᴇᴍᴇ ʙᴏᴛ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ & ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍɪɴɢ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇꜰᴜʟ ꜰᴇᴀᴛᴜʀᴇs!
-#ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ꜱᴧɪᴋᴏ̷](https://t.me/saikobukanbot)
+#✪ ᴍʏ ɴᴀᴍᴇ ɪs saiko [🤖](https://telegra.ph/file/ee46c0aba5c12e0d2bb71.jpg)
+#✪ ɪ'ᴍ ᴀ saiko ᴛʜᴇᴍᴇ ʙᴏᴛ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ & ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍɪɴɢ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇꜰᴜʟ ꜰᴇᴀᴛᴜʀᴇs!
+#ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ꜱᴧɪᴋᴏ̷](https://t.me/teleudahhina)
 #─────────────────────
 #✪ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ : /
 #─────────────────────
-#✪ Pᴏᴡᴇʀᴇᴅ 🔰 Bʏ: • 𝙏𝙀𝙇𝙀𝙂𝙍𝘼𝙈 𝙈𝙐𝙎𝙄𝘾 •!**
+#✪ Pᴏᴡᴇʀᴇᴅ 🔰 Bʏ: Saiko Music!**
 #"""
 
 
