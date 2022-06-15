@@ -1,7 +1,6 @@
 from typing import Dict, List, Union
 
-from Y
-Saiko import db
+from Saiko import db
 
 blacklist_chatdb = db.blacklistChat
 
