@@ -1,6 +1,6 @@
 from typing import Dict, List, Union
 
-from Yukki import db
+from Saiko import db
 
 themedb = db.notes
 
