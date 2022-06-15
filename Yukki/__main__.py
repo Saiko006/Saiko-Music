@@ -229,12 +229,12 @@ async def initiate_bot():
 
 #@app.on_message(filters.command("help") & filters.private)
 #async def help_command(_, message):
-    #text, keyboard = await help_parser(message.from_user.mention)
-    #await app.send_message(message.chat.id, text, reply_markup=keyboard)
+#    text, keyboard = await help_parser(message.from_user.mention)
+#    await app.send_message(message.chat.id, text, reply_markup=keyboard)
 
 
-#@app.on_message(filters.command("mstart") & filters.private)
-#async def start_command(_, message):
+@app.on_message(filters.command("mstart") & filters.private)
+async def start_command(_, message):
     if len(message.text.split()) > 1:
         name = (message.text.split(None, 1)[1]).lower()
         if name[0] == "s":
@@ -280,14 +280,14 @@ async def initiate_bot():
                     LOG_GROUP_ID,
                     f"{message.from_user.mention} has just started bot to check <code>SUDOLIST</code>\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
                 )
-        if name == "help":
-            text, keyboard = await help_parser(message.from_user.mention)
-            await message.delete()
-            return await app.send_message(
-                message.chat.id,
-                text,
-                reply_markup=keyboard,
-            )
+        #if name == "help":
+        #    text, keyboard = await help_parser(message.from_user.mention)
+        #    await message.delete()
+        #    return await app.send_message(
+        #        message.chat.id,
+        #        text,
+        #        reply_markup=keyboard,
+        #    )
         if name[0] == "i":
             m = await message.reply_text("🔎 Fetching Info!")
             query = (str(name)).replace("info_", "", 1)
@@ -344,11 +344,11 @@ async def initiate_bot():
                     f"{message.from_user.mention} has just started bot to check <code>VIDEO INFORMATION</code>\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
                 )
             return
-    out = private_panel()
-    await message.reply_text(
-        home_text_pm,
-        reply_markup=InlineKeyboardMarkup(out[1]),
-    )
+#    out = private_panel()
+#    await message.reply_text(
+#        home_text_pm,
+#        reply_markup=InlineKeyboardMarkup(out[1]),
+#    )
     if await is_on_off(5):
         sender_id = message.from_user.id
         sender_name = message.from_user.first_name
@@ -360,26 +360,26 @@ async def initiate_bot():
     return
 
 
-async def help_parser(name, keyboard=None):
-    if not keyboard:
-        keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
-    return (
-        """**Hello {first_name}**,
+#async def help_parser(name, keyboard=None):
+#    if not keyboard:
+#        keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
+#    return (
+#        """**Hello {first_name}**,
 
-Click on the buttons for more information.
+#Click on the buttons for more information.
 
-All commands can be used with: /
-""".format(
-    first_name=name
-        ),
-        keyboard,
-    )
+#All commands can be used with: /
+#""".format(
+#    first_name=name
+#        ),
+#        keyboard,
+#    )
 
 
-@app.on_callback_query(filters.regex("shikhar"))
-async def shikhar(_, CallbackQuery):
-    text, keyboard = await help_parser(CallbackQuery.from_user.mention)
-    await CallbackQuery.message.edit(text, reply_markup=keyboard)
+#@app.on_callback_query(filters.regex("shikhar"))
+#async def shikhar(_, CallbackQuery):
+#    text, keyboard = await help_parser(CallbackQuery.from_user.mention)
+#    await CallbackQuery.message.edit(text, reply_markup=keyboard)
         
 @app.on_callback_query(filters.regex(r"help_(.*?)"))
 async def help_button(client, query):
