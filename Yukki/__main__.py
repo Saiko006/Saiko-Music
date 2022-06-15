@@ -242,7 +242,7 @@ async def initiate_bot():
             #text = "👑<u> **Owners:**</u>\n"
             #sex = 0
             #for x in OWNER_ID:
-                try:
+                #try:
                     #user = await app.get_users(x)
                     user = (
                         user.first_name if not user.mention else user.mention
