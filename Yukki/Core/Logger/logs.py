@@ -1,5 +1,5 @@
-from Saiko import BOT_USERNAME
-from Saiko.Core.Clients.cli import app
+from Yukki import BOT_USERNAME
+from Yukki.Core.Clients.cli import app
 from config import LOG_GROUP_ID
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton 
 
