@@ -215,35 +215,35 @@ async def initiate_bot():
     console.print(f"\n[red]Stopping Bot")
 
 
- home_text_pm = f"""
- **✪ 👋 Hello !
- ✪ ᴍʏ ɴᴀᴍᴇ ɪs saiko [🤖]
- ✪ ɪ'ᴍ ᴀ saiko ᴛʜᴇᴍᴇ ʙᴏᴛ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ & ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍɪɴɢ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇꜰᴜʟ ꜰᴇᴀᴛᴜʀᴇs!
- ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ꜱᴧɪᴋᴏ̷](https://t.me/teleudahhina)
- ─────────────────────
- ✪ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ : /
- ─────────────────────
- ✪ Pᴏᴡᴇʀᴇᴅ 🔰 Bʏ: Saiko Music!**
- """
+#home_text_pm = f"""
+#**✪ 👋 Hello !
+#✪ ᴍʏ ɴᴀᴍᴇ ɪs saiko [🤖]
+#✪ ɪ'ᴍ ᴀ saiko ᴛʜᴇᴍᴇ ʙᴏᴛ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜsɪᴄ & ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍɪɴɢ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇꜰᴜʟ ꜰᴇᴀᴛᴜʀᴇs!
+#ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ꜱᴧɪᴋᴏ̷](https://t.me/teleudahhina)
+#─────────────────────
+#✪ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ : /
+#─────────────────────
+#✪ Pᴏᴡᴇʀᴇᴅ 🔰 Bʏ: Saiko Music!**
+#"""
 
 
- @app.on_message(filters.command("help") & filters.private)
- async def help_command(_, message):
-     text, keyboard = await help_parser(message.from_user.mention)
-     await app.send_message(message.chat.id, text, reply_markup=keyboard)
+#@app.on_message(filters.command("help") & filters.private)
+#async def help_command(_, message):
+    #text, keyboard = await help_parser(message.from_user.mention)
+    #await app.send_message(message.chat.id, text, reply_markup=keyboard)
 
 
-@app.on_message(filters.command("mstart") & filters.private)
-async def start_command(_, message):
-    if len(message.text.split()) > 1:
-        name = (message.text.split(None, 1)[1]).lower()
-        if name[0] == "s":
-            sudoers = await get_sudoers()
-            text = "👑<u> **Owners:**</u>\n"
-            sex = 0
-            for x in OWNER_ID:
+#@app.on_message(filters.command("mstart") & filters.private)
+#async def start_command(_, message):
+    #if len(message.text.split()) > 1:
+        #name = (message.text.split(None, 1)[1]).lower()
+        #if name[0] == "s":
+            #sudoers = await get_sudoers()
+            #text = "👑<u> **Owners:**</u>\n"
+            #sex = 0
+            #for x in OWNER_ID:
                 try:
-                    user = await app.get_users(x)
+                    #user = await app.get_users(x)
                     user = (
                         user.first_name if not user.mention else user.mention
                     )
