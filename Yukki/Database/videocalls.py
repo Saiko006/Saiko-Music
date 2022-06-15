@@ -2,7 +2,7 @@ from typing import Dict, List, Union
 
 from Saiko import db
 
-videodb = db.yukkivideocalls
+videodb = db.saikovideocalls
 
 
 ## limit
