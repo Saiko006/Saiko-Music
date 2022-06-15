@@ -1,6 +1,6 @@
 from typing import Dict, List, Union
 
-from Saiko import db
+from Yukki import db
 
 sudoersdb = db.sudoers
 
