@@ -1,6 +1,6 @@
 from typing import Dict, List, Union
 
-from Saiko import db
+from Yukki import db
 
 playlistdb_lofi = db.playlistlofi
 playlistdb_rock = db.playlistrock
