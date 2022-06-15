@@ -480,7 +480,7 @@ async def playout_end(pytgclients, chat_id):
             await pytgclients.leave_group_call(chat_id)
             await app.send_message(
                 chat_id,
-                "**✅ Antrian kosong.\n\n• Assistant meninggalkan obrolan suara**",
+                "**✅ Antrian Kosong.\n\n• Assistant meninggalkan obrolan suara**",
             )
         else:
             afk = Queues.get(chat_id)["file"]
