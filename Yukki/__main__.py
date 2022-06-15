@@ -235,13 +235,13 @@ async def initiate_bot():
 
 #@app.on_message(filters.command("mstart") & filters.private)
 #async def start_command(_, message):
-    #if len(message.text.split()) > 1:
-        #name = (message.text.split(None, 1)[1]).lower()
-        #if name[0] == "s":
-             sudoers = await get_sudoers()
-             text = "👑<u> **Owners:**</u>\n"
-             sex = 0
-             for x in OWNER_ID:
+    if len(message.text.split()) > 1:
+        name = (message.text.split(None, 1)[1]).lower()
+        if name[0] == "s":
+            sudoers = await get_sudoers()
+            text = "👑<u> **Owners:**</u>\n"
+            sex = 0
+            for x in OWNER_ID:
                 try:
                     user = await app.get_users(x)
                     user = (
